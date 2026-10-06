@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E&amp;H STORE — SPORT WEAR | متجر أدوات وملابس الفنون القتالية والرياضة</title>
+<meta name="description" content="متجر E&H STORE SPORT WEAR — بدل كونغ فو، قفازات ملاكمه، ملابس رياضيه، أدوات تدريب. واتساب فوري ودفع انستا باي وفودافون كاش.">
+<style>
+/* ===== E&H STORE — SPORT WEAR | ملف واحد مستقل (كل شيء بالداخل) ===== */
+:root{
+  --bg:#0a0c11; --bg2:#0e1119; --card:#151a25; --card2:#1b2130;
+  --line:#28303f; --txt:#eef1f7; --muted:#96a0b4;
+  --red:#e0192f; --red2:#ff3a50; --gold:#f5c451; --gold2:#ffe0a3;
+  --wa:#25d366; --ok:#27c07a;
+  --r:16px; --r-sm:10px; --r-pill:999px;
+  --sh:0 18px 40px rgba(0,0,0,.5); --sh-sm:0 8px 20px rgba(0,0,0,.35);
+  --ff:"Segoe UI",Tahoma,"Noto Kufi Arabic","Cairo",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{margin:0;padding:0;scroll-behavior:smooth}
+body{margin:0;font-family:var(--ff);background:var(--bg);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(900px 420px at 88% -8%,rgba(224,25,47,.20),transparent 62%),radial-gradient(760px 380px at 4% 2%,rgba(245,196,81,.10),transparent 62%)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5rem}
+p{margin:0 0 .8rem}
+ul{margin:0 0 1rem;padding-inline-start:1.25rem}
+button,input,select,textarea{font-family:inherit;font-size:1rem}
+.container{width:min(1200px,92vw);margin-inline:auto;position:relative;z-index:1}
+.section{padding:56px 0}
+.section-sm{padding:34px 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.section-head h2{font-size:clamp(1.35rem,2.4vw,2rem);margin:0}
+.section-head .muted{margin:0;font-size:.95rem}
+.eyebrow{color:var(--gold);letter-spacing:.16em;font-size:.76rem;font-weight:800;text-transform:uppercase;margin:0 0 6px}
+.muted{color:var(--muted)} .gold{color:var(--gold)} .red{color:var(--red2)} .center{text-align:center}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:var(--r-pill);background:rgba(245,196,81,.12);color:var(--gold);border:1px solid rgba(245,196,81,.35);font-size:.78rem;font-weight:700}
+.page[hidden]{display:none !important}
+
+.topbar{background:linear-gradient(90deg,var(--red),#8c0f1e);color:#fff;font-size:.86rem;position:relative;z-index:3}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 0;flex-wrap:wrap}
+.topbar strong{color:var(--gold2)}
+.topbar-links{display:flex;gap:14px;flex-wrap:wrap}
+
+.site-header{position:sticky;top:0;z-index:40;background:rgba(10,12,17,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px;min-width:190px}
+.brand-mark{width:48px;height:48px;border-radius:14px;flex:none;background:linear-gradient(145deg,var(--red),#7d0c1a);display:grid;place-items:center;box-shadow:0 8px 22px rgba(224,25,47,.45);border:1px solid rgba(245,196,81,.5)}
+.brand-mark span{font-weight:900;color:#fff;font-size:1.05rem}
+.brand-text b{display:block;font-size:1.02rem}
+.brand-text small{display:block;color:var(--gold);font-size:.7rem;letter-spacing:.28em;font-weight:700}
+.menu{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center}
+.menu a{padding:8px 11px;border-radius:var(--r-sm);font-size:.92rem;color:#dfe4ef;transition:.18s}
+.menu a:hover{background:var(--card);color:#fff}
+.menu a.active{background:linear-gradient(180deg,rgba(224,25,47,.28),rgba(224,25,47,.12));color:#fff;box-shadow:inset 0 0 0 1px rgba(224,25,47,.5)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.cart-btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:var(--r-pill);background:linear-gradient(145deg,var(--red),#8f101f);color:#fff;font-weight:700;font-size:.9rem;border:1px solid rgba(245,196,81,.35)}
+.cart-count{background:var(--gold);color:#160f00;border-radius:var(--r-pill);min-width:22px;height:22px;display:grid;place-items:center;font-size:.75rem;font-weight:900;padding:0 6px}
+.burger{display:none;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:var(--r-sm);padding:9px 12px;cursor:pointer;font-size:1.1rem}
+@media(max-width:1080px){
+  .burger{display:block}
+  .menu{display:none;flex-direction:column;align-items:stretch;position:absolute;inset-inline:4vw;top:100%;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:12px;box-shadow:var(--sh)}
+  .menu.open{display:flex}
+  .menu a{text-align:center}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:var(--r-pill);font-weight:800;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-red{background:linear-gradient(145deg,var(--red2),#a30f20);color:#fff;box-shadow:0 10px 26px rgba(224,25,47,.35)}
+.btn-gold{background:linear-gradient(145deg,var(--gold2),var(--gold));color:#170f00;box-shadow:0 10px 26px rgba(245,196,81,.28)}
+.btn-wa{background:linear-gradient(145deg,#37e07a,#128c47);color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.3)}
+.btn-call{background:linear-gradient(145deg,#4a90ff,#1d54c8);color:#fff;box-shadow:0 10px 26px rgba(74,144,255,.3)}
+.btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--card);border-color:var(--gold)}
+.btn-block{width:100%} .btn-sm{padding:9px 14px;font-size:.86rem} .btn-lg{padding:15px 26px;font-size:1.02rem}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(120deg,#0a0c11 0%,#141a26 55%,#1d0d12 100%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding:64px 0 60px}
+.hero h1{font-size:clamp(1.9rem,4.2vw,3.3rem);margin:10px 0 12px;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--gold);display:block}
+.hero p.lead{font-size:1.06rem;color:#cbd3e2;max-width:56ch}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}
+.hero-badges span{background:rgba(255,255,255,.05);border:1px solid var(--line);padding:7px 13px;border-radius:var(--r-pill);font-size:.84rem;color:#d8deeb}
+.hero-media{position:relative}
+.hero-media .frame{border-radius:22px;overflow:hidden;border:1px solid rgba(245,196,81,.35);box-shadow:var(--sh);aspect-ratio:4/3;background:var(--card)}
+.hero-media .frame img{width:100%;height:100%;object-fit:cover}
+.hero-stat{position:absolute;bottom:-18px;inset-inline-start:-14px;background:var(--card2);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;box-shadow:var(--sh-sm);display:flex;gap:14px;flex-wrap:wrap}
+.hero-stat b{display:block;color:var(--gold);font-size:1.15rem;line-height:1.1}
+.hero-stat small{color:var(--muted);font-size:.74rem}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;padding:40px 0}}
+
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.cat-card{position:relative;overflow:hidden;border-radius:var(--r);border:1px solid var(--line);background:var(--card);box-shadow:var(--sh-sm);transition:.2s}
+.cat-card:hover{transform:translateY(-4px);border-color:rgba(245,196,81,.5)}
+.cat-card img{height:170px;width:100%;object-fit:cover}
+.cat-card .body{padding:16px}
+.cat-card h3{margin:0 0 4px;font-size:1.08rem}
+.cat-card p{margin:0;color:var(--muted);font-size:.88rem}
+.cat-card .go{color:var(--gold);font-weight:800;font-size:.85rem;margin-top:8px;display:inline-block}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.feature{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.feature .ico{font-size:1.5rem;margin-bottom:6px}
+.feature b{display:block;margin-bottom:2px}
+.feature span{color:var(--muted);font-size:.86rem}
+
+.site-footer{margin-top:40px;background:linear-gradient(180deg,#0b0e15,#070910);border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:26px;padding:44px 0 26px}
+.site-footer h4{color:var(--gold);font-size:.95rem;letter-spacing:.06em;margin-bottom:12px}
+.site-footer a.link{display:block;color:#c9d2e2;font-size:.9rem;padding:3px 0}
+.site-footer a.link:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+.float-wa{position:fixed;inset-inline-end:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:linear-gradient(145deg,#37e07a,#0f7a3e);display:grid;place-items:center;color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.45);border:2px solid rgba(255,255,255,.25);font-size:1.5rem}
+
+.page-hero{background:linear-gradient(120deg,#0c0f16,#1a1016);border-bottom:1px solid var(--line);padding:34px 0}
+.page-hero h1{margin:6px 0 4px;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:900}
+.crumbs{color:var(--muted);font-size:.85rem}
+.crumbs a:hover{color:var(--gold)}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.chip{padding:9px 16px;border-radius:var(--r-pill);background:var(--card);border:1px solid var(--line);color:#d3dbe8;cursor:pointer;font-size:.88rem;font-weight:700}
+.chip:hover{border-color:var(--gold)}
+.chip.active{background:linear-gradient(145deg,var(--red2),#94101f);color:#fff;border-color:transparent}
+.search-box{flex:1;min-width:210px;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-pill);padding:9px 15px}
+.search-box input{background:transparent;border:0;outline:0;color:var(--txt);width:100%}
+
+.grid-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:18px}
+.p-card{background:linear-gradient(180deg,var(--card),#12161f);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.2s;position:relative}
+.p-card:hover{transform:translateY(-5px);border-color:rgba(245,196,81,.55);box-shadow:var(--sh)}
+.p-thumb{position:relative;aspect-ratio:1/1;background:#0f131b;overflow:hidden}
+.p-thumb img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.p-card:hover .p-thumb img{transform:scale(1.05)}
+.badge{position:absolute;top:10px;inset-inline-start:10px;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;padding:5px 10px;border-radius:var(--r-pill);z-index:2}
+.badge.gold{background:var(--gold);color:#170f00}
+.p-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.p-cat{color:var(--gold);font-size:.72rem;font-weight:800;letter-spacing:.08em}
+.p-name{font-size:.98rem;font-weight:800;margin:0;min-height:2.6em}
+.p-desc{color:var(--muted);font-size:.82rem;margin:0;flex:1}
+.p-price{display:flex;align-items:center;gap:8px}
+.p-price b{color:var(--gold);font-size:1.14rem}
+.p-price s{color:var(--muted);font-size:.85rem}
+.p-actions{display:flex;gap:8px}
+.p-actions .btn{flex:1}
+.sizes{display:flex;gap:6px;flex-wrap:wrap}
+.size{font-size:.74rem;border:1px solid var(--line);border-radius:8px;padding:3px 8px;color:#c6cfde}
+.empty-note{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center;color:var(--muted)}
+
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+@media(max-width:860px){.pd-grid{grid-template-columns:1fr}}
+.pd-media{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);aspect-ratio:1/1}
+.pd-media img{width:100%;height:100%;object-fit:cover}
+.pd-price{display:flex;align-items:baseline;gap:12px;margin:10px 0}
+.pd-price b{font-size:1.9rem;color:var(--gold)}
+.qty{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-pill);padding:5px}
+.qty button{width:34px;height:34px;border-radius:50%;border:0;background:var(--card2);color:#fff;font-size:1.1rem;cursor:pointer}
+.qty input{width:52px;text-align:center;background:transparent;border:0;color:#fff;font-size:1rem}
+.spec-table{width:100%;border-collapse:collapse;margin-top:10px}
+.spec-table td{border-bottom:1px solid var(--line);padding:9px 4px;font-size:.9rem}
+.spec-table td:first-child{color:var(--muted);width:42%}
+
+.cart-wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;align-items:start}
+@media(max-width:900px){.cart-wrap{grid-template-columns:1fr}}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+table.data{width:100%;border-collapse:collapse;min-width:560px}
+table.data th{background:#101521;color:var(--gold);font-size:.85rem;padding:12px;text-align:right;border-bottom:1px solid var(--line)}
+table.data td{padding:12px;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:middle}
+table.data tr:last-child td{border-bottom:0}
+.mini-thumb{width:58px;height:58px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.summary{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sh-sm)}
+.summary h3{margin-top:0}
+.sum-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.sum-row.total{border:0;font-size:1.15rem;font-weight:900;color:var(--gold);padding-top:14px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.85rem;color:#c8d1e0;font-weight:700}
+.field input,.field select,.field textarea{background:#0f131b;border:1px solid var(--line);border-radius:var(--r-sm);padding:11px 13px;color:var(--txt);outline:0}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.radio-row{display:flex;gap:10px;flex-wrap:wrap}
+.radio-card{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:var(--r-sm);padding:11px 14px;cursor:pointer;background:#0f131b;font-size:.9rem}
+.radio-card:hover{border-color:var(--gold)}
+.radio-card input{accent-color:var(--red)}
+
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.pay-card{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(180deg,var(--card),#11151f)}
+.pay-card .tag{font-size:.75rem;font-weight:800;letter-spacing:.1em;color:var(--gold)}
+.pay-card .num{font-family:Consolas,monospace;font-size:1.32rem;font-weight:800;letter-spacing:1px;color:#fff;background:#0d1017;border:1px dashed var(--line);border-radius:var(--r-sm);padding:10px 12px;margin:10px 0;text-align:center;direction:ltr}
+.coach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.coach-card{display:grid;grid-template-columns:104px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.coach-card img{width:104px;height:104px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
+.coach-card h3{margin:0;font-size:1.05rem}
+.coach-card .role{color:var(--gold);font-size:.82rem;font-weight:800}
+.coach-card .num{direction:ltr;text-align:left;color:#fff;font-weight:800;letter-spacing:.5px}
+@media(max-width:520px){.coach-card{grid-template-columns:1fr}.coach-card img{width:100%;height:180px}}
+
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;overflow:hidden}
+.faq-item summary{padding:16px 18px;cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--gold);font-size:1.3rem;line-height:1}
+.faq-item[open] summary::after{content:"–"}
+.faq-item[open] summary{border-bottom:1px solid var(--line);background:#111621}
+.faq-item .ans{padding:14px 18px;color:#c6cfdf;font-size:.92rem}
+
+.invoice-tools{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:18px}
+.invoice{background:#fff;color:#14181f;border-radius:14px;overflow:hidden;box-shadow:var(--sh);max-width:900px;margin-inline:auto;border:1px solid #e4e7ee;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.inv-head{background:linear-gradient(120deg,#a30f20 0%,#e0192f 55%,#7d0c1a 100%);color:#fff;padding:22px 26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+.inv-head .logo{display:flex;align-items:center;gap:12px}
+.inv-head .mark{width:52px;height:52px;border-radius:14px;background:#12060a;display:grid;place-items:center;border:2px solid #f5c451;font-weight:900;color:#f5c451}
+.inv-head h2{margin:0;font-size:1.3rem;letter-spacing:.4px}
+.inv-head small{display:block;color:#ffe0a3;letter-spacing:.24em;font-size:.68rem;font-weight:700}
+.inv-head .inv-meta{text-align:left;font-size:.86rem;line-height:1.9;direction:ltr}
+.inv-bar{height:6px;background:linear-gradient(90deg,#f5c451,#e0192f,#f5c451)}
+.inv-body{padding:24px 26px}
+.inv-parties{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+@media(max-width:640px){.inv-parties{grid-template-columns:1fr}}
+.inv-box{border:1px solid #e4e7ee;border-radius:12px;padding:14px 16px;background:#fafbfe}
+.inv-box b{display:block;color:#a30f20;font-size:.8rem;letter-spacing:.1em;margin-bottom:6px}
+.inv-box span{display:block;font-size:.9rem;color:#2b3140}
+table.inv-table{width:100%;border-collapse:collapse;margin:6px 0 18px}
+table.inv-table th{background:#111621;color:#f5c451;padding:11px 12px;font-size:.84rem;text-align:right}
+table.inv-table td{padding:11px 12px;border-bottom:1px solid #eceff5;font-size:.9rem}
+table.inv-table tbody tr:nth-child(even) td{background:#f7f8fc}
+table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
+.inv-totals{display:flex;justify-content:flex-end}
+.inv-totals .box{width:min(380px,100%);border:1px solid #e4e7ee;border-radius:12px;overflow:hidden}
+.inv-totals .row{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #eceff5;font-size:.92rem}
+.inv-totals .row.grand{background:linear-gradient(90deg,#a30f20,#e0192f);color:#fff;font-weight:900;font-size:1.05rem;border:0}
+.inv-totals .row .v{direction:ltr}
+.inv-pay{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.inv-pay{grid-template-columns:1fr}}
+.inv-pay .box{border:1px dashed #d9c089;background:#fffdf5;border-radius:12px;padding:14px 16px}
+.inv-pay .box b{color:#a30f20;display:block;margin-bottom:6px}
+.inv-pay .box .n{font-family:Consolas,monospace;font-size:1.08rem;font-weight:800;direction:ltr;color:#14181f}
+.inv-notes{margin-top:20px;background:#f7f8fc;border:1px solid #eceff5;border-radius:12px;padding:14px 16px;font-size:.86rem;color:#3a4253}
+.inv-foot{margin-top:22px;background:#111621;color:#dfe4ef;padding:16px 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.84rem}
+.inv-foot b{color:#f5c451}
+.inv-sign{margin-top:26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.85rem;color:#3a4253}
+.inv-sign div{border-top:1px dashed #c9cfdb;padding-top:8px;min-width:180px}
+
+@media print{
+  @page{size:A4;margin:10mm}
+  body{background:#fff !important;color:#000}
+  body::before{display:none !important}
+  .no-print,.site-header,.topbar,.site-footer,.float-wa,.invoice-tools,.page-hero{display:none !important}
+  .container{width:100%;margin:0}
+  .section{padding:0}
+  .invoice{box-shadow:none;border:0;border-radius:0;max-width:100%;margin:0}
+  .inv-head{padding:18px 20px;background:#a30f20 !important}
+  .inv-body{padding:16px 20px}
+  .inv-foot{padding:12px 20px}
+  table.inv-table th,table.inv-table td{padding:8px 10px}
+  .inv-totals .row.grand{background:#a30f20 !important;color:#fff !important}
+  .inv-bar{background:#f5c451 !important}
+  a{color:#000;text-decoration:none}
+}
+.mt0{margin-top:0}.mt1{margin-top:10px}.mt2{margin-top:20px}.mt3{margin-top:30px}
+.mb0{margin-bottom:0}.mb2{margin-bottom:20px}
+.hide{display:none !important}
+.note{background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.3);border-radius:var(--r-sm);padding:12px 14px;font-size:.87rem;color:#f0e3c2}
+.ok-note{background:rgba(39,192,122,.1);border-color:rgba(39,192,122,.35);color:#c8f2dc}
+</style>
+</head>
+<body>
+
+
+
+<!-- ============ الهيدر ============ -->
+<header class="site-header no-print">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark"><span>E&amp;H</span></span>
+      <span class="brand-text"><b>E&amp;H STORE</b><small>SPORT WEAR</small></span>
+    </a>
+    <nav class="menu" id="mainMenu">
+      <a href="#home" data-page="home">الرئيسية</a>
+      <a href="#shop" data-page="shop">المتجر</a>
+      <a href="#kungfu" data-page="kungfu">كونغ فو</a>
+      <a href="#boxing" data-page="boxing">ملاكمه</a>
+      <a href="#sportswear" data-page="sportswear">ملابس رياضيه</a>
+      <a href="#equipment" data-page="equipment">أدوات ومعدات</a>
+      <a href="#offers" data-page="offers">العروض</a>
+      <a href="#payment" data-page="payment">طرق الدفع</a>
+      <a href="#shipping" data-page="shipping">الشحن والاستبدال</a>
+      <a href="#faq" data-page="faq">أسئلة شائعة</a>
+      <a href="#about" data-page="about">من نحن</a>
+      <a href="#contact" data-page="contact">تواصل معنا</a>
+      <a href="#photos" data-page="photos">دليل الصور</a>
+      <a href="#invoice" data-page="invoice">الفاتورة</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="cart-btn" href="#cart">🛒 <span>سلة الطلب</span> <span class="cart-count" data-cart-count>0</span></a>
+      <button class="burger" aria-label="القائمة">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= الصفحة الرئيسية ================= -->
+<section class="page" id="page-home">
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">🥋 MARTIAL ARTS &amp; SPORTS GEAR</span>
+        <h1>كل أدوات الفنون القتالية <em>في مكان واحد</em></h1>
+        <p class="lead">بدل كونغ فو، قفازات ملاكمه، ملابس تدريب بشعار <b>E&amp;H STORE SPORT WEAR</b>، وأدوات ومعدات جيم — بجودة عالية وأسعار مناسبة، وتدريب بإشراف كابتن هشام وليد (كونغ فو) وكابتن اياد الشربيني (ملاكمه).</p>
+        <div class="hero-badges">
+          <span>✔ أصلية ومضمونة</span><span>✔ دفع انستا باي / فودافون كاش</span>
+          <span>✔ واتساب فوري</span><span>✔ فاتورة PDF للطباعة</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-red btn-lg" href="#shop">تسوّق الآن 🛍️</a>
+          <a class="btn btn-wa btn-lg" target="_blank" href="https://wa.me/201016946303?text=مرحبًا، أريد الاستفسار عن منتجات E&H STORE SPORT WEAR">واتساب فوري</a>
+          <a class="btn btn-ghost btn-lg" href="#offers">العروض 🔥</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="frame"><img class="ph-img" alt="E&amp;H STORE SPORT WEAR — opa.jpg"></div>
+        <div class="hero-stat">
+          <div><b>+500</b><small>عميل سعيد</small></div>
+          <div><b>32</b><small>منتج متاح</small></div>
+          <div><b>24/7</b><small>رد واتساب</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section-sm features">
+    <div class="feature"><div class="ico">🥋</div><b>متخصصون في الفنون القتالية</b><span>كل المعدات مختارة ومجرّبة داخل التمرين.</span></div>
+    <div class="feature"><div class="ico">🚚</div><b>شحن سريع</b><span>توصيل لكل المحافظات ودفع عند الاستلام.</span></div>
+    <div class="feature"><div class="ico">🧾</div><b>فاتورة PDF</b><span>فاتورة رسمية قابلة للطباعة والحفظ.</span></div>
+    <div class="feature"><div class="ico">💳</div><b>دفع مرن</b><span>انستا باي — فودافون كاش — كاش عند الاستلام.</span></div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head">
+      <div><p class="eyebrow">SHOP BY CATEGORY</p><h2>أقسام المتجر</h2></div>
+      <p class="muted">اختر القسم المناسب وابدأ التسوق فورًا</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="#kungfu"><img class="ph-img" alt="قسم الكونغ فو"><div class="body"><h3>كونغ فو — KUNG FU</h3><p>بدل، أحزمة، أسلحة تدريب ووسائد ومجسمات.</p><span class="go">تصفح القسم ←</span></div></a>
+      <a class="cat-card" href="#boxing"><img class="ph-img" alt="قسم الملاكمه"><div class="body"><h3>ملاكمه — BOXING</h3><p>قفازات، أكياس، ملفات يد، واقيات ولو كيك باد.</p><span class="go">تصفح القسم ←</span></div></a>
+      <a class="cat-card" href="#sportswear"><img class="ph-img" alt="قسم الملابس الرياضيه"><div class="body"><h3>ملابس رياضيه — SPORT WEAR</h3><p>تيشيرتات، هودي، تراك سوت وبناطيل بشعار E&amp;H.</p><span class="go">تصفح القسم ←</span></div></a>
+      <a class="cat-card" href="#equipment"><img class="ph-img" alt="قسم الأدوات والمعدات"><div class="body"><h3>أدوات ومعدات — EQUIPMENT</h3><p>حبال مقاومة، دمبل، أرضيات، تايمر جولات.</p><span class="go">تصفح القسم ←</span></div></a>
+    </div>
+  </div>
+
+  <div class="container section-sm">
+    <div class="section-head">
+      <div><p class="eyebrow">BEST SELLERS</p><h2>الأكثر مبيعًا والعروض</h2></div>
+      <a class="btn btn-ghost btn-sm" href="#shop">كل المنتجات ←</a>
+    </div>
+    <div class="grid-products" id="homeFeatured"></div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head">
+      <div><p class="eyebrow">OUR COACHES</p><h2>تواصل مع الكابتن مباشرة</h2></div>
+      <p class="muted">اضغط واتساب لفتح المحادثة فورًا، أو اتصال للتحويل المباشر</p>
+    </div>
+    <div class="coach-grid">
+      <div class="coach-card">
+        <img class="ph-img" alt="كابتن هشام وليد">
+        <div>
+          <span class="role">مدرب كونغ فو — KUNG FU COACH</span>
+          <h3>كابتن هشام وليد</h3>
+          <div class="num">01016946303</div>
+          <div class="btn-row mt1">
+            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا كابتن هشام، أريد الاستفسار عن الكونغ فو والمنتجات">واتساب</a>
+            <a class="btn btn-call btn-sm" href="tel:+201016946303">اتصال</a>
+          </div>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="ph-img" alt="كابتن اياد الشربيني">
+        <div>
+          <span class="role">مدرب ملاكمه — BOXING COACH</span>
+          <h3>كابتن اياد الشربيني</h3>
+          <div class="num">01557587871</div>
+          <div class="btn-row mt1">
+            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، أريد الاستفسار عن الملاكمه والمنتجات">واتساب</a>
+            <a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section-sm">
+    <div class="section-head">
+      <div><p class="eyebrow">PAYMENT METHODS</p><h2>وسائل الدفع المتاحة</h2></div>
+      <a class="btn btn-ghost btn-sm" href="#payment">تفاصيل الدفع ←</a>
+    </div>
+    <div class="pay-grid">
+      <div class="pay-card">
+        <span class="tag">INSTAPAY — تحويل مباشر</span>
+        <h3 class="mb0">انستا باي</h3>
+        <p class="muted">حوّل المبلغ على الرقم التالي ثم أرسل صورة التحويل واتساب.</p>
+        <div class="num">01016946303</div>
+        <div class="btn-row">
+          <button class="btn btn-gold btn-sm" type="button" data-copy="01016946303">نسخ الرقم</button>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=تم تحويل مبلغ انستا باي — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+        </div>
+      </div>
+      <div class="pay-card">
+        <span class="tag">VODAFONE CASH</span>
+        <h3 class="mb0">فودافون كاش</h3>
+        <p class="muted">حوّل على محفظة فودافون كاش ثم أرسل صورة العملية واتساب.</p>
+        <div class="num">01557587871</div>
+        <div class="btn-row">
+          <button class="btn btn-gold btn-sm" type="button" data-copy="01557587871">نسخ الرقم</button>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+        </div>
+      </div>
+      <div class="pay-card">
+        <span class="tag">CASH ON DELIVERY</span>
+        <h3 class="mb0">الدفع عند الاستلام</h3>
+        <p class="muted">متاح داخل القاهرة والجيزة — ادفع للمندوب عند وصول الطلب.</p>
+        <div class="num" style="font-size:.95rem">CAIRO &amp; GIZA</div>
+        <a class="btn btn-ghost btn-sm" href="#shipping">تفاصيل التوصيل</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section-sm">
+    <div class="note">
+      🧾 <b>فاتورة قابلة للطباعة PDF:</b> بعد إتمام الطلب تُنشئ لك الصفحة فاتورة رسمية بألوان المتجر — اضغط «طباعة / حفظ PDF» واختر <b>Save as PDF</b>، أو أرسلها واتساب للكابتن مباشرة.
+      <div class="btn-row mt1">
+        <a class="btn btn-red btn-sm" href="#cart">إنشاء طلب / فاتورة</a>
+        <a class="btn btn-ghost btn-sm" href="#invoice">عرض نموذج الفاتورة</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head">
+      <div><p class="eyebrow">SITE MAP</p><h2>كل صفحات المتجر</h2></div>
+      <p class="muted">كل الصفحات داخل نفس الملف — تنتقل بالضغط بدون تحميل جديد</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="#shop"><div class="body"><h3>🛍️ المتجر — كل المنتجات</h3><p>بحث وفلترة بين 32 منتج.</p></div></a>
+      <a class="cat-card" href="#kungfu"><div class="body"><h3>🥋 قسم الكونغ فو</h3><p>بدل، أحزمة، أسلحة تدريب.</p></div></a>
+      <a class="cat-card" href="#boxing"><div class="body"><h3>🥊 قسم الملاكمه</h3><p>قفازات، أكياس، واقيات.</p></div></a>
+      <a class="cat-card" href="#sportswear"><div class="body"><h3>👕 الملابس الرياضيه</h3><p>تيشيرتات وهودي وتراك سوت.</p></div></a>
+      <a class="cat-card" href="#equipment"><div class="body"><h3>🏋️ الأدوات والمعدات</h3><p>معدات تدريب ولياقة.</p></div></a>
+      <a class="cat-card" href="#offers"><div class="body"><h3>🔥 العروض والخصومات</h3><p>أقوى عروض المتجر.</p></div></a>
+      <a class="cat-card" href="#product/kf-01"><div class="body"><h3>📄 صفحة منتج</h3><p>تفاصيل، مقاسات، وإضافة للطلب.</p></div></a>
+      <a class="cat-card" href="#cart"><div class="body"><h3>🧺 سلة الطلب والدفع</h3><p>بيانات العميل وطريقة الدفع.</p></div></a>
+      <a class="cat-card" href="#invoice"><div class="body"><h3>🧾 الفاتورة (PDF)</h3><p>فاتورة بألوان المتجر قابلة للطباعة.</p></div></a>
+      <a class="cat-card" href="#payment"><div class="body"><h3>💳 طرق الدفع</h3><p>انستا باي وفودافون كاش وكاش.</p></div></a>
+      <a class="cat-card" href="#shipping"><div class="body"><h3>🚚 الشحن والاستبدال</h3><p>مواعيد التسليم وسياسة الاستبدال.</p></div></a>
+      <a class="cat-card" href="#faq"><div class="body"><h3>❓ الأسئلة الشائعة</h3><p>إجابات سريعة لأهم الاستفسارات.</p></div></a>
+      <a class="cat-card" href="#about"><div class="body"><h3>ℹ️ من نحن</h3><p>قصة المتجر والمدربين.</p></div></a>
+      <a class="cat-card" href="#contact"><div class="body"><h3>📞 تواصل معنا</h3><p>واتساب واتصال فوري.</p></div></a>
+      <a class="cat-card" href="#photos"><div class="body"><h3>🖼️ دليل الصور</h3><p>أسماء الصور المطلوبة لكل منتج.</p></div></a>
+      <a class="cat-card" href="#terms"><div class="body"><h3>📜 الشروط والأحكام</h3><p>سياسة الشراء والاستبدال والضمان.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= المتجر ================= -->
+<section class="page" id="page-shop" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← المتجر</p>
+    <h1>كل منتجات المتجر</h1>
+    <p class="muted mb0">32 منتج في الكونغ فو، الملاكمه، الملابس الرياضيه، والأدوات والمعدات — ابحث أو فلتر ثم اضغط «أضف للطلب».</p>
+  </div></div>
+  <div class="container section">
+    <div class="filters">
+      <div class="search-box">🔎 <input id="q" type="text" placeholder="ابحث باسم المنتج... مثل: قفازات، بدلة، حبل"></div>
+      <select class="chip" id="sort" style="padding:9px 14px">
+        <option value="def">الترتيب الافتراضي</option>
+        <option value="low">الأرخص أولًا</option>
+        <option value="high">الأغلى أولًا</option>
+        <option value="name">أبجديًا</option>
+      </select>
+    </div>
+    <div class="filters" id="chips">
+      <button class="chip active" data-cat="all">الكل</button>
+      <button class="chip" data-cat="kungfu">🥋 كونغ فو</button>
+      <button class="chip" data-cat="boxing">🥊 ملاكمه</button>
+      <button class="chip" data-cat="clothes">👕 ملابس رياضيه</button>
+      <button class="chip" data-cat="equipment">🏋️ أدوات ومعدات</button>
+    </div>
+    <p class="muted" id="resultCount"></p>
+    <div class="grid-products" id="allGrid"></div>
+    <div class="note mt2">
+      💬 <b>مش لاقي اللي تدور عليه؟</b> كلّم الكابتن واتساب ونوفّره لك:
+      <div class="btn-row mt1">
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أبحث عن منتج غير موجود في المتجر">كابتن هشام وليد — كونغ فو</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أبحث عن منتج غير موجود في المتجر">كابتن اياد الشربيني — ملاكمه</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= كونغ فو ================= -->
+<section class="page" id="page-kungfu" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← <a href="#shop">المتجر</a> ← كونغ فو</p>
+    <h1>🥋 قسم الكونغ فو — KUNG FU</h1>
+    <p class="muted mb0">بدل وأحزمة رسمية، أسلحة تدريب، وسائد ومجسمات — بإشراف كابتن هشام وليد (مدرب كونغ فو).</p>
+  </div></div>
+  <div class="container section-sm">
+    <div class="coach-card">
+      <img class="ph-img" alt="كابتن هشام وليد">
+      <div>
+        <span class="role">مدرب كونغ فو — KUNG FU COACH</span>
+        <h3>كابتن هشام وليد</h3>
+        <p class="muted mb0">للاستفسار عن المنتجات واختيار المقاس المناسب وحجز التدريب — رد فوري واتساب أو اتصال مباشر.</p>
+        <div class="num mt1">01016946303</div>
+        <div class="btn-row mt1">
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا كابتن هشام، استفسار عن قسم الكونغ فو">واتساب فوري</a>
+          <a class="btn btn-call btn-sm" href="tel:+201016946303">اتصال مباشر</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">KUNG FU GEAR</p><h2>منتجات الكونغ فو</h2></div><p class="muted" id="count-kungfu"></p></div>
+    <div class="grid-products" id="grid-kungfu"></div>
+    <div class="note mt2">📄 <b>نصيحة من الكابتن:</b> البدلة القطنية للتدريب اليومي والخفيفة للبطولات، والحزام يتغيّر مع درجة التقدّم — أرسل لنا درجتك واتساب ونرشّح لك المقاس واللون.</div>
+  </div>
+</section>
+
+<!-- ================= ملاكمه ================= -->
+<section class="page" id="page-boxing" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← <a href="#shop">المتجر</a> ← ملاكمه</p>
+    <h1>🥊 قسم الملاكمه — BOXING</h1>
+    <p class="muted mb0">قفازات جلدية، أكياس تدريب، ملفات يد، واقيات رأس وأسنان، ولو كيك باد — بإشراف كابتن اياد الشربيني.</p>
+  </div></div>
+  <div class="container section-sm">
+    <div class="coach-card">
+      <img class="ph-img" alt="كابتن اياد الشربيني">
+      <div>
+        <span class="role">مدرب ملاكمه — BOXING COACH</span>
+        <h3>كابتن اياد الشربيني</h3>
+        <p class="muted mb0">يساعدك في اختيار مقاس القفاز المناسب والوزن والخطة التدريبية — واتساب أو اتصال فوري.</p>
+        <div class="num mt1">01557587871</div>
+        <div class="btn-row mt1">
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، استفسار عن قسم الملاكمه">واتساب فوري</a>
+          <a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال مباشر</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">BOXING GEAR</p><h2>منتجات الملاكمه</h2></div><p class="muted" id="count-boxing"></p></div>
+    <div class="grid-products" id="grid-boxing"></div>
+    <div class="note mt2">📏 <b>دليل مقاس القفاز:</b> للأوزان الخفيفة والكيس 10–12 أونصة، وللسبار والتدريب المتقدم 14–16 أونصة. مش متأكد؟ كلّم الكابتن واكتب وزنك وطولك.</div>
+  </div>
+</section>
+
+<!-- ================= ملابس رياضيه ================= -->
+<section class="page" id="page-sportswear" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← <a href="#shop">المتجر</a> ← ملابس رياضيه</p>
+    <h1>👕 الملابس الرياضيه — SPORT WEAR</h1>
+    <p class="muted mb0">تيشيرتات وهودي وتراك سوت بشعار <b>E&amp;H STORE SPORT WEAR</b> — مقاسات من S إلى XXL وخامات تتحمّل التمرين.</p>
+  </div></div>
+  <div class="container section-sm features">
+    <div class="feature"><div class="ico">🧵</div><b>خامات تتنفس</b><span>قطن مخلوط يمتص العرق ويجف سريعًا.</span></div>
+    <div class="feature"><div class="ico">📐</div><b>مقاسات دقيقة</b><span>من S إلى XXL مع جدول مقاسات واضح.</span></div>
+    <div class="feature"><div class="ico">🖨️</div><b>طبعة ثابتة</b><span>شعار لا يبهت مع الغسيل المتكرر.</span></div>
+    <div class="feature"><div class="ico">🔄</div><b>استبدال المقاس</b><span>خلال 3 أيام إذا لم يناسب المقاس.</span></div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">APPAREL</p><h2>منتجات الملابس الرياضيه</h2></div><p class="muted" id="count-clothes"></p></div>
+    <div class="grid-products" id="grid-clothes"></div>
+    <div class="table-scroll mt2">
+      <table class="data">
+        <thead><tr><th>المقاس</th><th>الصدر (سم)</th><th>الطول (سم)</th><th>مناسب لوزن</th></tr></thead>
+        <tbody>
+          <tr><td>S</td><td>96</td><td>68</td><td>50 – 60 كجم</td></tr>
+          <tr><td>M</td><td>102</td><td>70</td><td>60 – 72 كجم</td></tr>
+          <tr><td>L</td><td>108</td><td>72</td><td>72 – 85 كجم</td></tr>
+          <tr><td>XL</td><td>114</td><td>74</td><td>85 – 95 كجم</td></tr>
+          <tr><td>XXL</td><td>120</td><td>76</td><td>95 – 110 كجم</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted mt1">جدول تقريبي — لو بين مقاسين كلّمنا واتساب ونساعدك في الاختيار الصحيح.</p>
+  </div>
+</section>
+
+<!-- ================= أدوات ومعدات ================= -->
+<section class="page" id="page-equipment" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← <a href="#shop">المتجر</a> ← أدوات ومعدات</p>
+    <h1>🏋️ الأدوات والمعدات — EQUIPMENT</h1>
+    <p class="muted mb0">كل معدات اللياقة وتقوية الجذع والسرعة: حبال مقاومة، دمبل، أرضيات تدريب، تايمر جولات، وبوكس قفز.</p>
+  </div></div>
+  <div class="container section-sm features">
+    <div class="feature"><div class="ico">🛡️</div><b>أمان التدريب</b><span>أرضيات ممتصة للصدمات تقلل الإصابات.</span></div>
+    <div class="feature"><div class="ico">💪</div><b>مقاومات متدرجة</b><span>طقم حبال 5 مستويات لكل الأجسام.</span></div>
+    <div class="feature"><div class="ico">⏱️</div><b>تنظيم الجولات</b><span>تايمر بجرس عالي للملاكمة والكونغ فو.</span></div>
+    <div class="feature"><div class="ico">🏠</div><b>مناسب للبيت</b><span>معدات عملية للتدريب المنزلي.</span></div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">TRAINING EQUIPMENT</p><h2>منتجات الأدوات والمعدات</h2></div><p class="muted" id="count-equipment"></p></div>
+    <div class="grid-products" id="grid-equipment"></div>
+    <div class="note mt2">
+      🤝 <b>للجيمات والمراكز الرياضية:</b> أسعار خاصة للكميات الكبيرة وتجهيز صالات التدريب بالكامل — كلّم الكابتن واطلب عرض سعر.
+      <div class="btn-row mt1">
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (كونغ فو)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (ملاكمه)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= العروض ================= -->
+<section class="page" id="page-offers" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← العروض</p>
+    <h1>🔥 العروض والخصومات</h1>
+    <p class="muted mb0">أقوى عروض المتجر على الأدوات والملابس — الكميات محدودة والعروض سارية حتى نفاد المخزون.</p>
+  </div></div>
+  <div class="container section-sm features">
+    <div class="feature"><div class="ico">🏷️</div><b>خصم حتى 20%</b><span>على المنتجات المختارة.</span></div>
+    <div class="feature"><div class="ico">🚚</div><b>شحن مجاني</b><span>للطلبات فوق 2000 ج.م.</span></div>
+    <div class="feature"><div class="ico">🎁</div><b>هدية تدريب</b><span>ملف يد أو جوارب مع كل طقم كامل.</span></div>
+    <div class="feature"><div class="ico">💳</div><b>دفع سهل</b><span>انستا باي / فودافون كاش / كاش.</span></div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">HOT DEALS</p><h2>منتجات عليها خصم الآن</h2></div><p class="muted" id="count-offers"></p></div>
+    <div class="grid-products" id="grid-offers"></div>
+    <div class="note mt2">
+      🎁 <b>عرض الطقم الكامل:</b> بدلة كونغ فو + حزام + ملف يد = هدية جوارب رياضية. وقفازات + كيس تدريب = خصم إضافي 5%.
+      <div class="btn-row mt1">
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (كونغ فو)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (ملاكمه)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= صفحة منتج ================= -->
+<section class="page" id="page-product" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← <a href="#shop">المتجر</a> ← <span id="crumbCat">المنتج</span></p>
+  </div></div>
+  <div class="container section pd-grid" id="pd"></div>
+  <div class="container section-sm">
+    <div class="section-head"><div><p class="eyebrow">RELATED</p><h2>منتجات مشابهة</h2></div></div>
+    <div class="grid-products" id="related"></div>
+  </div>
+</section>
+
+<!-- ================= سلة الطلب ================= -->
+<section class="page" id="page-cart" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← سلة الطلب</p>
+    <h1>🧺 سلة الطلب والدفع</h1>
+    <p class="muted mb0">راجع أصنافك، اكتب بياناتك، اختر طريقة الدفع، ثم اضغط «تأكيد الطلب» لإصدار الفاتورة القابلة للطباعة PDF.</p>
+  </div></div>
+  <div class="container section cart-wrap">
+    <div>
+      <div class="table-scroll">
+        <table class="data">
+          <thead><tr><th>الصنف</th><th>المقاس</th><th>السعر</th><th>الكمية</th><th>الإجمالي</th><th></th></tr></thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+      <p class="mt1">
+        <a class="btn btn-ghost btn-sm" href="#shop">← أكمل التسوق</a>
+        <button class="btn btn-ghost btn-sm" id="clearCart" type="button">🗑️ تفريغ السلة</button>
+      </p>
+      <div class="form-card mt2">
+        <h3 class="mt0">بيانات العميل</h3>
+        <div class="form-grid">
+          <div class="field"><label>الاسم بالكامل *</label><input id="cName" type="text" placeholder="اكتب اسمك"></div>
+          <div class="field"><label>رقم الموبايل / واتساب *</label><input id="cPhone" type="tel" placeholder="01xxxxxxxxx" dir="ltr"></div>
+          <div class="field"><label>المحافظة / المدينة</label><input id="cCity" type="text" placeholder="مثال: القاهرة — مدينة نصر"></div>
+          <div class="field"><label>طريقة التسليم</label>
+            <select id="cDeliver"><option>توصيل للعنوان</option><option>استلام من المتجر</option></select>
+          </div>
+        </div>
+        <div class="field mt1"><label>العنوان بالتفصيل</label><input id="cAddress" type="text" placeholder="الشارع — رقم العقار — علامة مميزة"></div>
+        <div class="field mt1"><label>ملاحظات على الطلب</label><textarea id="cNotes" rows="3" placeholder="مثال: يرجى الاتصال قبل التوصيل"></textarea></div>
+        <h3 class="mt3">طريقة تأكيد الدفع</h3>
+        <div class="radio-row">
+          <label class="radio-card"><input type="radio" name="pay" value="انستا باي — تحويل مباشر (01016946303)" checked> انستا باي — InstaPay</label>
+          <label class="radio-card"><input type="radio" name="pay" value="فودافون كاش (01557587871)"> فودافون كاش — Vodafone Cash</label>
+          <label class="radio-card"><input type="radio" name="pay" value="الدفع عند الاستلام"> دفع عند الاستلام</label>
+        </div>
+        <div class="note mt2">💳 رقم انستا باي: <b dir="ltr">01016946303</b> — رقم فودافون كاش: <b dir="ltr">01557587871</b> — بعد التحويل أرسل صورة العملية واتساب لتأكيد الطلب فورًا.</div>
+      </div>
+    </div>
+    <aside class="summary">
+      <h3 class="mt0">ملخص الطلب</h3>
+      <div class="sum-row"><span>عدد الأصناف</span><span id="sCount">0</span></div>
+      <div class="sum-row"><span>الإجمالي قبل الشحن</span><span id="sSub">0 ج.م</span></div>
+      <div class="sum-row"><span>الشحن</span><span id="sShip">0 ج.م</span></div>
+      <div class="sum-row total"><span>الإجمالي</span><span id="sTotal">0 ج.م</span></div>
+      <p class="muted mt1" style="font-size:.82rem">شحن مجاني للطلبات فوق 2000 ج.م — الشحن داخل القاهرة والجيزة 60 ج.م.</p>
+      <button class="btn btn-red btn-block btn-lg mt1" id="confirm" type="button">✅ تأكيد الطلب وإصدار الفاتورة</button>
+      <button class="btn btn-wa btn-block mt1" id="waCart" type="button">💬 إرسال الطلب واتساب</button>
+      <a class="btn btn-ghost btn-block mt1" href="#invoice">🧾 عرض الفاتورة</a>
+      <p class="muted mt1" style="font-size:.8rem">بالضغط على تأكيد الطلب أنت توافق على <a class="gold" href="#terms">الشروط والأحكام</a>.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= الفاتورة ================= -->
+<section class="page" id="page-invoice" hidden>
+  <div class="page-hero no-print"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← الفاتورة</p>
+    <h1>🧾 فاتورة E&amp;H STORE — SPORT WEAR</h1>
+    <p class="muted mb0">فاتورة رسمية بألوان المتجر — اضغط «طباعة / حفظ PDF» ثم اختر <b>Save as PDF</b>، أو أرسلها واتساب للكابتن مباشرة.</p>
+  </div></div>
+  <div class="container section">
+    <div class="invoice-tools no-print">
+      <button class="btn btn-red" id="printBtn" type="button">🖨️ طباعة / حفظ PDF</button>
+      <button class="btn btn-wa" id="waKungfu" type="button">💬 إرسال (كونغ فو)</button>
+      <button class="btn btn-wa" id="waBoxing" type="button">💬 إرسال (ملاكمه)</button>
+      <a class="btn btn-ghost" href="#cart">🧺 طلب جديد</a>
+      <a class="btn btn-ghost" href="#shop">🛍️ المتجر</a>
+    </div>
+    <div id="invoiceNote" class="note no-print hide"></div>
+    <div class="invoice" id="invoice"></div>
+  </div>
+</section>
+
+<!-- ================= طرق الدفع ================= -->
+<section class="page" id="page-payment" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← طرق الدفع</p>
+    <h1>💳 وسائل الدفع</h1>
+    <p class="muted mb0">انستا باي (تحويل مباشر)، فودافون كاش، أو الدفع عند الاستلام — وكل طلب يصدر فاتورة رسمية PDF.</p>
+  </div></div>
+  <div class="container section pay-grid">
+    <div class="pay-card">
+      <span class="tag">1 — INSTAPAY — تحويل مباشر</span>
+      <h3 class="mb0">انستا باي</h3>
+      <p class="muted">أسرع طريقة — تحويل فوري لحظي بين البنوك والتطبيقات.</p>
+      <div class="num">01016946303</div>
+      <div class="btn-row">
+        <button class="btn btn-gold btn-sm" type="button" data-copy="01016946303">نسخ الرقم</button>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=تم تحويل مبلغ انستا باي — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+      </div>
+    </div>
+    <div class="pay-card">
+      <span class="tag">2 — VODAFONE CASH</span>
+      <h3 class="mb0">فودافون كاش</h3>
+      <p class="muted">حوّل من محفظتك إلى الرقم التالي في دقائق.</p>
+      <div class="num">01557587871</div>
+      <div class="btn-row">
+        <button class="btn btn-gold btn-sm" type="button" data-copy="01557587871">نسخ الرقم</button>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+      </div>
+    </div>
+    <div class="pay-card">
+      <span class="tag">3 — CASH ON DELIVERY</span>
+      <h3 class="mb0">الدفع عند الاستلام</h3>
+      <p class="muted">متاح داخل القاهرة والجيزة — تدفع للمندوب عند استلام الأوردر.</p>
+      <div class="num" style="font-size:1rem">CAIRO &amp; GIZA</div>
+      <a class="btn btn-ghost btn-sm" href="#shipping">تفاصيل الشحن</a>
+    </div>
+  </div>
+  <div class="container section-sm">
+    <div class="section-head"><div><p class="eyebrow">STEPS</p><h2>خطوات إتمام الطلب</h2></div></div>
+    <div class="features">
+      <div class="feature"><div class="ico">1️⃣</div><b>اختر منتجاتك</b><span>أضف الأصناف والمقاسات لسلة الطلب.</span></div>
+      <div class="feature"><div class="ico">2️⃣</div><b>أكّد الطلب</b><span>اكتب بياناتك واختر طريقة الدفع ثم «تأكيد الطلب».</span></div>
+      <div class="feature"><div class="ico">3️⃣</div><b>حوّل المبلغ</b><span>انستا باي أو فودافون كاش على الرقم المحدد.</span></div>
+      <div class="feature"><div class="ico">4️⃣</div><b>أرسل الإشعار</b><span>ابعت صورة التحويل واتساب لتأكيد الطلب والشحن.</span></div>
+    </div>
+    <div class="btn-row mt2">
+      <a class="btn btn-red" href="#cart">ابدأ الطلب الآن</a>
+      <a class="btn btn-ghost" href="#invoice">عرض / طباعة الفاتورة</a>
+    </div>
+    <div class="note mt2">🔒 <b>تنبيه أمان:</b> أرقام الدفع الوحيدة المعتمدة هي <b dir="ltr">01016946303</b> (انستا باي) و <b dir="ltr">01557587871</b> (فودافون كاش). لا تحوّل على أي رقم آخر يزعم أنه من المتجر، ولو شكيت كلّمنا واتساب للتأكد قبل التحويل.</div>
+  </div>
+</section>
+
+<!-- ================= الشحن والاستبدال ================= -->
+<section class="page" id="page-shipping" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← الشحن والاستبدال</p>
+    <h1>🚚 الشحن والاستبدال</h1>
+    <p class="muted mb0">مواعيد تسليم واضحة، شحن مجاني للطلبات فوق 2000 ج.م، وسياسة استبدال عادلة خلال 3 أيام.</p>
+  </div></div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">DELIVERY</p><h2>مواعيد وأسعار الشحن</h2></div></div>
+    <div class="table-scroll">
+      <table class="data">
+        <thead><tr><th>المنطقة</th><th>مدة التسليم</th><th>سعر الشحن</th><th>الدفع</th></tr></thead>
+        <tbody>
+          <tr><td>القاهرة والجيزة</td><td>1 – 2 يوم عمل</td><td>60 ج.م</td><td>انستا باي / فودافون كاش / كاش عند الاستلام</td></tr>
+          <tr><td>الإسكندرية والدلتا</td><td>2 – 3 أيام عمل</td><td>75 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
+          <tr><td>الصعيد ومحافظات الوجه القبلي</td><td>3 – 5 أيام عمل</td><td>90 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
+          <tr><td>محافظات أخرى</td><td>3 – 5 أيام عمل</td><td>85 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
+          <tr><td>الطلبات فوق 2000 ج.م</td><td>حسب المنطقة</td><td class="gold">مجاني</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted mt1">الأوزان الثقيلة (كيس ملاكمه / دمبل / أرضيات تدريب) قد يُضاف فرق شحن تحميل بسيط — يتم إخبارك بالمبلغ النهائي قبل الشحن.</p>
+  </div>
+  <div class="container section-sm">
+    <div class="section-head"><div><p class="eyebrow">RETURN POLICY</p><h2>سياسة الاستبدال والإرجاع</h2></div></div>
+    <div class="features">
+      <div class="feature"><div class="ico">🔄</div><b>استبدال المقاس</b><span>خلال 3 أيام من الاستلام والمقاس متوفر.</span></div>
+      <div class="feature"><div class="ico">🧾</div><b>بالفاتورة</b><span>موجودة فاتورتك؟ الاستبدال أسهل وأسرع.</span></div>
+      <div class="feature"><div class="ico">📦</div><b>بحالة أصلية</b><span>المنتج غير مستخدم ومغلف بنفس الشكل.</span></div>
+      <div class="feature"><div class="ico">🛠️</div><b>عيب صناعة</b><span>استبدال فوري مجانًا مع تحمّلنا الشحن.</span></div>
+    </div>
+    <div class="note mt2">❌ <b>غير قابل للاستبدال:</b> أدوات التدريب المستخدمة (قفازات مستعملة، ملفات يد، واقيات أسنان) للأسباب الصحية، والمنتجات المصنوعة بمقاس خاص.</div>
+    <div class="btn-row mt2">
+      <a class="btn btn-wa" target="_blank" href="https://wa.me/201016946303?text=أريد استبدال منتج — رقم الفاتورة: ">واتساب الاستبدال (كونغ فو)</a>
+      <a class="btn btn-wa" target="_blank" href="https://wa.me/201557587871?text=أريد استبدال منتج — رقم الفاتورة: ">واتساب الاستبدال (ملاكمه)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= الأسئلة الشائعة ================= -->
+<section class="page" id="page-faq" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← الأسئلة الشائعة</p>
+    <h1>❓ الأسئلة الشائعة</h1>
+    <p class="muted mb0">أهم 12 سؤال بنجاوب عليهم كل يوم — ولو سؤالك مش موجود كلّمنا واتساب فورًا.</p>
+  </div></div>
+  <div class="container section">
+    <details class="faq-item" open><summary>إزاي أطلب من المتجر؟</summary><div class="ans">اختار المنتج والمقاس واضغط «أضف للطلب»، بعدين افتح سلة الطلب واكتب بياناتك واختر طريقة الدفع و«تأكيد الطلب» — هتظهر لك فاتورة قابلة للطباعة PDF، ويمكنك إرسالها واتساب للكابتن لتأكيد الطلب فورًا.</div></details>
+    <details class="faq-item"><summary>إيه وسائل الدفع المتاحة؟</summary><div class="ans">انستا باي (تحويل مباشر) على رقم <b dir="ltr">01016946303</b> — فودافون كاش على رقم <b dir="ltr">01557587871</b> — والدفع عند الاستلام داخل القاهرة والجيزة.</div></details>
+    <details class="faq-item"><summary>هل الشحن متاح لكل محافظات مصر؟</summary><div class="ans">أيوه، الشحن لكل المحافظات، والشحن مجاني للطلبات فوق 2000 ج.م. التفاصيل في صفحة <a class="gold" href="#shipping">الشحن والاستبدال</a>.</div></details>
+    <details class="faq-item"><summary>كم مدة التوصيل؟</summary><div class="ans">القاهرة والجيزة 1 – 2 يوم عمل، الدلتا والإسكندرية 2 – 3 أيام، الصعيد والمحافظات الأخرى 3 – 5 أيام عمل.</div></details>
+    <details class="faq-item"><summary>أقدر أستبدل المقاس؟</summary><div class="ans">نعم خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية وغير مستخدم مع الفاتورة. الاستبدال لمرة واحدة لكل طلب.</div></details>
+    <details class="faq-item"><summary>الفاتورة بتطلع منها نسخة PDF؟</summary><div class="ans">أيوه — من صفحة <a class="gold" href="#invoice">الفاتورة</a> اضغط «طباعة / حفظ PDF» واختار <b>Save as PDF</b>، هتطلع فاتورة بألوان المتجر جاهزة للطباعة أو الإرسال.</div></details>
+    <details class="faq-item"><summary>مين المدربين الموجودين في المتجر؟</summary><div class="ans"><b>كابتن هشام وليد</b> — مدرب كونغ فو: <span dir="ltr">01016946303</span> — و <b>كابتن اياد الشربيني</b> — مدرب ملاكمه: <span dir="ltr">01557587871</span>. اضغط واتساب أو اتصال من <a class="gold" href="#contact">صفحة التواصل</a>.</div></details>
+    <details class="faq-item"><summary>هل فيه تدريب أو حصص مع الشراء؟</summary><div class="ans">المنتجات تُشترى منفصلة عن الحصص، لكن الكابتن يرشّح لك المقاس المناسب للتمرين ويوجهك في أي استفسار فني عن المعدات.</div></details>
+    <details class="faq-item"><summary>المنتجات أصلية؟</summary><div class="ans">كل المعدات مختارة ومجرّبة من المدربين أنفسهم، ومضمونة ضد عيوب الصناعة مع استبدال مجاني عند وجود عيب.</div></details>
+    <details class="faq-item"><summary>أقدر أدفع مبلغ مقدّم للطلبات الكبيرة؟</summary><div class="ans">للطلبات الثقيلة (كيس ملاكمه / أرضيات / تجهيز جيم) يتم الاتفاق على مقدم بسيط وباقي المبلغ عند التسليم — التفاصيل مع الكابتن واتساب.</div></details>
+    <details class="faq-item"><summary>عندكم عروض وخصومات؟</summary><div class="ans">نعم، عروض مستمرة في صفحة <a class="gold" href="#offers">العروض</a>، وعرض الطقم الكامل (بدلة + حزام + ملف يد) هدية جوارب، وخصم إضافي على تجهيز الصالات.</div></details>
+    <details class="faq-item"><summary>إزاي أتواصل معاكم بسرعة؟</summary><div class="ans">واتساب فوري من أي مكان في الموقع (الزر الأخضر الثابت)، أو اتصال مباشر من الأرقام في <a class="gold" href="#contact">صفحة التواصل</a> — والرد على مدار اليوم.</div></details>
+    <div class="note mt2">لسه عندك سؤال؟ 🥋 كونغ فو: <b dir="ltr">01016946303</b> — 🥊 ملاكمه: <b dir="ltr">01557587871</b>
+      <div class="btn-row mt1">
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=عندي سؤال عن منتجات E&H STORE">واتساب كونغ فو</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=عندي سؤال عن منتجات E&H STORE">واتساب ملاكمه</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= من نحن ================= -->
+<section class="page" id="page-about" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← من نحن</p>
+    <h1>ℹ️ من نحن — E&amp;H STORE SPORT WEAR</h1>
+    <p class="muted mb0">متجر متخصص في أدوات وملابس الفنون القتالية والرياضة، بإدارة وإشراف مدربين حقيقيين من داخل الميدان.</p>
+  </div></div>
+  <div class="container section pd-grid">
+    <div class="pd-media"><img class="ph-img" alt="صورة المتجر"></div>
+    <div>
+      <span class="pill">OUR STORY</span>
+      <h2 class="mt1">قصتنا</h2>
+      <p class="muted">بدأت الفكرة من داخل صالة التدريب: لاعبين كثيرين بيسألوا عن مكان موثوق يجيب بدلة كونغ فو بجودة حقيقية، أو قفازات ملاكمه متقلة وتحمي الإيد فعلًا. فقررنا نعمل <b>E&amp;H STORE — SPORT WEAR</b> يكون متجر متخصص مش مجرد متجر عام: كل منتج بنختاره بنجرّبه قبل ما نعرضه، وكل مقاس بنرشّحه حسب وزن وطول اللاعب.</p>
+      <p class="muted">الأهم عندنا إن العميل يحس إنه بيتكلم مع مدرب مش بياع — يعني نصيحة فنية صحيحة، سعر منطقي، ومنتج يعيش معاك في التمرين لسنين.</p>
+      <div class="features mt2">
+        <div class="feature"><div class="ico">🥋</div><b>تخصص حقيقي</b><span>كونغ فو، ملاكمه، لياقة وتجهيز جيمات.</span></div>
+        <div class="feature"><div class="ico">🧪</div><b>منتجات مُجرّبة</b><span>كل صنف مستخدم قبل عرضه.</span></div>
+        <div class="feature"><div class="ico">🤝</div><b>أرقام حقيقية</b><span>واتساب واتصال مع الكابتن مباشرة.</span></div>
+        <div class="feature"><div class="ico">🧾</div><b>نظام فواتير منظم</b><span>فاتورة رسمية PDF لكل طلب.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container section-sm">
+    <div class="section-head"><div><p class="eyebrow">THE COACHES</p><h2>المدربون المسؤولون</h2></div><p class="muted">اضغط واتساب أو اتصال للتواصل الفوري</p></div>
+    <div class="coach-grid">
+      <div class="coach-card">
+        <img class="ph-img" alt="كابتن هشام وليد">
+        <div><span class="role">مدرب كونغ فو — KUNG FU COACH</span><h3>كابتن هشام وليد</h3><div class="num">01016946303</div>
+          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا كابتن هشام">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201016946303">اتصال</a></div>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="ph-img" alt="كابتن اياد الشربيني">
+        <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3><div class="num">01557587871</div>
+          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= تواصل معنا ================= -->
+<section class="page" id="page-contact" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← تواصل معنا</p>
+    <h1>📞 تواصل معنا</h1>
+    <p class="muted mb0">واتساب يفتح المحادثة فورًا، وزر الاتصال يحوّل على الموبايل مباشرة — اختر الكابتن المناسب لاستفسارك.</p>
+  </div></div>
+  <div class="container section coach-grid">
+    <div class="coach-card">
+      <img class="ph-img" alt="كابتن هشام وليد">
+      <div><span class="role">مدرب كونغ فو — KUNG FU COACH</span><h3>كابتن هشام وليد</h3>
+        <p class="muted mb0">استفسارات الكونغ فو، البدل والأحزمة، مقاسات الملابس، وحجز التدريب.</p>
+        <div class="num mt1">01016946303</div>
+        <div class="btn-row mt1">
+          <a class="btn btn-wa" target="_blank" href="https://wa.me/201016946303?text=مرحبًا كابتن هشام، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
+          <a class="btn btn-call" href="tel:+201016946303">اتصال مباشر</a>
+        </div>
+      </div>
+    </div>
+    <div class="coach-card">
+      <img class="ph-img" alt="كابتن اياد الشربيني">
+      <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3>
+        <p class="muted mb0">استفسارات الملاكمه، مقاسات القفازات، الأكياس والمعدات، وحجز التدريب.</p>
+        <div class="num mt1">01557587871</div>
+        <div class="btn-row mt1">
+          <a class="btn btn-wa" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
+          <a class="btn btn-call" href="tel:+201557587871">اتصال مباشر</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container section-sm pd-grid">
+    <div class="form-card">
+      <h3 class="mt0">ابعت رسالة سريعة (تفتح واتساب تلقائيًا)</h3>
+      <div class="form-grid">
+        <div class="field"><label>اسمك</label><input id="fName" type="text" placeholder="اكتب اسمك"></div>
+        <div class="field"><label>رقم موبايلك</label><input id="fPhone" type="tel" placeholder="01xxxxxxxxx" dir="ltr"></div>
+      </div>
+      <div class="field mt1"><label>نوع الاستفسار</label>
+        <select id="fType"><option>استفسار عن منتج</option><option>مقاس / درجة</option><option>حجز تدريب</option><option>تجهيز صالة / عرض سعر كمية</option><option>متابعة طلب / استبدال</option></select>
+      </div>
+      <div class="field mt1"><label>رسالتك</label><textarea id="fMsg" rows="4" placeholder="اكتب تفاصيل استفسارك..."></textarea></div>
+      <div class="btn-row mt2">
+        <button class="btn btn-wa" id="sendKungfu" type="button">💬 إرسال لكونغ فو</button>
+        <button class="btn btn-wa" id="sendBoxing" type="button">💬 إرسال لملاكمه</button>
+      </div>
+    </div>
+    <div>
+      <div class="pay-card"><span class="tag">WORKING HOURS</span><h3 class="mb0">مواعيد الرد</h3><p class="muted mb0">واتساب: يوميًا من 10 صباحًا حتى 11 مساءً — والرد على الرسائل خارج الوقت في أول وقت متاح.</p></div>
+      <div class="pay-card mt2"><span class="tag">PAYMENT</span><h3 class="mb0">الدفع</h3><p class="mb0 muted">انستا باي:</p><div class="num">01016946303</div><p class="mb0 muted">فودافون كاش:</p><div class="num">01557587871</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= دليل الصور ================= -->
+<section class="page" id="page-photos" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← دليل الصور</p>
+    <h1>🖼️ دليل الصور — مجلد photo/</h1>
+    <p class="muted mb0">كل مكان صورة في المتجر مكتوب عليه اسم الملف المطلوب. هذه النسخة (ملف واحد) تعرض شكل «ضع الصورة هنا» تلقائيًا.</p>
+  </div></div>
+  <div class="container section-sm">
+    <div class="note">
+      في النسخة الكاملة (ملفات منفصلة) ضع صورك داخل مجلد <b>photo</b> بنفس الأسماء المكتوبة بالأسفل وستظهر مباشرة بدل الـ placeholder.
+      المقاسات المقترحة: المنتجات 800×800 — البنرات 1600×900 — اللوجو 512×512 PNG.
+    </div>
+  </div>
+  <div class="container section">
+    <div class="section-head"><div><p class="eyebrow">PRODUCT IMAGES</p><h2>صور المنتجات المطلوبة</h2></div><p class="muted" id="count-photos"></p></div>
+    <div class="grid-products" id="photoGrid"></div>
+  </div>
+  <div class="container section-sm">
+    <div class="section-head"><div><p class="eyebrow">SITE IMAGES</p><h2>صور الموقع والبنرات</h2></div></div>
+    <div class="grid-products" id="sitePhotoGrid"></div>
+  </div>
+</section>
+
+<!-- ================= الشروط والأحكام ================= -->
+<section class="page" id="page-terms" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← الشروط والأحكام</p>
+    <h1>📜 الشروط والأحكام</h1>
+    <p class="muted mb0">قواعد واضحة تحمي العميل والمتجر معًا — الشراء من E&amp;H STORE SPORT WEAR يعني الموافقة عليها.</p>
+  </div></div>
+  <div class="container section">
+    <details class="faq-item" open><summary>1) الطلبات والتأكيد</summary><div class="ans">يُعد الطلب مؤكدًا بعد إرسال بيانات العميل والفاتورة واتساب أو بعد تأكيد التحويل. الأسعار سارية وقت الطلب.</div></details>
+    <details class="faq-item"><summary>2) الأسعار والدفع</summary><div class="ans">الأسعار بالجنيه المصري. طرق الدفع: انستا باي <b dir="ltr">01016946303</b>، فودافون كاش <b dir="ltr">01557587871</b>، أو الدفع عند الاستلام داخل القاهرة والجيزة. يجب إرسال صورة التحويل لتأكيد الطلب.</div></details>
+    <details class="faq-item"><summary>3) الشحن والتسليم</summary><div class="ans">مواعيد التسليم تقديرية وقد تتأخر لأسباب خارجة عن إرادتنا (شركة الشحن / الأحوال الجوية). الوزن الثقيل قد يُضاف إليه فرق تحميل ويتم إخبار العميل قبل الشحن.</div></details>
+    <details class="faq-item"><summary>4) الاستبدال والإرجاع</summary><div class="ans">الاستبدال خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية ومغلف وغير مستخدم مع إظهار الفاتورة. تُستثنى الأدوات الصحية (واقي الأسنان، ملفات اليد، القفازات المستخدمة) والمنتجات المخصصة.</div></details>
+    <details class="faq-item"><summary>5) الضمان ضد عيوب الصناعة</summary><div class="ans">يتم استبدال المنتج مجانًا عند وجود عيب صناعة من أول استخدام، مع تحمّل المتجر تكلفة الشحن في هذه الحالة.</div></details>
+    <details class="faq-item"><summary>6) المسؤولية أثناء التدريب</summary><div class="ans">المعدات أدوات تدريب يجب استخدامها مع مدرب مؤهل وبإشراف، ولا يتحمل المتجر مسؤولية أي إصابة ناتجة عن استخدام خاطئ للمعدات أو عدم الالتزام بتعليمات السلامة.</div></details>
+    <details class="faq-item"><summary>7) الصور والوصف</summary><div class="ans">قد تختلف الألوان قليلًا حسب الإضاءة والشاشة. الأوصاف محدّثة باستمرار، وفي حالة وجود خطأ واضح في الوصف يحق للعميل إلغاء الطلب خلال 24 ساعة.</div></details>
+    <details class="faq-item"><summary>8) الخصوصية</summary><div class="ans">بياناتك (الاسم / الموبايل / العنوان) تُستخدم فقط لتجهيز الطلب والشحن، ولا تُشارك مع أي طرف خارج شركة التوصيل.</div></details>
+    <details class="faq-item"><summary>9) الفواتير</summary><div class="ans">تُصدر فاتورة إلكترونية لكل طلب من صفحة الفاتورة، قابلة للطباعة أو الحفظ PDF، وتُرسل واتساب عند الطلب. الفاتورة مستند رسمي لإتمام الاستبدال أو الضمان.</div></details>
+    <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01557587871</span>.</div></details>
+  </div>
+</section>
+</main>
+
+<!-- ============ الفوتر ============ -->
+<footer class="site-footer no-print">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="#home">
+        <span class="brand-mark"><span>E&amp;H</span></span>
+        <span class="brand-text"><b>E&amp;H STORE</b><small>SPORT WEAR</small></span>
+      </a>
+      <p class="muted">متجر متخصص في أدوات وملابس الفنون القتالية والرياضة — جودة عالية وأسعار مناسبة، بإشراف كابتن هشام وليد (كونغ فو) وكابتن اياد الشربيني (ملاكمه).</p>
+      <div class="btn-row">
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الكونغ فو</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الملاكمه</a>
+      </div>
+    </div>
+    <div>
+      <h4>أقسام المتجر</h4>
+      <a class="link" href="#kungfu">كونغ فو</a><a class="link" href="#boxing">ملاكمه</a>
+      <a class="link" href="#sportswear">ملابس رياضيه</a><a class="link" href="#equipment">أدوات ومعدات</a>
+      <a class="link" href="#offers">العروض</a><a class="link" href="#shop">كل المنتجات</a>
+    </div>
+    <div>
+      <h4>خدمة العملاء</h4>
+      <a class="link" href="#payment">طرق الدفع</a><a class="link" href="#shipping">الشحن والاستبدال</a>
+      <a class="link" href="#faq">الأسئلة الشائعة</a><a class="link" href="#terms">الشروط والأحكام</a>
+      <a class="link" href="#invoice">الفاتورة / PDF</a><a class="link" href="#photos">دليل الصور</a>
+    </div>
+    <div>
+      <h4>تواصل ودفع</h4>
+      <a class="link" href="tel:+201016946303">📞 كابتن هشام وليد — كونغ فو: 01016946303</a>
+      <a class="link" href="tel:+201557587871">📞 كابتن اياد الشربيني — ملاكمه: 01557587871</a>
+      <a class="link" href="#payment">💳 انستا باي: 01016946303</a>
+      <a class="link" href="#payment">💳 فودافون كاش: 01557587871</a>
+      <a class="link" href="#about">ℹ️ من نحن</a><a class="link" href="#contact">📞 تواصل معنا</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> E&amp;H STORE — SPORT WEAR. جميع الحقوق محفوظة.</span>
+    <span>صُنع بشغف لخدمة رياضات الفنون القتالية 🥋🥊</span>
+  </div>
+</footer>
+
+<a class="float-wa no-print" href="https://wa.me/201016946303?text=مرحبًا، أريد الاستفسار عن منتجات E&H STORE SPORT WEAR" target="_blank" title="تواصل واتساب فوري">✆</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============ صورة «ضع الصورة هنا» مدمجة داخل الملف ============ */
+  var PH_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">' +
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2130"/><stop offset="1" stop-color="#0a0c11"/></linearGradient>' +
+    '<linearGradient id="l" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e0192f"/><stop offset="1" stop-color="#f5c451"/></linearGradient></defs>' +
+    '<rect width="800" height="800" fill="url(#g)"/><rect x="16" y="16" width="768" height="768" rx="26" fill="none" stroke="#f5c451" stroke-opacity="0.45" stroke-width="4" stroke-dasharray="20 16"/>' +
+    '<g fill="none" stroke="#f5c451" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"><rect x="270" y="250" width="260" height="180" rx="26"/><path d="M348 250l16-34h72l16 34"/><circle cx="400" cy="340" r="46"/></g>' +
+    '<circle cx="400" cy="340" r="17" fill="#e0192f"/>' +
+    '<text x="400" y="510" fill="#ffffff" font-family="Tahoma, Segoe UI, Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" direction="rtl">ضع الصورة هنا</text>' +
+    '<text x="400" y="560" fill="#96a0b4" font-family="Tahoma, Arial, sans-serif" font-size="28" text-anchor="middle">Put your photo here</text>' +
+    '<rect x="250" y="600" width="300" height="6" rx="3" fill="url(#l)"/>' +
+    '<text x="400" y="654" fill="#f5c451" font-family="Tahoma, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle">E&amp;H STORE — SPORT WEAR</text></svg>';
+  var PH = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(PH_SVG);
+
+  /* ============ بيانات المتجر ============ */
+  var STORE = {
+    phoneKungfu: '01016946303', phoneBoxing: '01557587871',
+    waKungfu: '201016946303', waBoxing: '201557587871',
+    instapay: '01016946303', vodafone: '01557587871',
+    ship: 60, freeShipFrom: 2000
+  };
+  var CATS = {
+    kungfu: { ar: 'كونغ فو', en: 'KUNG FU' }, boxing: { ar: 'ملاكمه', en: 'BOXING' },
+    clothes: { ar: 'ملابس رياضيه', en: 'SPORT WEAR' }, equipment: { ar: 'أدوات ومعدات', en: 'EQUIPMENT' }
+  };
+  var CLOTHES = ['S', 'M', 'L', 'XL', 'XXL'];
+  var GLOVES = ['8 أونصة', '10 أونصة', '12 أونصة', '14 أونصة', '16 أونصة'];
+  var BELTS = ['أبيض', 'أصفر', 'برتقالي', 'أخضر', 'أزرق', 'أحمر', 'بني', 'أسود'];
+
+  var PRODUCTS = [
+    { id: 'kf-01', cat: 'kungfu', name: 'بدلة كونغ فو (Gi) — قطن 14 أونصة', price: 1250, old: 1450, badge: 'الأكثر مبيعًا', img: 'kungfu-gi.jpg', sizes: ['160 سم', '170 سم', '180 سم', '190 سم'],
+      desc: 'بدلة كونغ فو احترافية من القطن الثقيل، مناسبة للتدريب والبطولات مع حرية حركة كاملة.',
+      specs: [['الخامة', 'قطن 100% — 14 أونصة'], ['القطع', 'جاكيت + بنطال'], ['الألوان', 'أسود / أبيض / أزرق'], ['الاستخدام', 'تدريب وبطولات']] },
+    { id: 'kf-02', cat: 'kungfu', name: 'بدلة كونغ فو أطفال', price: 850, img: 'kungfu-gi-kids.jpg', sizes: ['4 سنوات', '6 سنوات', '8 سنوات', '10 سنوات', '12 سنة'],
+      desc: 'بدلة خفيفة ومريحة للأطفال المبتدئين في الكونغ فو.', specs: [['الخامة', 'قطن مخلوط'], ['المقاسات', '4 – 12 سنة']] },
+    { id: 'kf-03', cat: 'kungfu', name: 'حزام كونغ فو معتمد (Kyu Belt)', price: 120, img: 'kungfu-belt.jpg', sizes: BELTS,
+      desc: 'حزام متين بخياطة مقوّاة بالألوان الرسمية لدرجات الكونغ فو.', specs: [['الألوان', '8 درجات'], ['الطول', '280 سم'], ['الخامة', 'قطن مقوّى']] },
+    { id: 'kf-04', cat: 'kungfu', name: 'ننشاكو تدريبي (Nunchaku)', price: 250, old: 300, badge: 'عرض', img: 'kungfu-nunchaku.jpg', sizes: [],
+      desc: 'ننشاكو تدريبي بحلقات محكمة وسلسلة قوية، آمن للتمرين اليومي.', specs: [['الخامة', 'خشب/بلاستيك مقوّى'], ['الطول', '30 سم'], ['المستوى', 'مبتدئ ومتقدم']] },
+    { id: 'kf-05', cat: 'kungfu', name: 'سيف تاي تشي (Tai Chi Sword)', price: 950, img: 'kungfu-sword.jpg', sizes: [],
+      desc: 'سيف تاي تشي غير حاد بنصل مرن ومقبض مريح للعروض والتدريب.', specs: [['النصل', 'ستانلس قابل للثني'], ['الطول', '95 سم'], ['الوزن', '750 جم']] },
+    { id: 'kf-06', cat: 'kungfu', name: 'عصا كونغ فو (Bo Staff) 180 سم', price: 300, img: 'kungfu-bo-staff.jpg', sizes: [],
+      desc: 'عصا خشبية مصقولة متوازنة، مناسبة لتدريبات الوينج تشون والووشو.', specs: [['الطول', '180 سم'], ['القطر', '2.5 سم'], ['الخامة', 'خشب مصقول']] },
+    { id: 'kf-07', cat: 'kungfu', name: 'وسادة تدريب وينج تشون (Wall Bag)', price: 450, img: 'kungfu-wall-bag.jpg', sizes: [],
+      desc: 'وسادة جدارية لتدريبات اللكم القريبة وتقوية قبضة اليد.', specs: [['التثبيت', 'حلقات معدنية'], ['الخامة', 'ألياف مضغوطة']] },
+    { id: 'kf-08', cat: 'kungfu', name: 'مجسم تدريبي إسفنجي (Training Dummy)', price: 1650, img: 'kungfu-dummies.jpg', sizes: [],
+      desc: 'مجسم تدريبي كامل من الإسفنج المضغوط لمحاكاة اللكمات والمسكات.', specs: [['الارتفاع', '170 سم'], ['القاعدة', 'ثقيلة ثابتة']] },
+
+    { id: 'bx-01', cat: 'boxing', name: 'قفازات ملاكمه جلد طبيعي', price: 890, old: 1050, badge: 'الأكثر مبيعًا', img: 'boxing-gloves-16.jpg', sizes: GLOVES,
+      desc: 'قفازات ملاكمه بجلد طبيعي وحشو ثلاثي يمتص الصدمات ويحمي الرسغ.', specs: [['الخامة', 'جلد طبيعي'], ['الحشو', 'إسفنج ثلاثي الطبقات'], ['التثبيت', 'لزق رسغ عريض']] },
+    { id: 'bx-02', cat: 'boxing', name: 'قفازات ملاكمه اقتصادية', price: 550, img: 'boxing-gloves-12.jpg', sizes: GLOVES,
+      desc: 'خيار ممتاز للمبتدئين والتمرين اليومي بسعر مناسب.', specs: [['الخامة', 'جلد صناعي'], ['الاستخدام', 'تدريب / كيس']] },
+    { id: 'bx-03', cat: 'boxing', name: 'حبل ملاكمه سريع (Speed Rope)', price: 150, img: 'boxing-rope.jpg', sizes: [],
+      desc: 'حبل بكرل محوري سريع لتحسين القدم والتوافق واللياقة.', specs: [['الطول', 'قابل للتعديل'], ['المقبض', 'ألومنيوم']] },
+    { id: 'bx-04', cat: 'boxing', name: 'كيس ملاكمه 40 كجم', price: 3200, img: 'boxing-bag.jpg', sizes: [],
+      desc: 'كيس تدريب مهبّأ بالرمل ومصنوع من الجلد المقوّى مع سلاسل تعليق.', specs: [['الوزن', '40 كجم'], ['القطر', '35 سم'], ['الشكل', 'أسطواني']] },
+    { id: 'bx-05', cat: 'boxing', name: 'واقي رأس (Head Guard)', price: 900, img: 'boxing-headgear.jpg', sizes: CLOTHES,
+      desc: 'واقي رأس بإسفنج عالي الكثافة ورؤية مفتوحة أثناء السبار.', specs: [['الحماية', 'جبهة + خدين'], ['التثبيت', 'لزق خلفي + شريط']] },
+    { id: 'bx-06', cat: 'boxing', name: 'واقي أسنان (Mouthguard)', price: 120, img: 'boxing-mouthguard.jpg', sizes: [],
+      desc: 'واقي أسنان قابل للتشكيل بحرارة الماء مع حافظة نظافة.', specs: [['النوع', 'قابل للتشكيل'], ['الحافظة', 'مشمولة']] },
+    { id: 'bx-07', cat: 'boxing', name: 'ملفات يد (Hand Wraps) 4 متر', price: 90, img: 'boxing-wraps.jpg', sizes: [],
+      desc: 'ملف يد مطاطي يثبّت الرسغ والمفاصل ويحميها من الإصابات.', specs: [['الطول', '4 متر'], ['الإغلاق', 'لزق'], ['الخامة', 'قطن مطاطي']] },
+    { id: 'bx-08', cat: 'boxing', name: 'لو كيك باد (Kick Pads)', price: 600, img: 'boxing-kick-pads.jpg', sizes: [],
+      desc: 'لو كيك محمول بضربات متينة، مناسب للكيك بوكسينج والملاكمة التايلاندية.', specs: [['المقاس', 'مقاس موحد'], ['الحشو', 'إسفنج عالي']] },
+
+    { id: 'sw-01', cat: 'clothes', name: 'تيشيرت E&H Store SPORT WEAR', price: 350, old: 420, badge: 'الأكثر مبيعًا', img: 'tshirt-eh.jpg', sizes: CLOTHES,
+      desc: 'تيشيرت قطن مخلوط بطبعة E&H STORE — خفيف ويمتص العرق.', specs: [['الخامة', 'قطن 95% / إيلاستين 5%'], ['الطبعة', 'شعار دائم لا يبهت']] },
+    { id: 'sw-02', cat: 'clothes', name: 'هودي تدريب (Hoodie) بشعار E&H', price: 650, img: 'hoodie-eh.jpg', sizes: CLOTHES,
+      desc: 'هودي شتوي دافئ بجودة عالية لتدريبات الصباح البارد.', specs: [['الخامة', 'قطن مبطن'], ['الجيب', 'كنغر + كابوتش']] },
+    { id: 'sw-03', cat: 'clothes', name: 'شورت رياضي مرن', price: 300, img: 'shorts-sport.jpg', sizes: CLOTHES,
+      desc: 'شورت رياضي بقصة واسعة وجيب داخلي آمن.', specs: [['الخامة', 'بوليستر مرن'], ['المرونة', '4 اتجاهات']] },
+    { id: 'sw-04', cat: 'clothes', name: 'بدلة تدريب كاملة (Tracksuit) E&H', price: 800, old: 950, badge: 'عرض', img: 'tracksuit-eh.jpg', sizes: CLOTHES,
+      desc: 'طقم تدريب كامل (جاكيت + بنطال) بتصميم رياضي عصري.', specs: [['القطع', 'جاكيت + بنطال'], ['الاستخدام', 'تدريب / خروج']] },
+    { id: 'sw-05', cat: 'clothes', name: 'بنطال رياضي (Sports Pants)', price: 420, img: 'pants-sport.jpg', sizes: CLOTHES,
+      desc: 'بنطال رياضي بخصر مطاطي وربطة داخلية مريح للتدريب.', specs: [['الخصر', 'مطاطي + ربطة'], ['القصة', 'مستقيمة مرنة']] },
+    { id: 'sw-06', cat: 'clothes', name: 'جوارب رياضية (3 أزواج)', price: 150, img: 'socks-sport.jpg', sizes: ['39-42', '43-46'],
+      desc: 'جوارب قطنية ممتصة للعرق مع تدعيم القوس.', specs: [['العدد', '3 أزواج'], ['الإفرازات', 'مضادة للروائح']] },
+    { id: 'sw-07', cat: 'clothes', name: 'تانك راش جارد (Rash Guard)', price: 380, img: 'tank-rush.jpg', sizes: CLOTHES,
+      desc: 'راش جارد ضاغط يقلل الاحتكاك ويحفظ حرارة الجسم.', specs: [['الخامة', 'ليكرا ضاغطة'], ['الاستخدام', 'جرابلينج / MMA']] },
+    { id: 'sw-08', cat: 'clothes', name: 'كاب E&H رياضي', price: 200, img: 'cap-eh.jpg', sizes: [],
+      desc: 'كاب قطني بقياس قابل للتعديل وشعار مطرّز.', specs: [['القياس', 'قابل للتعديل'], ['الشعار', 'تطريز']] },
+
+    { id: 'eq-01', cat: 'equipment', name: 'كرة طبية (Medicine Ball) 8 كجم', price: 700, img: 'med-ball.jpg', sizes: [],
+      desc: 'كرة طبية لتقوية الجذع والرماية للرياضيين.', specs: [['الوزن', '8 كجم'], ['السطح', 'مطاط مضاد للانزلاق']] },
+    { id: 'eq-02', cat: 'equipment', name: 'دمبل قابل للتعديل 10 كجم', price: 850, img: 'dumbbell.jpg', sizes: [],
+      desc: 'دمبل بقواط بشدّ آمن للمنزل والجيم.', specs: [['الوزن', '10 كجم'], ['الخامة', 'مطاط + معدن']] },
+    { id: 'eq-03', cat: 'equipment', name: 'حبال مقاومة (Resistance Bands) طقم', price: 250, old: 320, badge: 'عرض', img: 'resistance-bands.jpg', sizes: [],
+      desc: 'طقم 5 مقاومات مختلفة لمقاومة الأوزان والإحماء.', specs: [['العدد', '5 مستويات'], ['الشد', 'من خفيف إلى شديد']] },
+    { id: 'eq-04', cat: 'equipment', name: 'حصيرة تدريب / يوغا', price: 480, img: 'mat-yoga.jpg', sizes: [],
+      desc: 'حصيرة سميكة مضادة للانزلاق لتمارين الإطالة واليوغا.', specs: [['السماكة', '10 مم'], ['المقاس', '183 × 61 سم']] },
+    { id: 'eq-05', cat: 'equipment', name: 'أرضية تدريب متشابكة (Interlock Mats)', price: 1450, img: 'mat-interlock.jpg', sizes: [],
+      desc: 'أرضية إسفنجية متشابكة آمنة للتدريب القتالي والحد من الإصابات.', specs: [['التغطية', '2 متر مربع'], ['السماكة', '2 سم']] },
+    { id: 'eq-06', cat: 'equipment', name: 'تايمر جولات تدريب (Round Timer)', price: 400, img: 'round-timer.jpg', sizes: [],
+      desc: 'مؤقت جولات بجرس صوتي عالي لتدريبات الملاكمة والكونغ فو.', specs: [['الجولات', 'قابلة للضبط'], ['الجرس', 'عالي الصوت']] },
+    { id: 'eq-07', cat: 'equipment', name: 'سلم رشاقة (Speed Ladder)', price: 260, img: 'speed-ladder.jpg', sizes: [],
+      desc: 'سلم تدريب للقدم والتوافق والسرعة.', specs: [['الطول', '4 متر'], ['الحافظة', 'شنطة مشمولة']] },
+    { id: 'eq-08', cat: 'equipment', name: 'بوكس قفز تدريب (Jump Box)', price: 1100, img: 'jump-box.jpg', sizes: [],
+      desc: 'بوكس قفز متين بثلاثة ارتفاعات للتغذية واللياقة.', specs: [['الارتفاعات', '30 / 45 / 60 سم'], ['الخامة', 'خشب مضغوط مقوّى']] }
+  ];
+
+  var SITE_IMAGES = [
+    ['logo.png', 'لوجو المتجر'], ['hero.jpg', 'صورة الصفحة الرئيسية'],
+    ['banner-kungfu.jpg', 'بنر قسم الكونغ فو'], ['banner-boxing.jpg', 'بنر قسم الملاكمه'],
+    ['banner-clothes.jpg', 'بنر قسم الملابس'], ['banner-equipment.jpg', 'بنر قسم الأدوات'],
+    ['coach-hisham.jpg', 'كابتن هشام وليد'], ['coach-iyad.jpg', 'كابتن اياد الشربيني'],
+    ['about-store.jpg', 'صورة عن المتجر'], ['gallery-1.jpg', 'معرض 1'], ['gallery-2.jpg', 'معرض 2'],
+    ['gallery-3.jpg', 'معرض 3'], ['gallery-4.jpg', 'معرض 4']
+  ];
+
+  /* ============ أدوات ============ */
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function money(n) { return new Intl.NumberFormat('en-US').format(Math.round(n)) + ' ج.م'; }
+  function pById(id) { for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === id) return PRODUCTS[i]; return null; }
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  /* تخزين آمن (يشتغل حتى لو المتصفح منع localStorage) */
+  var memStore = {};
+  function sget(k) { try { return localStorage.getItem(k); } catch (e) { return memStore[k] || null; } }
+  function sset(k, v) { try { localStorage.setItem(k, v); } catch (e) { memStore[k] = v; } }
+
+  /* ============ السلة ============ */
+  var KEY = 'ehstore_cart';
+  function getCart() { try { return JSON.parse(sget(KEY)) || []; } catch (e) { return []; } }
+  function setCart(c) { sset(KEY, JSON.stringify(c)); updateBadge(); }
+  function count() { return getCart().reduce(function (a, i) { return a + i.qty; }, 0); }
+  function subtotal() { return getCart().reduce(function (a, i) { return a + i.price * i.qty; }, 0); }
+  function shipCost() { var s = subtotal(); return (s === 0 || s >= STORE.freeShipFrom) ? 0 : STORE.ship; }
+  function add(id, size, qty) {
+    var p = pById(id); if (!p) return;
+    qty = Math.max(1, parseInt(qty || 1, 10));
+    size = size || (p.sizes && p.sizes[0]) || '';
+    var c = getCart();
+    for (var i = 0; i < c.length; i++) if (c[i].id === id && c[i].size === size) { c[i].qty += qty; setCart(c); return; }
+    c.push({ id: id, name: p.name, price: p.price, size: size, qty: qty });
+    setCart(c);
+  }
+  function setQty(idx, q) { var c = getCart(); if (!c[idx]) return; q = parseInt(q, 10); if (isNaN(q) || q < 1) q = 1; c[idx].qty = q; setCart(c); }
+  function removeIdx(idx) { var c = getCart(); c.splice(idx, 1); setCart(c); }
+  function clearCart() { setCart([]); }
+  function updateBadge() { $$('[data-cart-count]').forEach(function (e) { e.textContent = count(); }); }
+
+  /* ============ واتساب ============ */
+  function waLink(phone, text) { return 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text || ''); }
+  function openWA(phone, text) { window.open(waLink(phone, text), '_blank'); }
+  function orderText(order) {
+    var t = 'طلب جديد من E&H STORE — SPORT WEAR\n';
+    t += 'رقم الفاتورة: ' + order.no + '\nالاسم: ' + order.customer.name + '\nالموبايل: ' + order.customer.phone + '\n';
+    if (order.customer.city) t += 'المدينة: ' + order.customer.city + '\n';
+    if (order.customer.address) t += 'العنوان: ' + order.customer.address + '\n';
+    t += '\nالأصناف:\n';
+    order.items.forEach(function (i) { t += '- ' + i.name + (i.size ? ' (' + i.size + ')' : '') + ' × ' + i.qty + ' = ' + money(i.price * i.qty) + '\n'; });
+    t += '\nالشحن: ' + (order.ship ? money(order.ship) : 'مجاني') + '\nالإجمالي: ' + money(order.total) + '\nطريقة الدفع: ' + order.method;
+    return t;
+  }
+
+  /* ============ كارت المنتج ============ */
+  function cardHTML(p) {
+    var sizes = (p.sizes || []).map(function (s) { return '<span class="size">' + esc(s) + '</span>'; }).join('');
+    return '<article class="p-card">' +
+      (p.badge ? '<span class="badge' + (p.badge === 'عرض' ? ' gold' : '') + '">' + esc(p.badge) + '</span>' : '') +
+      '<a class="p-thumb" href="#product/' + p.id + '"><img src="' + PH + '" alt="' + esc(p.name) + '"></a>' +
+      '<div class="p-body"><span class="p-cat">' + esc(CATS[p.cat].en) + '</span>' +
+      '<h3 class="p-name">' + esc(p.name) + '</h3><p class="p-desc">' + esc(p.desc) + '</p>' +
+      (sizes ? '<div class="sizes">' + sizes + '</div>' : '') +
+      '<div class="p-price"><b>' + money(p.price) + '</b>' + (p.old ? '<s>' + money(p.old) + '</s>' : '') + '</div>' +
+      '<div class="p-actions"><button class="btn btn-gold btn-sm" data-add="' + p.id + '">أضف للطلب</button>' +
+      '<a class="btn btn-ghost btn-sm" href="#product/' + p.id + '">تفاصيل</a></div></div></article>';
+  }
+  function renderGrid(sel, list) {
+    var el = typeof sel === 'string' ? $(sel) : sel; if (!el) return;
+    if (!list || !list.length) { el.innerHTML = '<div class="empty-note">لا توجد منتجات مطابقة — جرّب كلمة بحث أخرى.</div>'; return; }
+    el.innerHTML = list.map(cardHTML).join('');
+  }
+
+  /* ============ الفاتورة ============ */
+  function invoiceHTML(o) {
+    var rows = o.items.map(function (i, n) {
+      return '<tr><td>' + (n + 1) + '</td><td>' + esc(i.name) + (i.size ? '<br><small style="color:#6b7280">المقاس: ' + esc(i.size) + '</small>' : '') + '</td>' +
+        '<td class="num">' + money(i.price) + '</td><td class="num">' + i.qty + '</td><td class="num">' + money(i.price * i.qty) + '</td></tr>';
+    }).join('');
+    return '<div class="inv-head"><div class="logo"><div class="mark">E&amp;H</div>' +
+      '<div><h2>E&amp;H STORE — SPORT WEAR</h2><small>MARTIAL ARTS &amp; SPORTS GEAR</small></div></div>' +
+      '<div class="inv-meta"><div><b>INVOICE / فاتورة</b></div><div>No: ' + esc(o.no) + '</div><div>Date: ' + esc(o.date) + '</div></div></div>' +
+      '<div class="inv-bar"></div><div class="inv-body">' +
+      '<div class="inv-parties">' +
+        '<div class="inv-box"><b>بيانات العميل</b><span>الاسم: ' + esc(o.customer.name || '—') + '</span><span>الموبايل: ' + esc(o.customer.phone || '—') + '</span>' +
+        '<span>المدينة: ' + esc(o.customer.city || '—') + '</span><span>العنوان: ' + esc(o.customer.address || '—') + '</span></div>' +
+        '<div class="inv-box"><b>بيانات المتجر</b><span>E&amp;H STORE — SPORT WEAR</span>' +
+        '<span>الكونغ فو: كابتن هشام وليد — ' + STORE.phoneKungfu + '</span><span>الملاكمه: كابتن اياد الشربيني — ' + STORE.phoneBoxing + '</span>' +
+        '<span>التسليم: ' + esc(o.deliver || 'من المتجر / شحن') + '</span></div>' +
+      '</div>' +
+      '<table class="inv-table"><thead><tr><th>#</th><th>الصنف</th><th class="num">السعر</th><th class="num">الكمية</th><th class="num">الإجمالي</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<div class="inv-totals"><div class="box">' +
+        '<div class="row"><span>الإجمالي قبل الشحن</span><span class="v">' + money(o.subtotal) + '</span></div>' +
+        '<div class="row"><span>الشحن</span><span class="v">' + (o.ship ? money(o.ship) : 'مجاني') + '</span></div>' +
+        '<div class="row grand"><span>الإجمالي المطلوب</span><span class="v">' + money(o.total) + '</span></div>' +
+      '</div></div>' +
+      '<div class="inv-pay">' +
+        '<div class="box"><b>انستا باي — InstaPay (تحويل مباشر)</b><div class="n">' + STORE.instapay + '</div><small style="color:#6b7280">حوّل المبلغ ثم أرسل صورة التحويل واتساب لتأكيد الطلب.</small></div>' +
+        '<div class="box"><b>فودافون كاش — Vodafone Cash</b><div class="n">' + STORE.vodafone + '</div><small style="color:#6b7280">متاح كذلك الدفع عند الاستلام داخل القاهرة والجيزة.</small></div>' +
+      '</div>' +
+      '<div class="inv-notes"><b>ملاحظات:</b> ' + esc(o.customer.notes || 'لا توجد ملاحظات.') +
+        '<br>الفاتورة صالحة للطباعة أو الحفظ بصيغة PDF من زر «طباعة / حفظ PDF».</div>' +
+      '<div class="inv-sign"><div>توقيع العميل</div><div>ختم المتجر — E&amp;H STORE</div></div></div>' +
+      '<div class="inv-foot"><span>واتساب كونغ فو: <b>' + STORE.phoneKungfu + '</b></span>' +
+      '<span>واتساب ملاكمه: <b>' + STORE.phoneBoxing + '</b></span><span>شكرًا لثقتك في <b>E&amp;H STORE — SPORT WEAR</b></span></div>';
+  }
+
+  function makeOrder(customer, items, method, deliver) {
+    var sub = items.reduce(function (a, i) { return a + i.price * i.qty; }, 0);
+    var ship = sub >= STORE.freeShipFrom ? 0 : STORE.ship;
+    var d = new Date(), hh = String(d.getHours()).padStart(2, '0'), mm = String(d.getMinutes()).padStart(2, '0');
+    return {
+      no: 'EH-' + d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + String(Math.floor(1000 + Math.random() * 9000)),
+      date: d.getFullYear() + '/' + String(d.getMonth() + 1).padStart(2, '0') + '/' + String(d.getDate()).padStart(2, '0') + ' — ' + hh + ':' + mm,
+      ts: d.getTime(), customer: customer, items: items, method: method, deliver: deliver || '',
+      subtotal: sub, ship: ship, total: sub + ship
+    };
+  }
+
+  /* ============ التنقّل بين الصفحات (راوتر داخلي) ============ */
+  var PAGES = ['home','shop','kungfu','boxing','sportswear','equipment','offers','product','cart','invoice','payment','shipping','faq','about','contact','photos','terms'];
+  var shopReady = false, cartReady = false, photosReady = false;
+
+  function show(name) {
+    PAGES.forEach(function (p) { var el = document.getElementById('page-' + p); if (el) el.hidden = (p !== name); });
+    $$('.menu a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-page') === name); });
+    var m = $('#mainMenu'); if (m) m.classList.remove('open');
+    window.scrollTo(0, 0);
+  }
+  function grid(cat, sel, cnt) {
+    var list = PRODUCTS.filter(function (p) { return p.cat === cat; });
+    renderGrid(sel, list);
+    var c = $(cnt); if (c) c.textContent = list.length + ' منتج متاح';
+  }
+
+  function initShop() {
+    if (shopReady) return; shopReady = true;
+    var state = { cat: 'all', q: '', sort: 'def' };
+    function apply() {
+      var list = PRODUCTS.slice();
+      if (state.cat !== 'all') list = list.filter(function (p) { return p.cat === state.cat; });
+      if (state.q) { var q = state.q.trim().toLowerCase(); list = list.filter(function (p) { return (p.name + ' ' + p.desc + ' ' + CATS[p.cat].ar + ' ' + CATS[p.cat].en).toLowerCase().indexOf(q) > -1; }); }
+      if (state.sort === 'low') list.sort(function (a, b) { return a.price - b.price; });
+      if (state.sort === 'high') list.sort(function (a, b) { return b.price - a.price; });
+      if (state.sort === 'name') list.sort(function (a, b) { return a.name.localeCompare(b.name, 'ar'); });
+      renderGrid('#allGrid', list);
+      $('#resultCount').textContent = 'عدد النتائج: ' + list.length + ' منتج';
+    }
+    apply();
+    $('#q').addEventListener('input', function (e) { state.q = e.target.value; apply(); });
+    $('#sort').addEventListener('change', function (e) { state.sort = e.target.value; apply(); });
+    $('#chips').addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('[data-cat]') : null; if (!b) return;
+      $$('#chips .chip').forEach(function (c) { c.classList.remove('active'); });
+      b.classList.add('active'); state.cat = b.getAttribute('data-cat'); apply();
+    });
+  }
+
+  function initProduct(id) {
+    var p = pById(id) || PRODUCTS[0], cat = CATS[p.cat];
+    $('#crumbCat').textContent = cat.ar;
+    var sizeBlock = '';
+    if (p.sizes && p.sizes.length) {
+      sizeBlock = '<div class="field mt1"><label>اختر المقاس / الدرجة</label><select data-size-for="' + p.id + '">' +
+        p.sizes.map(function (s) { return '<option value="' + s + '">' + s + '</option>'; }).join('') + '</select></div>';
+    }
+    var specs = (p.specs || []).map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; }).join('');
+    $('#pd').innerHTML =
+      '<div class="pd-media"><img src="' + PH + '" alt="' + esc(p.name) + '"></div>' +
+      '<div><span class="pill">' + cat.en + ' — ' + cat.ar + '</span>' +
+      (p.badge ? ' <span class="badge" style="position:static;display:inline-block">' + p.badge + '</span>' : '') +
+      '<h1 class="mt1">' + esc(p.name) + '</h1><p class="muted">' + esc(p.desc) + '</p>' +
+      '<div class="pd-price"><b>' + money(p.price) + '</b>' + (p.old ? '<s class="muted">' + money(p.old) + '</s>' : '') + '</div>' + sizeBlock +
+      '<div class="field mt1"><label>الكمية</label><div class="qty"><button type="button" data-dec>-</button>' +
+      '<input type="number" min="1" value="1" data-qty-for="' + p.id + '"><button type="button" data-inc>+</button></div></div>' +
+      '<div class="btn-row mt2"><button class="btn btn-gold btn-lg" data-add="' + p.id + '">أضف إلى سلة الطلب 🛒</button>' +
+      '<button class="btn btn-red btn-lg" id="buyNow" type="button">اطلب الآن واتساب 💬</button>' +
+      '<a class="btn btn-ghost btn-lg" href="#cart">إتمام الطلب</a></div>' +
+      '<table class="spec-table">' + specs +
+      '<tr><td>الضمان</td><td>استبدال خلال 3 أيام عند وجود عيب صناعة</td></tr>' +
+      '<tr><td>طرق الدفع</td><td>انستا باي 01016946303 — فودافون كاش 01557587871</td></tr></table>' +
+      '<div class="note mt2">🧾 الفاتورة تُصدر تلقائيًا بعد تأكيد الطلب وقابلة للطباعة أو الحفظ PDF.</div></div>';
+    var qin = document.querySelector('[data-qty-for="' + p.id + '"]');
+    document.querySelector('[data-inc]').addEventListener('click', function () { qin.value = (parseInt(qin.value, 10) || 1) + 1; });
+    document.querySelector('[data-dec]').addEventListener('click', function () { qin.value = Math.max(1, (parseInt(qin.value, 10) || 1) - 1); });
+    document.getElementById('buyNow').addEventListener('click', function () {
+      var sel = document.querySelector('[data-size-for="' + p.id + '"]');
+      var txt = 'أريد طلب: ' + p.name + (sel ? ' — المقاس: ' + sel.value : '') + ' — الكمية: ' + qin.value +
+        ' — السعر: ' + money(p.price * (parseInt(qin.value, 10) || 1)) + '\nمن متجر E&H STORE SPORT WEAR';
+      openWA(p.cat === 'boxing' ? STORE.waBoxing : STORE.waKungfu, txt);
+    });
+    renderGrid('#related', PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; }).slice(0, 4));
+  }
+
+  function renderCart() {
+    var c = getCart(), body = $('#cartBody');
+    if (!c.length) {
+      body.innerHTML = '<tr><td colspan="6" class="center" style="padding:34px">سلتك فاضية حاليًا — <a class="gold" href="#shop">ابدأ التسوق من هنا</a></td></tr>';
+    } else {
+      body.innerHTML = c.map(function (i, n) {
+        return '<tr><td><div style="display:flex;align-items:center;gap:10px"><img class="mini-thumb" src="' + PH + '" alt="">' +
+          '<a href="#product/' + i.id + '">' + i.name + '</a></div></td><td>' + (i.size || '—') + '</td><td>' + money(i.price) + '</td>' +
+          '<td><input type="number" min="1" value="' + i.qty + '" data-q="' + n + '" style="width:70px;background:#0f131b;border:1px solid var(--line);border-radius:8px;color:#fff;padding:6px;text-align:center"></td>' +
+          '<td class="gold">' + money(i.price * i.qty) + '</td><td><button class="btn btn-ghost btn-sm" type="button" data-del="' + n + '">حذف</button></td></tr>';
+      }).join('');
+    }
+    var sub = subtotal(), ship = shipCost();
+    $('#sCount').textContent = count();
+    $('#sSub').textContent = money(sub);
+    $('#sShip').textContent = ship ? money(ship) : 'مجاني';
+    $('#sTotal').textContent = money(sub + ship);
+  }
+
+  function itemsForOrder() { return getCart().map(function (i) { return { id: i.id, name: i.name, price: i.price, qty: i.qty, size: i.size }; }); }
+
+  function initCart() {
+    renderCart();
+    if (cartReady) return; cartReady = true;
+    $('#cartBody').addEventListener('change', function (e) { if (e.target.hasAttribute('data-q')) { setQty(+e.target.getAttribute('data-q'), e.target.value); renderCart(); } });
+    $('#cartBody').addEventListener('click', function (e) { var d = e.target.closest ? e.target.closest('[data-del]') : null; if (d) { removeIdx(+d.getAttribute('data-del')); renderCart(); } });
+    $('#clearCart').addEventListener('click', function () { clearCart(); renderCart(); });
+    $('#confirm').addEventListener('click', function () {
+      if (!getCart().length) { alert('السلة فاضية — أضف منتجات أولًا 🛒'); return; }
+      var name = $('#cName').value.trim(), phone = $('#cPhone').value.trim();
+      if (!name || !phone) { alert('اكتب الاسم ورقم الموبايل لإتمام الطلب 🙏'); return; }
+      var method = document.querySelector('input[name=pay]:checked').value;
+      var deliver = $('#cDeliver').value;
+      var order = makeOrder({ name: name, phone: phone, city: $('#cCity').value.trim(), address: $('#cAddress').value.trim(), notes: $('#cNotes').value.trim(), deliver: deliver }, itemsForOrder(), method, deliver);
+      sset('eh_order', JSON.stringify(order));
+      clearCart(); renderCart();
+      location.hash = '#invoice';
+    });
+    $('#waCart').addEventListener('click', function () {
+      if (!getCart().length) { alert('السلة فاضية 🛒'); return; }
+      var method = document.querySelector('input[name=pay]:checked').value;
+      var order = makeOrder({ name: $('#cName').value.trim() || 'عميل جديد', phone: $('#cPhone').value.trim(), city: $('#cCity').value.trim(), address: $('#cAddress').value.trim(), notes: $('#cNotes').value.trim() }, itemsForOrder(), method, $('#cDeliver').value);
+      openWA(STORE.waKungfu, orderText(order));
+    });
+  }
+
+  function initInvoice() {
+    var order = null;
+    try { order = JSON.parse(sget('eh_order')); } catch (e) { order = null; }
+    var note = $('#invoiceNote');
+    if (!order) {
+      order = makeOrder({ name: 'عميل تجريبي — نموذج فاتورة', phone: '01000000000', city: 'القاهرة', address: 'نموذج للعرض فقط', notes: 'دي فاتورة نموذجية لمعاينة التصميم والألوان — اعمل طلب حقيقي من سلة الطلب.', deliver: 'توصيل للعنوان' },
+        [{ id: 'kf-01', name: 'بدلة كونغ فو (Gi) — قطن 14 أونصة', price: 1250, qty: 1, size: '180 سم' },
+         { id: 'bx-01', name: 'قفازات ملاكمه جلد طبيعي', price: 890, qty: 1, size: '12 أونصة' },
+         { id: 'sw-01', name: 'تيشيرت E&H Store SPORT WEAR', price: 350, qty: 2, size: 'L' }], 'انستا باي — تحويل مباشر (01016946303)', 'توصيل للعنوان');
+      order.no = 'EH-DEMO-0001';
+      note.classList.remove('hide');
+      note.innerHTML = 'ℹ️ <b>دي فاتورة نموذجية</b> للمعاينة فقط. لإنشاء فاتورة حقيقية: أضف منتجاتك ثم أكمل الطلب من <a class="gold" href="#cart">سلة الطلب</a>.';
+    } else {
+      note.classList.add('hide');
+    }
+    $('#invoice').innerHTML = invoiceHTML(order);
+    $('#printBtn').onclick = function () { window.print(); };
+    $('#waKungfu').onclick = function () { openWA(STORE.waKungfu, orderText(order)); };
+    $('#waBoxing').onclick = function () { openWA(STORE.waBoxing, orderText(order)); };
+  }
+
+  function initPhotos() {
+    if (photosReady) return; photosReady = true;
+    function slot(file, label) {
+      return '<article class="p-card"><div class="p-thumb"><img src="' + PH + '" alt="' + esc(label) + '"></div>' +
+        '<div class="p-body"><span class="p-cat">PHOTO SLOT</span><h3 class="p-name">' + esc(label) + '</h3>' +
+        '<p class="p-desc" dir="ltr" style="text-align:left;font-family:Consolas,monospace">photo/' + esc(file) + '</p></div></article>';
+    }
+    $('#photoGrid').innerHTML = PRODUCTS.map(function (p) { return slot(p.img, p.name); }).join('');
+    $('#count-photos').textContent = PRODUCTS.length + ' صورة منتج';
+    $('#sitePhotoGrid').innerHTML = SITE_IMAGES.map(function (s) { return slot(s[0], s[1]); }).join('');
+  }
+
+  function route() {
+    var h = (location.hash || '#home').replace(/^#/, '');
+    var parts = h.split('/'), name = parts[0] || 'home', arg = parts[1] || '';
+    if (PAGES.indexOf(name) < 0) name = 'home';
+    show(name);
+    if (name === 'shop') initShop();
+    if (name === 'kungfu') grid('kungfu', '#grid-kungfu', '#count-kungfu');
+    if (name === 'boxing') grid('boxing', '#grid-boxing', '#count-boxing');
+    if (name === 'sportswear') grid('clothes', '#grid-clothes', '#count-clothes');
+    if (name === 'equipment') grid('equipment', '#grid-equipment', '#count-equipment');
+    if (name === 'offers') {
+      var offs = PRODUCTS.filter(function (p) { return p.old; });
+      renderGrid('#grid-offers', offs);
+      $('#count-offers').textContent = offs.length + ' عرض متاح';
+    }
+    if (name === 'product') initProduct(arg || 'kf-01');
+    if (name === 'cart') initCart();
+    if (name === 'invoice') initInvoice();
+    if (name === 'photos') initPhotos();
+  }
+
+  function boot() {
+    $$('.ph-img').forEach(function (im) { im.src = PH; });
+    var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
+    updateBadge();
+    var best = PRODUCTS.filter(function (p) { return p.badge === 'الأكثر مبيعًا'; });
+    var off = PRODUCTS.filter(function (p) { return p.badge === 'عرض'; });
+    renderGrid('#homeFeatured', best.concat(off).slice(0, 8));
+    var b = $('.burger');
+    if (b) b.addEventListener('click', function () { $('#mainMenu').classList.toggle('open'); });
+    $$('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var txt = btn.getAttribute('data-copy');
+        try { navigator.clipboard.writeText(txt); } catch (e) {}
+        var old = btn.textContent; btn.textContent = 'تم النسخ ✓';
+        setTimeout(function () { btn.textContent = old; }, 1400);
+      });
+    });
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('[data-add]') : null;
+      if (!btn) return;
+      var id = btn.getAttribute('data-add');
+      var sel = document.querySelector('[data-size-for="' + id + '"]');
+      var qin = document.querySelector('[data-qty-for="' + id + '"]');
+      add(id, sel ? sel.value : '', qin ? qin.value : 1);
+      var old = btn.textContent; btn.textContent = 'تم الإضافة ✓'; btn.disabled = true;
+      setTimeout(function () { btn.textContent = old; btn.disabled = false; }, 1200);
+    });
+    function buildMsg() {
+      return 'استفسار من موقع E&H STORE SPORT WEAR\nالاسم: ' + ($('#fName').value.trim() || '—') +
+        '\nالموبايل: ' + ($('#fPhone').value.trim() || '—') + '\nالنوع: ' + $('#fType').value +
+        '\nالرسالة: ' + ($('#fMsg').value.trim() || '—');
+    }
+    $('#sendKungfu').addEventListener('click', function () { openWA(STORE.waKungfu, buildMsg()); });
+    $('#sendBoxing').addEventListener('click', function () { openWA(STORE.waBoxing, buildMsg()); });
+    route();
+  }
+
+  window.addEventListener('hashchange', route);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+})();
+</script>
+</body>
+</html>
