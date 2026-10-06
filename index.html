@@ -48,6 +48,9 @@ button,input,select,textarea{font-family:inherit;font-size:1rem}
 .brand{display:flex;align-items:center;gap:12px;min-width:190px}
 .brand-mark{width:48px;height:48px;border-radius:14px;flex:none;background:linear-gradient(145deg,var(--red),#7d0c1a);display:grid;place-items:center;box-shadow:0 8px 22px rgba(224,25,47,.45);border:1px solid rgba(245,196,81,.5)}
 .brand-mark span{font-weight:900;color:#fff;font-size:1.05rem}
+.brand-logo{height:52px;width:auto;max-width:200px;flex:none;display:block;border-radius:10px;object-fit:contain}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media(max-width:560px){.brand-logo{height:44px;max-width:160px}}
 .brand-text b{display:block;font-size:1.02rem}
 .brand-text small{display:block;color:var(--gold);font-size:.7rem;letter-spacing:.28em;font-weight:700}
 .menu{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center}
@@ -57,6 +60,15 @@ button,input,select,textarea{font-family:inherit;font-size:1rem}
 .nav-actions{display:flex;align-items:center;gap:8px}
 .cart-btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:var(--r-pill);background:linear-gradient(145deg,var(--red),#8f101f);color:#fff;font-weight:700;font-size:.9rem;border:1px solid rgba(245,196,81,.35)}
 .cart-count{background:var(--gold);color:#160f00;border-radius:var(--r-pill);min-width:22px;height:22px;display:grid;place-items:center;font-size:.75rem;font-weight:900;padding:0 6px}
+/* ---------------- تسجيل الدخول (Google + أدمن) ---------------- */
+.login-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:var(--r-pill);background:var(--card);border:1px solid var(--line);color:#dfe4ef;font-weight:700;font-size:.86rem}
+.login-btn:hover{border-color:var(--gold);color:var(--gold)}
+.login-btn.is-admin{background:linear-gradient(145deg,rgba(39,192,122,.22),rgba(39,192,122,.08));border-color:rgba(39,192,122,.5);color:#a9f3cd}
+#gBtn{min-height:44px}
+.lg-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:820px){.lg-grid{grid-template-columns:1fr}}
+#editorPanel table.data input{width:100%;background:#0f131b;border:1px solid var(--line);border-radius:8px;color:#fff;padding:8px}
+#editorPanel table.data{min-width:520px}
 .burger{display:none;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:var(--r-sm);padding:9px 12px;cursor:pointer;font-size:1.1rem}
 @media(max-width:1080px){
   .burger{display:block}
@@ -260,6 +272,48 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   a{color:#000;text-decoration:none}
 }
 .mt0{margin-top:0}.mt1{margin-top:10px}.mt2{margin-top:20px}.mt3{margin-top:30px}
+/* ---------------- معرض الأعمال ---------------- */
+.g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.g-card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.2s}
+.g-card:hover{transform:translateY(-4px);border-color:rgba(245,196,81,.55);box-shadow:var(--sh-sm)}
+.g-thumb{aspect-ratio:1/1;background:#0f131b;overflow:hidden}
+.g-thumb img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.g-card:hover .g-thumb img{transform:scale(1.06)}
+.g-card figcaption{padding:10px 12px}
+.g-card figcaption b{display:block;font-size:.88rem;line-height:1.4}
+.g-card figcaption span{color:var(--gold);font-size:.72rem;font-weight:700}
+.g-card.brand-card{border-color:rgba(245,196,81,.6)}
+.g-card.brand-card .g-thumb img{object-fit:contain;background:#0b0b0d;padding:14px}
+.g-price{display:block;color:var(--gold);font-weight:900;font-size:.92rem;margin-top:6px;font-style:normal}
+.g-actions{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+.g-actions .btn{flex:1;min-width:94px}
+.g-modal{position:fixed;inset:0;background:rgba(4,6,10,.86);display:none;place-items:center;z-index:90;padding:16px}
+.g-modal .box{position:relative;width:min(760px,96vw);max-height:92vh;overflow:auto;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.g-modal .box>img{width:100%;max-height:56vh;object-fit:contain;background:#0b0b0d;border-bottom:1px solid var(--line)}
+.g-modal .bd{padding:18px 20px}
+.g-modal .x{position:absolute;top:10px;inset-inline-end:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(10,12,17,.85);color:#fff;font-size:1.1rem;cursor:pointer}
+.eh-toast{position:fixed;inset-inline:50%;transform:translateX(50%);bottom:88px;z-index:95;max-width:92vw;background:linear-gradient(145deg,var(--gold2),var(--gold));color:#170f00;font-weight:800;font-size:.9rem;padding:12px 18px;border-radius:var(--r-pill);box-shadow:var(--sh);display:none;text-align:center}
+.eh-toast.show{display:block}
+.inv-stamp-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 26px 0;background:#fff}
+.inv-stamp{display:inline-block;border:3px double #e0192f;color:#a30f20;font-weight:900;font-size:1.25rem;letter-spacing:.14em;padding:8px 20px;border-radius:10px;transform:rotate(-4deg);background:rgba(224,25,47,.06)}
+.inv-stamp-note{color:#6b7280;font-size:.82rem;max-width:52ch}
+@media print{.inv-stamp-wrap{padding:10px 20px 0}.inv-stamp{border-color:#a30f20 !important;color:#a30f20 !important;background:transparent !important}}
+.p-card .p-thumb{aspect-ratio:auto;background:transparent;min-height:0}
+/* ---------------- صور المنتجات الحقيقية (بالتصنيف) ---------------- */
+.p-card .p-thumb.has-photo{aspect-ratio:4/3;background:#0f131b}
+.p-card .p-thumb.has-photo img{width:100%;height:100%;object-fit:cover}
+.pd-thumbs{display:flex;gap:6px;padding:8px;overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-top:8px}
+.pd-thumbs img{width:64px;height:64px;flex:none;object-fit:cover;border-radius:8px;border:1px solid var(--line);cursor:pointer}
+.pd-thumbs img.active{border-color:var(--gold);box-shadow:0 0 0 2px rgba(245,196,81,.25)}
+.ask-thumb{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:center;width:100%;height:100%;min-height:74px;padding:12px;text-decoration:none;background:linear-gradient(150deg,#151a25,#0e1119);border:0;border-radius:12px}
+.ask-thumb .ico{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:1.05rem;flex:none;background:linear-gradient(145deg,#37e07a,#0f7a3e);border:2px solid rgba(255,255,255,.25)}
+.ask-thumb b{color:#fff;font-size:.92rem;line-height:1.3}
+.ask-thumb small{display:none}
+.ask-thumb.sm{min-height:62px;padding:9px}.ask-thumb.sm b{font-size:.84rem}
+.hero-grid.no-media{grid-template-columns:1fr}
+.hero-grid.no-media .hero-stat{position:static;margin-top:18px;inset-inline-start:auto}
+.pd-grid.no-media{grid-template-columns:1fr}
+@media(max-width:520px){.g-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}}
 .mb0{margin-bottom:0}.mb2{margin-bottom:20px}
 .hide{display:none !important}
 .note{background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.3);border-radius:var(--r-sm);padding:12px 14px;font-size:.87rem;color:#f0e3c2}
@@ -269,13 +323,12 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
 <body>
 
 
-
 <!-- ============ الهيدر ============ -->
 <header class="site-header no-print">
   <div class="container nav">
     <a class="brand" href="#home">
-      <span class="brand-mark"><span>E&amp;H</span></span>
-      <span class="brand-text"><b>E&amp;H STORE</b><small>SPORT WEAR</small></span>
+      <img class="brand-logo logo-img" alt="E&amp;H STORE — SPORT WEAR">
+      <span class="sr-only">E&amp;H STORE — SPORT WEAR</span>
     </a>
     <nav class="menu" id="mainMenu">
       <a href="#home" data-page="home">الرئيسية</a>
@@ -290,10 +343,13 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a href="#faq" data-page="faq">أسئلة شائعة</a>
       <a href="#about" data-page="about">من نحن</a>
       <a href="#contact" data-page="contact">تواصل معنا</a>
+      <a href="#gallery" data-page="gallery">معرض الأعمال</a>
       <a href="#photos" data-page="photos">دليل الصور</a>
       <a href="#invoice" data-page="invoice">الفاتورة</a>
+      <a href="#login" data-page="login">تسجيل الدخول</a>
     </nav>
     <div class="nav-actions">
+      <a class="login-btn" data-auth-btn href="#login">👤 تسجيل الدخول</a>
       <a class="cart-btn" href="#cart">🛒 <span>سلة الطلب</span> <span class="cart-count" data-cart-count>0</span></a>
       <button class="burger" aria-label="القائمة">☰</button>
     </div>
@@ -320,7 +376,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
         </div>
       </div>
       <div class="hero-media">
-        <div class="frame"><img src="opa.jpg" alt=""></div>
+        <div class="frame"><img class="ph-img" alt="E&amp;H STORE SPORT WEAR — صورة رئيسية"></div>
         <div class="hero-stat">
           <div><b>+500</b><small>عميل سعيد</small></div>
           <div><b>32</b><small>منتج متاح</small></div>
@@ -347,6 +403,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a class="cat-card" href="#boxing"><img class="ph-img" alt="قسم الملاكمه"><div class="body"><h3>ملاكمه — BOXING</h3><p>قفازات، أكياس، ملفات يد، واقيات ولو كيك باد.</p><span class="go">تصفح القسم ←</span></div></a>
       <a class="cat-card" href="#sportswear"><img class="ph-img" alt="قسم الملابس الرياضيه"><div class="body"><h3>ملابس رياضيه — SPORT WEAR</h3><p>تيشيرتات، هودي، تراك سوت وبناطيل بشعار E&amp;H.</p><span class="go">تصفح القسم ←</span></div></a>
       <a class="cat-card" href="#equipment"><img class="ph-img" alt="قسم الأدوات والمعدات"><div class="body"><h3>أدوات ومعدات — EQUIPMENT</h3><p>حبال مقاومة، دمبل، أرضيات، تايمر جولات.</p><span class="go">تصفح القسم ←</span></div></a>
+      <a class="cat-card" href="#login"><img class="ph-img" alt="تسجيل الدخول"><div class="body"><h3>🔐 تسجيل الدخول (أدمن)</h3><p>الكابتن يدخل بحساب Google أو إيميله ليفتح محرر الأسماء والأسعار.</p><span class="go">تسجيل الدخول ←</span></div></a>
     </div>
   </div>
 
@@ -356,6 +413,16 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a class="btn btn-ghost btn-sm" href="#shop">كل المنتجات ←</a>
     </div>
     <div class="grid-products" id="homeFeatured"></div>
+  </div>
+
+  <!-- ===== معرض الأعمال — تحت قسم العروض (أول صورة = اللوجو) ===== -->
+  <div class="container section-sm">
+    <div class="section-head">
+      <div><p class="eyebrow">WORK GALLERY</p><h2>معرض الأعمال — صور منتجاتنا الحقيقية</h2></div>
+      <a class="btn btn-ghost btn-sm" href="#gallery">كل صور المعرض ←</a>
+    </div>
+    <div class="g-grid" id="homeGallery"></div>
+    <div class="note mt2">🖼️ صور حقيقية من مخزن المتجر — للمقاسات والأسعار اسأل الكابتن واتساب: <b dir="ltr">01016946303</b></div>
   </div>
 
   <div class="container section">
@@ -453,6 +520,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a class="cat-card" href="#cart"><div class="body"><h3>🧺 سلة الطلب والدفع</h3><p>بيانات العميل وطريقة الدفع.</p></div></a>
       <a class="cat-card" href="#invoice"><div class="body"><h3>🧾 الفاتورة (PDF)</h3><p>فاتورة بألوان المتجر قابلة للطباعة.</p></div></a>
       <a class="cat-card" href="#payment"><div class="body"><h3>💳 طرق الدفع</h3><p>انستا باي وفودافون كاش وكاش.</p></div></a>
+      <a class="cat-card" href="#gallery"><div class="body"><h3>🖼️ معرض الأعمال</h3><p>صور المنتجات الحقيقية (ملابس وأدوات).</p></div></a>
       <a class="cat-card" href="#shipping"><div class="body"><h3>🚚 الشحن والاستبدال</h3><p>مواعيد التسليم وسياسة الاستبدال.</p></div></a>
       <a class="cat-card" href="#faq"><div class="body"><h3>❓ الأسئلة الشائعة</h3><p>إجابات سريعة لأهم الاستفسارات.</p></div></a>
       <a class="cat-card" href="#about"><div class="body"><h3>ℹ️ من نحن</h3><p>قصة المتجر والمدربين.</p></div></a>
@@ -696,12 +764,12 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     <aside class="summary">
       <h3 class="mt0">ملخص الطلب</h3>
       <div class="sum-row"><span>عدد الأصناف</span><span id="sCount">0</span></div>
-      <div class="sum-row"><span>الإجمالي قبل الشحن</span><span id="sSub">0 ج.م</span></div>
-      <div class="sum-row"><span>الشحن</span><span id="sShip">0 ج.م</span></div>
+      <div class="sum-row"><span>إجمالي المنتجات</span><span id="sSub">0 ج.م</span></div>
+      <div class="sum-row"><span>التوصيل</span><span id="sShip">يُحدَّد على واتساب</span></div>
       <div class="sum-row total"><span>الإجمالي</span><span id="sTotal">0 ج.م</span></div>
-      <p class="muted mt1" style="font-size:.82rem">شحن مجاني للطلبات فوق 2000 ج.م — الشحن داخل القاهرة والجيزة 60 ج.م.</p>
-      <button class="btn btn-red btn-block btn-lg mt1" id="confirm" type="button">✅ تأكيد الطلب وإصدار الفاتورة</button>
-      <button class="btn btn-wa btn-block mt1" id="waCart" type="button">💬 إرسال الطلب واتساب</button>
+      <p class="muted mt1" style="font-size:.82rem">سعر التوصيل يُحدَّد على واتساب على الرقم <b dir="ltr">01016946303</b>.</p>
+      <button class="btn btn-red btn-block btn-lg mt1" id="confirm" type="button">🧾 إصدار الفاتورة</button>
+      <button class="btn btn-gold btn-block btn-lg mt1" id="waCart" type="button">📤 إتمام الطلب</button>
       <a class="btn btn-ghost btn-block mt1" href="#invoice">🧾 عرض الفاتورة</a>
       <p class="muted mt1" style="font-size:.8rem">بالضغط على تأكيد الطلب أنت توافق على <a class="gold" href="#terms">الشروط والأحكام</a>.</p>
     </aside>
@@ -785,23 +853,22 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   <div class="page-hero"><div class="container">
     <p class="crumbs"><a href="#home">الرئيسية</a> ← الشحن والاستبدال</p>
     <h1>🚚 الشحن والاستبدال</h1>
-    <p class="muted mb0">مواعيد تسليم واضحة، شحن مجاني للطلبات فوق 2000 ج.م، وسياسة استبدال عادلة خلال 3 أيام.</p>
+    <p class="muted mb0">مواعيد تسليم واضحة وسياسة استبدال عادلة خلال 3 أيام — <b>وسعر التوصيل يُحدَّد على واتساب على الرقم 01016946303</b>.</p>
   </div></div>
   <div class="container section">
     <div class="section-head"><div><p class="eyebrow">DELIVERY</p><h2>مواعيد وأسعار الشحن</h2></div></div>
     <div class="table-scroll">
       <table class="data">
-        <thead><tr><th>المنطقة</th><th>مدة التسليم</th><th>سعر الشحن</th><th>الدفع</th></tr></thead>
+        <thead><tr><th>المنطقة</th><th>مدة التسليم</th><th>سعر التوصيل</th><th>الدفع</th></tr></thead>
         <tbody>
-          <tr><td>القاهرة والجيزة</td><td>1 – 2 يوم عمل</td><td>60 ج.م</td><td>انستا باي / فودافون كاش / كاش عند الاستلام</td></tr>
-          <tr><td>الإسكندرية والدلتا</td><td>2 – 3 أيام عمل</td><td>75 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
-          <tr><td>الصعيد ومحافظات الوجه القبلي</td><td>3 – 5 أيام عمل</td><td>90 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
-          <tr><td>محافظات أخرى</td><td>3 – 5 أيام عمل</td><td>85 ج.م</td><td>انستا باي / فودافون كاش</td></tr>
-          <tr><td>الطلبات فوق 2000 ج.م</td><td>حسب المنطقة</td><td class="gold">مجاني</td><td>—</td></tr>
+          <tr><td>القاهرة والجيزة</td><td>1 – 2 يوم عمل</td><td rowspan="4" class="gold">يُحدَّد على واتساب على الرقم 01016946303</td><td>انستا باي / فودافون كاش / كاش عند الاستلام</td></tr>
+          <tr><td>الإسكندرية والدلتا</td><td>2 – 3 أيام عمل</td><td>انستا باي / فودافون كاش</td></tr>
+          <tr><td>الصعيد ومحافظات الوجه القبلي</td><td>3 – 5 أيام عمل</td><td>انستا باي / فودافون كاش</td></tr>
+          <tr><td>محافظات أخرى</td><td>3 – 5 أيام عمل</td><td>انستا باي / فودافون كاش</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="muted mt1">الأوزان الثقيلة (كيس ملاكمه / دمبل / أرضيات تدريب) قد يُضاف فرق شحن تحميل بسيط — يتم إخبارك بالمبلغ النهائي قبل الشحن.</p>
+    <div class="note mt2">🚚 <b>سعر التوصيل يُحدَّد على واتساب على الرقم 01016946303</b> — السعر حسب المنطقة والوزن (الأوزان الثقيلة زي كيس الملاكمه والأرضيات لها فرق تحميل)، ويتم تأكيد المبلغ النهائي على واتساب قبل الشحن.</div>
   </div>
   <div class="container section-sm">
     <div class="section-head"><div><p class="eyebrow">RETURN POLICY</p><h2>سياسة الاستبدال والإرجاع</h2></div></div>
@@ -812,10 +879,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <div class="feature"><div class="ico">🛠️</div><b>عيب صناعة</b><span>استبدال فوري مجانًا مع تحمّلنا الشحن.</span></div>
     </div>
     <div class="note mt2">❌ <b>غير قابل للاستبدال:</b> أدوات التدريب المستخدمة (قفازات مستعملة، ملفات يد، واقيات أسنان) للأسباب الصحية، والمنتجات المصنوعة بمقاس خاص.</div>
-    <div class="btn-row mt2">
-      <a class="btn btn-wa" target="_blank" href="https://wa.me/201016946303?text=أريد استبدال منتج — رقم الفاتورة: ">واتساب الاستبدال (كونغ فو)</a>
-      <a class="btn btn-wa" target="_blank" href="https://wa.me/201557587871?text=أريد استبدال منتج — رقم الفاتورة: ">واتساب الاستبدال (ملاكمه)</a>
-    </div>
+    <div class="note mt2">🧾 <b>للاستبدال:</b> ابعت رقم الفاتورة وسبب الاستبدال — كونغ فو: <b dir="ltr">01016946303</b> — ملاكمه: <b dir="ltr">01557587871</b>.</div>
   </div>
 </section>
 
@@ -966,6 +1030,26 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   </div>
 </section>
 
+<!-- ================= معرض الأعمال ================= -->
+<section class="page" id="page-gallery" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← معرض الأعمال</p>
+    <h1>🖼️ معرض الأعمال — صور منتجاتنا</h1>
+    <p class="muted mb0">صور حقيقية من مخزن المتجر (ملابس رياضيه + أدوات ومعدات). للمقاسات والأسعار: واتساب <b dir="ltr">01016946303</b>.</p>
+  </div></div>
+  <div class="container section">
+    <div class="filters" id="gChips">
+      <button class="chip active" data-cat="all">كل الصور</button>
+      <button class="chip" data-cat="brand">شعار المتجر</button>
+      <button class="chip" data-cat="clothes">👕 ملابس رياضيه</button>
+      <button class="chip" data-cat="equipment">🥊 أدوات ومعدات</button>
+    </div>
+    <p class="muted" id="gCount"></p>
+    <div class="g-grid" id="galleryAll"></div>
+    <div class="note mt2">🛒 كل الأصناف موجودة في المتجر — <a class="gold" href="#shop">كل المنتجات</a> · <a class="gold" href="#sportswear">ملابس رياضيه</a> · <a class="gold" href="#equipment">أدوات ومعدات</a>.</div>
+  </div>
+</section>
+
 <!-- ================= الشروط والأحكام ================= -->
 <section class="page" id="page-terms" hidden>
   <div class="page-hero"><div class="container">
@@ -986,6 +1070,86 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01557587871</span>.</div></details>
   </div>
 </section>
+
+<!-- ================= تسجيل الدخول (Google + أدمن) ================= -->
+<section class="page" id="page-login" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← تسجيل الدخول</p>
+    <h1>👤 تسجيل الدخول</h1>
+    <p class="muted mb0">سجّل الدخول لتعديل كل بيانات المتجر: المنتجات والأسعار والأوصاف وأرقام التواصل والنصوص. دخول الإدارة بكلمة السر.</p>
+  </div></div>
+  <div class="container section">
+    <div class="lg-grid">
+      <div class="form-card">
+        <h3 class="mt0">1) الدخول بحساب Google</h3>
+        <p class="muted" id="gState">…</p>
+        <div id="gBtn" class="mt1"></div>
+        <div class="field mt2" id="gIdWrap"><label>Google Client ID</label>
+          <input id="gIdInp" dir="ltr" placeholder="xxxxxxxx.apps.googleusercontent.com"></div>
+        <button class="btn btn-gold btn-block mt1" id="gIdSave" type="button">تشغيل زر جوجل</button>
+        <div class="note mt2">🎯 لو زر جوجل مش ظاهر: الصقه مرة واحدة من Google Cloud Console (OAuth client ID → Web application) واضغط «تشغيل زر جوجل». أو استخدم «دخول سريع بالإيميل» فورًا من غير جوجل.</div>
+      </div>
+      <div class="form-card">
+        <h3 class="mt0">2) الدخول بالإيميل + كلمة السر</h3>
+        <div class="field"><label>الإيميل</label><input id="lgEmail" type="email" dir="ltr" placeholder="name@gmail.com"></div>
+        <div class="field mt1"><label>كلمة السر (لازمّة لحسابات المشرفين)</label>
+          <input id="lgPass" type="password" dir="ltr" placeholder="••••••••"></div>
+        <button class="btn btn-red btn-block mt1" id="lgBtn" type="button">🔐 دخول</button>
+        <p class="muted mt1" style="font-size:.82rem">حسابات الإدارة لازمها كلمة السر للدخول. أي إيميل آخر يدخل كزائر (قراءة فقط).</p>
+        <p class="muted mt1" id="lgMsg"></p>
+        <div class="note mt2" data-auth-state>مش مسجّل الدخول حاليًا.</div>
+        <div class="btn-row mt2">
+          <a class="btn btn-ghost" href="#editor" id="lgEd" hidden>✏️ محرر الأسماء والأسعار</a>
+          <button class="btn btn-ghost" id="lgOut" type="button" hidden>🚪 خروج</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= محرر الأسماء والأسعار (أدمن) ================= -->
+<section class="page" id="page-editor" hidden>
+  <div class="page-hero"><div class="container">
+    <p class="crumbs"><a href="#home">الرئيسية</a> ← محرر الأسعار</p>
+    <h1>✏️ تعديل أسماء المنتجات والأسعار</h1>
+    <p class="muted mb0">للمشرفين فقط — تقدر تعدّل أي حاجة: <b>أسماء المنتجات + أسعارها + أوصافها</b>، وأصناف <b>معرض الأعمال</b>، و<b>أرقام الواتساب والموبايل</b>، ونصوص الشحن وأيقونة الصور والعنوان الرئيسي، و<b>كلمة السر</b>. اضغط «💾 حفظ كل التعديلات» — يظهر فورًا. وللعرض لكل الزوار: «📋 نسخ كود التعديل» وحطّه في الملف.</p>
+  </div></div>
+  <div class="container section">
+    <div class="form-card" id="edGate">
+      <p class="mb0 muted">🔒 الصفحة دي للأدمن بس — <a class="gold" href="#login">سجّل الدخول</a> بإيميل مشرف + كلمة السر.</p>
+    </div>
+    <div id="editorPanel" hidden>
+      <h3 class="mt0">🧾 المنتجات ومعرض الأعمال</h3>
+      <div class="table-scroll">
+        <table class="data">
+          <thead><tr><th>الكود</th><th>الاسم</th><th>السعر (ج.م)</th><th>الوصف</th></tr></thead>
+          <tbody id="edRows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="mt2">⚙️ بيانات المتجر والنصوص</h3>
+      <div class="form-card" id="edSite"></div>
+
+      <h3 class="mt2">🔑 كلمة السر</h3>
+      <div class="form-card">
+        <p class="muted mb0">كلمة سر حسابك الحالية: <b id="edPassNow" dir="ltr">…</b></p>
+        <div class="form-grid mt1">
+          <div class="field"><label>كلمة السر الحالية</label><input id="edCurPass" type="password" dir="ltr"></div>
+          <div class="field"><label>كلمة السر الجديدة</label><input id="edNewPass" type="password" dir="ltr"></div>
+          <div class="field"><label>تأكيد كلمة السر الجديدة</label><input id="edNewPass2" type="password" dir="ltr"></div>
+        </div>
+        <button class="btn btn-gold mt2" id="edPassSave" type="button">🔑 تغيير كلمة السر</button>
+      </div>
+
+      <div class="btn-row mt2">
+        <button class="btn btn-gold" id="edSave" type="button">💾 حفظ كل التعديلات</button>
+        <button class="btn btn-ghost" id="edReset" type="button">↺ رجوع للأصلي</button>
+        <button class="btn btn-ghost" id="edCopy" type="button">📋 نسخ كود التعديل</button>
+      </div>
+      <textarea id="edOut" class="hide mt2" rows="6" dir="ltr" style="width:100%;background:#0f131b;border:1px solid var(--line);border-radius:10px;color:#fff;padding:10px"></textarea>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ============ الفوتر ============ -->
@@ -993,8 +1157,8 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   <div class="container footer-grid">
     <div>
       <a class="brand" href="#home">
-        <span class="brand-mark"><span>E&amp;H</span></span>
-        <span class="brand-text"><b>E&amp;H STORE</b><small>SPORT WEAR</small></span>
+        <img class="brand-logo logo-img" alt="E&amp;H STORE — SPORT WEAR">
+        <span class="sr-only">E&amp;H STORE — SPORT WEAR</span>
       </a>
       <p class="muted">متجر متخصص في أدوات وملابس الفنون القتالية والرياضة — جودة عالية وأسعار مناسبة، بإشراف كابتن هشام وليد (كونغ فو) وكابتن اياد الشربيني (ملاكمه).</p>
       <div class="btn-row">
@@ -1013,6 +1177,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a class="link" href="#payment">طرق الدفع</a><a class="link" href="#shipping">الشحن والاستبدال</a>
       <a class="link" href="#faq">الأسئلة الشائعة</a><a class="link" href="#terms">الشروط والأحكام</a>
       <a class="link" href="#invoice">الفاتورة / PDF</a><a class="link" href="#photos">دليل الصور</a>
+      <a class="link" href="#login">🔐 تسجيل الدخول (أدمن)</a><a class="link" href="#editor">✏️ محرر الأسماء والأسعار</a>
     </div>
     <div>
       <h4>تواصل ودفع</h4>
@@ -1047,6 +1212,20 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     '<rect x="250" y="600" width="300" height="6" rx="3" fill="url(#l)"/>' +
     '<text x="400" y="654" fill="#f5c451" font-family="Tahoma, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle">E&amp;H STORE — SPORT WEAR</text></svg>';
   var PH = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(PH_SVG);
+  window.EH_PH = PH;
+
+  /* ============ شعار المتجر (لوجو) مدمج داخل الملف ============ */
+  var LOGO_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420">' +
+    '<rect width="1200" height="420" fill="#0b0b0d"/>' +
+    '<g transform="translate(600,178) skewX(-11)" text-anchor="middle" font-family="Arial Black,Segoe UI Black,Impact,Arial,sans-serif" font-weight="900">' +
+    '<text x="-118" y="0" font-size="192" fill="#ffffff">E</text>' +
+    '<text x="6" y="0" font-size="176" fill="#e0192f">&amp;</text>' +
+    '<text x="128" y="0" font-size="192" fill="#ffffff">H</text></g>' +
+    '<text x="600" y="308" text-anchor="middle" font-family="Arial Black,Impact,Arial,sans-serif" font-weight="900" font-style="italic" font-size="92" fill="#ffffff" letter-spacing="8">STORE</text>' +
+    '<rect x="90" y="356" width="250" height="5" fill="#e0192f"/><rect x="860" y="356" width="250" height="5" fill="#e0192f"/>' +
+    '<text x="600" y="372" text-anchor="middle" font-family="Segoe UI,Arial,Tahoma,sans-serif" font-weight="600" font-size="42" fill="#ffffff" letter-spacing="18">SPORT WEAR</text></svg>';
+  var LOGO = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(LOGO_SVG);
+  window.EH_LOGO = LOGO;
 
   /* ============ بيانات المتجر ============ */
   var STORE = {
@@ -1140,13 +1319,150 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     ['banner-clothes.jpg', 'بنر قسم الملابس'], ['banner-equipment.jpg', 'بنر قسم الأدوات'],
     ['coach-hisham.jpg', 'كابتن هشام وليد'], ['coach-iyad.jpg', 'كابتن اياد الشربيني'],
     ['about-store.jpg', 'صورة عن المتجر'], ['gallery-1.jpg', 'معرض 1'], ['gallery-2.jpg', 'معرض 2'],
-    ['gallery-3.jpg', 'معرض 3'], ['gallery-4.jpg', 'معرض 4']
+    ['gallery-3.jpg', 'معرض 3'],     ['gallery-4.jpg', 'معرض 4']
   ];
+
+  /* ---------- نص التوصيل الموحّد ---------- */
+  var SHIP_TEXT = 'يُحدَّد على واتساب على الرقم 01016946303';
+  /* مكان الصور الفاضية: أيقونة «اسأل على أدواتك وملابسك» */
+  var ASK_NUM = '201557587871';
+  var ASK_TEXT = 'اسأل على أدواتك وملابسك';
+  function askLink() { return 'https://wa.me/' + ASK_NUM + '?text=' + encodeURIComponent('مرحبًا، أريد أسأل على أدواتك وملابسك — E&H STORE SPORT WEAR'); }
+  function askThumb(cls) {
+    return '<a class="ask-thumb' + (cls ? ' ' + cls : '') + '" target="_blank" rel="noopener" href="' + askLink() + '">' +
+      '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01557587871</small></a>';
+  }
+
+  /* ---------- معرض الأعمال (أول صورة = اللوجو) ---------- */
+  var GALLERY = [
+    { u: 'https://sc04.alicdn.com/kf/Af2752a0fa9f746beb37db0635b9709c1F.jpg', t: 'شعار E&H STORE — SPORT WEAR', c: 'brand' },
+    { u: 'https://sc04.alicdn.com/kf/Aa2d24ccbb110472dae04940968cefe9au.jpg', t: 'ميتس تدريب (Focus Pads) — ملاكمه', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A8a8c9aef75684128b6ede10ad6615acdt.jpg', t: 'طقم ملابس ملاكمه — WESING (أزرق/أصفر)', c: 'clothes' },
+    { u: 'https://sc04.alicdn.com/kf/A115d1fec45ee47e1b77486e0d2dea982Q.jpg', t: 'طقم VENUM — Training Camp (أسود/أصفر)', c: 'clothes' },
+    { u: 'https://sc04.alicdn.com/kf/Aee79a80c9cf74d13be2f1be33b9bfc74J.jpg', t: 'طقم KICK BOXING (أسود/أزرق)', c: 'clothes' },
+    { u: 'https://sc04.alicdn.com/kf/A529ffdeb2a2c4d3baf720fe64a229620w.jpg', t: 'طقم VENUM (أسود/أحمر)', c: 'clothes' },
+    { u: 'https://sc04.alicdn.com/kf/A5dcb72a1292b45afbe1af18a48670f54W.jpg', t: 'ملفات يد EVERLAST (أحمر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A03eafad991e946918d0dc2d93eba1e21o.jpg', t: 'طقم VENUM (أسود/ذهبي)', c: 'clothes' },
+    { u: 'https://sc04.alicdn.com/kf/Ae25f15517f084620b9a85c65c3ba5db3j.jpg', t: 'ميتس EVERLAST (أصفر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A8756a397bd5d4f308a6fb8bd5550e2a9J.jpg', t: 'كيس ملاكمه EVERLAST (أحمر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Acde336c5789044c682bb03e5b5b520c3g.jpg', t: 'مضارب تنس طاولة (4 ألوان)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Abdc2ba36cdde45898b303bd223810fb6u.jpg', t: 'أكياس تدريب EVERLAST + VENUM', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A6b2ce9c6bae745a4826346af45d04af71.jpg', t: 'كيس ملاكمه EVERLAST (أبيض)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Ab742e8d328ea4fa19a2bd5638d86ab5dC.jpg', t: 'ميتس VENUM — Training Camp (أحمر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A9b13996f6701463eaf843b259ab2a50cm.jpg', t: 'كيس ملاكمه EVERLAST (أصفر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A783ea7b6a8d14c668599b357385248b8x.jpg', t: 'قفاز VENUM (أزرق)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Ac5191ad2dd9644e8be5479a6148f86bcl.jpg', t: 'قفازات VENUM (أزرق) — زوج', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A81d0f2e424584a14ac39effdaabc1c205.jpg', t: 'قفازات VENUM (أزرق) — صورة إضافية', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/A0601c2661e304aabb61ae90b8dcd8b25u.jpg', t: 'ميتس VENUM (أحمر) — صورة إضافية', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Ada5deef8a2484535a4f1f09b464b920e0.jpg', t: 'ملفات يد KANGO (أسود/أحمر)', c: 'equipment' },
+    { u: 'https://sc04.alicdn.com/kf/Ad6023d6f8bb34770a9960009b41bdbdfR.jpg', t: 'واقي رأس + واقيات KANGO (أحمر/أسود)', c: 'equipment' }
+  ];
+  var CAT_LABEL = { brand: 'شعار المتجر', clothes: 'ملابس رياضيه', equipment: 'أدوات ومعدات' };
+  /* أسعار أصناف المعرض (الأولى = الشعار بدون سعر/اسم) */
+  var G_PRICES = [null, 600, 800, 950, 850, 950, 120, 990, 750, 3200, 300, 9500, 3200, 900, 3200, 890, 1500, 1500, 900, 140, 1100];
+  GALLERY.forEach(function (g, i) { if (G_PRICES[i] !== null && G_PRICES[i] !== undefined) g.price = G_PRICES[i]; });
+
+  /* ---------- صور المنتجات الحقيقية (من صور الكابتن) موزّعة بالتصنيف ----------
+     كل رقم = ترتيب الصورة في GALLERY. المنتجات اللي مالهاش صورة حقيقية
+     بتفضل بأيقونة «اسأل على أدواتك وملابسك» واتساب 01557587871. */
+  var PHOTO_OF = {
+    /* ملاكمه */
+    'bx-01': [15, 17], 'bx-02': [16], 'bx-04': [9, 11, 12, 14], 'bx-05': [20],
+    'bx-07': [6, 19], 'bx-08': [1, 8, 13, 18],
+    /* ملابس رياضيه (أطقم التدريب) */
+    'sw-04': [2, 3, 4, 5, 7]
+  };
+  function productPics(p) {
+    var a = PHOTO_OF[p.id]; if (!a) return null;
+    return a.map(function (i) { return GALLERY[i] ? GALLERY[i].u : null; }).filter(function (u) { return !!u; });
+  }
+  function cardThumb(p) {
+    var a = productPics(p);
+    if (!a || !a.length) return { cls: '', html: askThumb() };
+    return { cls: ' has-photo', html: '<img src="' + a[0] + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.onerror=null;this.src=window.EH_PH">' };
+  }
+  function pdMedia(p) {
+    var a = productPics(p);
+    if (!a || !a.length) return '<div class="pd-media">' + askThumb() + '</div>';
+    var main = '<img id="pdMain" src="' + a[0] + '" alt="' + esc(p.name) + '" onerror="this.onerror=null;this.src=window.EH_PH">';
+    var thumbs = a.length > 1 ? '<div class="pd-thumbs">' + a.map(function (u, i) {
+      return '<img src="' + u + '" data-pd="' + i + '" class="' + (i === 0 ? 'active' : '') + '" alt="">';
+    }).join('') + '</div>' : '';
+    return '<div><div class="pd-media">' + main + '</div>' + thumbs + '</div>';
+  }
+  function galleryCard(g, i) {
+    var isBrand = g.c === 'brand';
+    var fb = isBrand ? 'this.onerror=null;this.src=window.EH_LOGO' : 'this.onerror=null;this.src=window.EH_PH';
+    if (isBrand) {
+      return '<figure class="g-card brand-card"><div class="g-thumb"><img src="' + g.u + '" alt="E&H STORE — SPORT WEAR" loading="lazy" onerror="' + fb + '"></div></figure>';
+    }
+    return '<figure class="g-card">' +
+      '<a class="g-thumb" href="#gallery" data-gopen="' + i + '" title="التفاصيل"><img src="' + g.u + '" alt="' + esc(g.t) + '" loading="lazy" onerror="' + fb + '"></a>' +
+      '<figcaption><b>' + esc(g.t) + '</b><span>' + (CAT_LABEL[g.c] || '') + '</span>' +
+      '<em class="g-price">' + (g.price ? money(g.price) : 'السعر يُحدَّد على واتساب') + '</em>' +
+      '<span class="g-actions">' +
+        '<button class="btn btn-gold btn-sm" type="button" data-gadd="' + i + '">🛒 أضف طلب</button>' +
+        '<button class="btn btn-ghost btn-sm" type="button" data-gopen="' + i + '">التفاصيل</button>' +
+      '</span></figcaption></figure>';
+  }
+  function renderGallery(sel, list) {
+    var el = typeof sel === 'string' ? $(sel) : sel;
+    if (!el) return;
+    var items = list || GALLERY;
+    el.innerHTML = items.map(function (g) { var i = GALLERY.indexOf(g); return galleryCard(g, i < 0 ? 0 : i); }).join('');
+  }
+  var G_INFO = 'صنف متوفر في مخزن المتجر — للمقاسات والألوان والعروض الخاصة بالكميات اسأل الكابتن واتساب.';
+  function openGallery(i) {
+    var g = GALLERY[i]; if (!g) return;
+    var m = document.getElementById('gModal');
+    if (!m) {
+      m = document.createElement('div');
+      m.id = 'gModal'; m.className = 'g-modal';
+      m.addEventListener('click', function (e) {
+        if (e.target === m || (e.target.closest && e.target.closest('[data-gclose]'))) closeGallery();
+      });
+      document.body.appendChild(m);
+    }
+    m.innerHTML = '<div class="box"><button class="x" type="button" data-gclose aria-label="إغلاق">✕</button>' +
+      '<img src="' + g.u + '" alt="' + esc(g.t) + '" onerror="this.onerror=null;this.src=window.EH_PH">' +
+      '<div class="bd"><span class="p-cat">' + (CAT_LABEL[g.c] || '') + '</span>' +
+      '<h3>' + esc(g.t) + '</h3>' +
+      '<p class="g-price" style="font-size:1.15rem">' + (g.price ? money(g.price) : 'السعر يُحدَّد على واتساب') + '</p>' +
+      '<p class="muted">' + G_INFO + '</p>' +
+      '<div class="btn-row">' +
+        '<button class="btn btn-gold" type="button" data-gadd="' + i + '">🛒 أضف طلب</button>' +
+        '<a class="btn btn-wa" target="_blank" rel="noopener" href="' + waLink(ASK_NUM, 'مرحبًا، عايز أعرف سعر وتفاصيل: ' + g.t) + '">💬 اسأل</a>' +
+        '<a class="btn btn-ghost" href="#cart">🧺 سلة الطلب</a>' +
+        '<button class="btn btn-ghost" type="button" data-gclose>إغلاق</button>' +
+      '</div></div></div>';
+    m.style.display = 'grid';
+  }
+  function closeGallery() { var m = document.getElementById('gModal'); if (m) m.style.display = 'none'; }
+  function addGalleryItem(i) {
+    var g = GALLERY[i]; if (!g) return;
+    var c = getCart(), key = 'g-' + i;
+    for (var n = 0; n < c.length; n++) if (c[n].id === key) { c[n].qty += 1; setCart(c); afterAdd(g.t); return; }
+    c.push({ id: key, name: g.t, price: (g.price || null), size: '', qty: 1 });
+    setCart(c); afterAdd(g.t);
+  }
+  function afterAdd(name) {
+    updateBadge();
+    var t = document.getElementById('ehToast');
+    if (!t) { t = document.createElement('div'); t.id = 'ehToast'; t.className = 'eh-toast'; document.body.appendChild(t); }
+    t.innerHTML = '✅ تم إضافة «' + name + '» إلى سلة الطلب — الإجمالي: ' + money(subtotal()) + ' <a href="#cart" style="color:#170f00;text-decoration:underline;font-weight:900">افتح السلة</a>';
+    t.classList.add('show');
+    clearTimeout(afterAdd._t);
+    afterAdd._t = setTimeout(function () { t.classList.remove('show'); }, 3200);
+  }
 
   /* ============ أدوات ============ */
   function $(s, r) { return (r || document).querySelector(s); }
   function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
-  function money(n) { return new Intl.NumberFormat('en-US').format(Math.round(n)) + ' ج.م'; }
+  function money(n) {
+    if (n === null || n === undefined || isNaN(n)) return 'يُحدَّد على واتساب';
+    return new Intl.NumberFormat('en-US').format(Math.round(n)) + ' ج.م';
+  }
+  function lineTotal(i) { return (i.price === null || i.price === undefined || isNaN(i.price)) ? 'يُحدَّد على واتساب' : money(i.price * i.qty); }
   function pById(id) { for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === id) return PRODUCTS[i]; return null; }
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
@@ -1160,8 +1476,8 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   function getCart() { try { return JSON.parse(sget(KEY)) || []; } catch (e) { return []; } }
   function setCart(c) { sset(KEY, JSON.stringify(c)); updateBadge(); }
   function count() { return getCart().reduce(function (a, i) { return a + i.qty; }, 0); }
-  function subtotal() { return getCart().reduce(function (a, i) { return a + i.price * i.qty; }, 0); }
-  function shipCost() { var s = subtotal(); return (s === 0 || s >= STORE.freeShipFrom) ? 0 : STORE.ship; }
+  function subtotal() { return getCart().reduce(function (a, i) { return a + (i.price || 0) * i.qty; }, 0); }
+  function shipCost() { return 0; }   /* سعر التوصيل يُحدَّد على واتساب */
   function add(id, size, qty) {
     var p = pById(id); if (!p) return;
     qty = Math.max(1, parseInt(qty || 1, 10));
@@ -1186,16 +1502,17 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     if (order.customer.address) t += 'العنوان: ' + order.customer.address + '\n';
     t += '\nالأصناف:\n';
     order.items.forEach(function (i) { t += '- ' + i.name + (i.size ? ' (' + i.size + ')' : '') + ' × ' + i.qty + ' = ' + money(i.price * i.qty) + '\n'; });
-    t += '\nالشحن: ' + (order.ship ? money(order.ship) : 'مجاني') + '\nالإجمالي: ' + money(order.total) + '\nطريقة الدفع: ' + order.method;
+    t += '\nالتوصيل: ' + SHIP_TEXT + '\nالإجمالي: ' + money(order.subtotal) + '\nطريقة الدفع: ' + order.method;
     return t;
   }
 
   /* ============ كارت المنتج ============ */
   function cardHTML(p) {
     var sizes = (p.sizes || []).map(function (s) { return '<span class="size">' + esc(s) + '</span>'; }).join('');
+    var th = cardThumb(p);
     return '<article class="p-card">' +
       (p.badge ? '<span class="badge' + (p.badge === 'عرض' ? ' gold' : '') + '">' + esc(p.badge) + '</span>' : '') +
-      '<a class="p-thumb" href="#product/' + p.id + '"><img src="' + PH + '" alt="' + esc(p.name) + '"></a>' +
+      '<div class="p-thumb' + th.cls + '">' + th.html + '</div>' +
       '<div class="p-body"><span class="p-cat">' + esc(CATS[p.cat].en) + '</span>' +
       '<h3 class="p-name">' + esc(p.name) + '</h3><p class="p-desc">' + esc(p.desc) + '</p>' +
       (sizes ? '<div class="sizes">' + sizes + '</div>' : '') +
@@ -1218,7 +1535,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     return '<div class="inv-head"><div class="logo"><div class="mark">E&amp;H</div>' +
       '<div><h2>E&amp;H STORE — SPORT WEAR</h2><small>MARTIAL ARTS &amp; SPORTS GEAR</small></div></div>' +
       '<div class="inv-meta"><div><b>INVOICE / فاتورة</b></div><div>No: ' + esc(o.no) + '</div><div>Date: ' + esc(o.date) + '</div></div></div>' +
-      '<div class="inv-bar"></div><div class="inv-body">' +
+      '<div class="inv-bar"></div>' +
+      '<div class="inv-stamp-wrap"><span class="inv-stamp">قيد المراجعة</span>' +
+      '<span class="inv-stamp-note">الفاتورة قيد المراجعة والتأكيد من إدارة المتجر — يتم تأكيد الطلب والتوصيل على واتساب 01016946303</span></div>' +
+      '<div class="inv-body">' +
       '<div class="inv-parties">' +
         '<div class="inv-box"><b>بيانات العميل</b><span>الاسم: ' + esc(o.customer.name || '—') + '</span><span>الموبايل: ' + esc(o.customer.phone || '—') + '</span>' +
         '<span>المدينة: ' + esc(o.customer.city || '—') + '</span><span>العنوان: ' + esc(o.customer.address || '—') + '</span></div>' +
@@ -1228,9 +1548,9 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       '</div>' +
       '<table class="inv-table"><thead><tr><th>#</th><th>الصنف</th><th class="num">السعر</th><th class="num">الكمية</th><th class="num">الإجمالي</th></tr></thead><tbody>' + rows + '</tbody></table>' +
       '<div class="inv-totals"><div class="box">' +
-        '<div class="row"><span>الإجمالي قبل الشحن</span><span class="v">' + money(o.subtotal) + '</span></div>' +
-        '<div class="row"><span>الشحن</span><span class="v">' + (o.ship ? money(o.ship) : 'مجاني') + '</span></div>' +
-        '<div class="row grand"><span>الإجمالي المطلوب</span><span class="v">' + money(o.total) + '</span></div>' +
+        '<div class="row"><span>إجمالي المنتجات</span><span class="v">' + money(o.subtotal) + '</span></div>' +
+        '<div class="row"><span>التوصيل</span><span class="v">يُحدَّد على واتساب</span></div>' +
+        '<div class="row grand"><span>الإجمالي المطلوب</span><span class="v">' + money(o.subtotal) + '</span></div>' +
       '</div></div>' +
       '<div class="inv-pay">' +
         '<div class="box"><b>انستا باي — InstaPay (تحويل مباشر)</b><div class="n">' + STORE.instapay + '</div><small style="color:#6b7280">حوّل المبلغ ثم أرسل صورة التحويل واتساب لتأكيد الطلب.</small></div>' +
@@ -1244,8 +1564,8 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   }
 
   function makeOrder(customer, items, method, deliver) {
-    var sub = items.reduce(function (a, i) { return a + i.price * i.qty; }, 0);
-    var ship = sub >= STORE.freeShipFrom ? 0 : STORE.ship;
+    var sub = items.reduce(function (a, i) { return a + (i.price || 0) * i.qty; }, 0);
+    var ship = 0; /* التوصيل يُحدَّد على واتساب */
     var d = new Date(), hh = String(d.getHours()).padStart(2, '0'), mm = String(d.getMinutes()).padStart(2, '0');
     return {
       no: 'EH-' + d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + String(Math.floor(1000 + Math.random() * 9000)),
@@ -1256,7 +1576,22 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   }
 
   /* ============ التنقّل بين الصفحات (راوتر داخلي) ============ */
-  var PAGES = ['home','shop','kungfu','boxing','sportswear','equipment','offers','product','cart','invoice','payment','shipping','faq','about','contact','photos','terms'];
+  var PAGES = ['home','shop','kungfu','boxing','sportswear','equipment','offers','product','cart','invoice','payment','shipping','faq','about','contact','gallery','photos','terms','login','editor'];
+  var galleryReady = false;
+  function initGallery() {
+    renderGallery('#galleryAll');
+    $('#gCount').textContent = 'عدد الصور: ' + GALLERY.length;
+    if (galleryReady) return; galleryReady = true;
+    $('#gChips').addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('[data-cat]') : null; if (!b) return;
+      $$('#gChips .chip').forEach(function (c) { c.classList.remove('active'); });
+      b.classList.add('active');
+      var cat = b.getAttribute('data-cat');
+      var list = cat === 'all' ? GALLERY : GALLERY.filter(function (g) { return g.c === cat; });
+      renderGallery('#galleryAll', list);
+      $('#gCount').textContent = 'عدد الصور: ' + list.length;
+    });
+  }
   var shopReady = false, cartReady = false, photosReady = false;
 
   function show(name) {
@@ -1304,7 +1639,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     }
     var specs = (p.specs || []).map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; }).join('');
     $('#pd').innerHTML =
-      '<div class="pd-media"><img src="' + PH + '" alt="' + esc(p.name) + '"></div>' +
+      pdMedia(p) +
       '<div><span class="pill">' + cat.en + ' — ' + cat.ar + '</span>' +
       (p.badge ? ' <span class="badge" style="position:static;display:inline-block">' + p.badge + '</span>' : '') +
       '<h1 class="mt1">' + esc(p.name) + '</h1><p class="muted">' + esc(p.desc) + '</p>' +
@@ -1321,6 +1656,13 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     var qin = document.querySelector('[data-qty-for="' + p.id + '"]');
     document.querySelector('[data-inc]').addEventListener('click', function () { qin.value = (parseInt(qin.value, 10) || 1) + 1; });
     document.querySelector('[data-dec]').addEventListener('click', function () { qin.value = Math.max(1, (parseInt(qin.value, 10) || 1) - 1); });
+    $$('.pd-thumbs img').forEach(function (t) {
+      t.addEventListener('click', function () {
+        var m = $('#pdMain'); if (m) m.src = t.getAttribute('src');
+        $$('.pd-thumbs img').forEach(function (x) { x.classList.remove('active'); });
+        t.classList.add('active');
+      });
+    });
     document.getElementById('buyNow').addEventListener('click', function () {
       var sel = document.querySelector('[data-size-for="' + p.id + '"]');
       var txt = 'أريد طلب: ' + p.name + (sel ? ' — المقاس: ' + sel.value : '') + ' — الكمية: ' + qin.value +
@@ -1345,7 +1687,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     var sub = subtotal(), ship = shipCost();
     $('#sCount').textContent = count();
     $('#sSub').textContent = money(sub);
-    $('#sShip').textContent = ship ? money(ship) : 'مجاني';
+    $('#sShip').textContent = 'يُحدَّد على واتساب';
     $('#sTotal').textContent = money(sub + ship);
   }
 
@@ -1366,13 +1708,17 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       var order = makeOrder({ name: name, phone: phone, city: $('#cCity').value.trim(), address: $('#cAddress').value.trim(), notes: $('#cNotes').value.trim(), deliver: deliver }, itemsForOrder(), method, deliver);
       sset('eh_order', JSON.stringify(order));
       clearCart(); renderCart();
+      /* زر إصدار الفاتورة: يحفظ الطلب ويفتح الفاتورة PDF (بدون واتساب) */
       location.hash = '#invoice';
     });
     $('#waCart').addEventListener('click', function () {
       if (!getCart().length) { alert('السلة فاضية 🛒'); return; }
       var method = document.querySelector('input[name=pay]:checked').value;
       var order = makeOrder({ name: $('#cName').value.trim() || 'عميل جديد', phone: $('#cPhone').value.trim(), city: $('#cCity').value.trim(), address: $('#cAddress').value.trim(), notes: $('#cNotes').value.trim() }, itemsForOrder(), method, $('#cDeliver').value);
+      /* زر إتمام الطلب: يحفظ الطلب ويفتح واتساب 01016946303 بنص الفاتورة تلقائيًا */
+      sset('eh_order', JSON.stringify(order));
       openWA(STORE.waKungfu, orderText(order));
+      location.hash = '#invoice';
     });
   }
 
@@ -1409,6 +1755,263 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     $('#sitePhotoGrid').innerHTML = SITE_IMAGES.map(function (s) { return slot(s[0], s[1]); }).join('');
   }
 
+  /* ============ تسجيل الدخول (Google + إيميل + كلمة سر) ============ */
+  var ADMINS = ['boxeyad568@gmail.com', 'hishamwalid309@gmail.com'];
+  /* 🔑 كلمة سر كل مشرف — غيّرها من هنا (في الملف) أو من صفحة المحرر «كلمة السر» (تتحفظ على الجهاز ده) */
+  var ADMIN_PASS = { 'boxeyad568@gmail.com': 'Eyad@2026', 'hishamwalid309@gmail.com': 'Hisham@2026' };
+  var UKEY = 'eh_user', GIDK = 'eh_gid', PKEY2 = 'eh_pass';
+  var loginReady = false, editorReady = false;
+  function getUser() { try { return JSON.parse(sget(UKEY) || 'null'); } catch (e) { return null; } }
+  function isAdmin(u) {
+    u = u || getUser(); if (!u) return false;
+    if (ADMINS.indexOf(String(u.email || '').trim().toLowerCase()) < 0) return false;
+    return !!(u.via === 'google' || u.pwOk === true);   /* لازم كلمة سر أو دخول جوجل */
+  }
+  function savedPass() { try { return JSON.parse(sget(PKEY2) || '{}'); } catch (e) { return {}; } }
+  function passOf(email) { var s = savedPass(); return String(s[email] || ADMIN_PASS[email] || ''); }
+  function setPass(email, p) { var s = savedPass(); s[email] = p; sset(PKEY2, JSON.stringify(s)); }
+  function authLogin(email, pass, via) {
+    email = String(email || '').trim().toLowerCase();
+    if (!email || email.indexOf('@') < 1 || email.indexOf('.') < 3) return { ok: false, msg: 'اكتب إيميل صحيح (مثال: name@gmail.com)' };
+    var admin = ADMINS.indexOf(email) > -1;
+    if (admin && via !== 'google') {   /* حساب المشرف لازم كلمة سر (جوجل موثّق من جوجل نفسه) */
+      if (!String(pass || '').trim()) return { ok: false, msg: 'كلمة السر مطلوبة لحساب المشرف 🔒' };
+      if (String(pass) !== passOf(email)) return { ok: false, msg: 'كلمة السر غلط — جرّب تاني 🔒' };
+    }
+    var u = { email: email, admin: admin, pwOk: admin ? (via === 'google' || String(pass) === passOf(email)) : false, via: via || 'email', at: Date.now() };
+    sset(UKEY, JSON.stringify(u)); paintAuth();
+    return { ok: true, admin: admin, email: email };
+  }
+  function authLogout() { try { localStorage.removeItem(UKEY); } catch (e) {} paintAuth(); }
+
+  function paintAuth() {
+    var u = getUser(), adm = isAdmin(u);
+    $$('[data-auth-btn]').forEach(function (b) {
+      b.innerHTML = u ? ('👤 ' + (adm ? 'أدمن' : u.email.split('@')[0]) + ' ✔') : '👤 تسجيل الدخول';
+      b.classList.toggle('is-admin', !!adm);
+    });
+    $$('[data-admin-only]').forEach(function (el) { el.hidden = !adm; });
+    $$('[data-guest-only]').forEach(function (el) { el.hidden = !!u; });
+    $$('[data-auth-state]').forEach(function (el) {
+      el.innerHTML = u
+        ? ('مسجّل الدخول: <b>' + u.email + '</b>' + (adm ? ' — <span class="gold">أدمن بكل الصلاحيات</span>' : ' — <span class="muted">حساب زائر (قراءة فقط)</span>'))
+        : 'مش مسجّل الدخول حاليًا.';
+    });
+    var o = $('#lgOut'); if (o) o.hidden = !u;
+    var ed = $('#lgEd'); if (ed) ed.hidden = !adm;
+    var st = $('#gState');
+    if (st) {
+      var cid = String(sget(GIDK) || '');
+      st.innerHTML = cid
+        ? '☑ زر جوجل الرسمي جاهز — اضغط «تسجيل الدخول بحساب Google».'
+        : 'الدخول بجوجل محتاج <b>Client ID</b> مرة واحدة (Google Cloud Console) — الصقه بالأسفل واضغط «تشغيل زر جوجل»، أو استخدم «دخول سريع بالإيميل» فورًا.';
+      var w = $('#gIdWrap'); if (w) w.classList.toggle('hide', !!cid);
+      var inp = $('#gIdInp'); if (inp && cid) inp.value = cid;
+    }
+  }
+
+  function decodeJwt(t) {
+    try { var b = t.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'); return JSON.parse(decodeURIComponent(escape(atob(b)))); } catch (e) { return null; }
+  }
+  function googleInit() {
+    var cid = String(sget(GIDK) || '');
+    if (!cid) return false;
+    var s = document.createElement('script');
+    s.src = 'https://accounts.google.com/gsi/client'; s.async = true; s.defer = true;
+    s.onload = function () {
+      try {
+        window.google.accounts.id.initialize({
+          client_id: cid,
+          callback: function (res) {
+            var p = decodeJwt(res.credential);
+            if (p && p.email) { var r = authLogin(p.email, '', 'google'); if (r.ok) location.hash = r.admin ? '#editor' : '#login'; }
+          }
+        });
+        var host = $('#gBtn');
+        if (host) window.google.accounts.id.renderButton(host, { theme: 'filled_black', size: 'large', text: 'signin_with', shape: 'pill' });
+      } catch (e) {}
+    };
+    document.head.appendChild(s);
+    return true;
+  }
+
+  function initLogin() {
+    paintAuth();
+    if (loginReady) { googleInit(); return; }
+    loginReady = true;
+    var save = $('#gIdSave');
+    if (save) save.addEventListener('click', function () {
+      var v = ($('#gIdInp').value || '').trim();
+      if (!v) { alert('الصق الـ Client ID من Google Cloud Console الأول 🙏'); return; }
+      sset(GIDK, v); paintAuth(); googleInit();
+    });
+    function doLogin() {
+      var r = authLogin($('#lgEmail').value, $('#lgPass') ? $('#lgPass').value : '', 'email');
+      $('#lgMsg').innerHTML = r.ok ? '✅ تم الدخول' : '⚠️ ' + r.msg;
+      if (r.ok && r.admin) location.hash = '#editor';
+    }
+    var b = $('#lgBtn');
+    if (b) b.addEventListener('click', doLogin);
+    var pp = $('#lgPass');
+    if (pp) pp.addEventListener('keydown', function (e) { if (e.key === 'Enter') doLogin(); });
+    var o = $('#lgOut');
+    if (o) o.addEventListener('click', function () { authLogout(); $('#lgMsg').textContent = 'تم الخروج.'; });
+    googleInit();
+  }
+
+  /* ============ تعديل أي حاجة في الموقع (أدمن) ============ */
+  var OKEY = 'eh_overrides';
+  var OV = { p: {}, g: {}, site: {} };
+  function numOrNull(v) { return (v === '' || v === null || v === undefined || isNaN(v)) ? null : +v; }
+  function applyOverrides(o) {
+    o = o || {};
+    if (o.p || o.g || o.site) { OV = { p: o.p || {}, g: o.g || {}, site: o.site || {} }; }
+    else {   /* صيغة قديمة كانت مسطّحة */
+      OV = { p: {}, g: {}, site: {} };
+      Object.keys(o).forEach(function (k) { if (k.indexOf('g-') === 0) OV.g[k] = o[k]; else OV.p[k] = o[k]; });
+    }
+    PRODUCTS.forEach(function (p) {
+      var r = OV.p[p.id]; if (!r) return;
+      if (r.name) p.name = r.name;
+      if (r.desc) p.desc = r.desc;
+      var n = numOrNull(r.price); if (n !== null) p.price = n;
+    });
+    GALLERY.forEach(function (g, i) {
+      var r = OV.g['g-' + i]; if (!r) return;
+      if (r.name) g.t = r.name;
+      var n = numOrNull(r.price); if (n !== null) g.price = n;
+    });
+  }
+  function loadOverrides() { try { applyOverrides(JSON.parse(sget(OKEY) || '{}')); } catch (e) {} }
+  function clearOverrides() { try { localStorage.removeItem(OKEY); } catch (e) {} }
+  function overridesCode() {
+    return '/* تعديلات الأدمن (منتجات + معرض + بيانات المتجر) — الصقها في js/app.js */\nvar EH_OVERRIDES = ' + JSON.stringify(OV, null, 2) + ';';
+  }
+
+  /* ---------- تطبيق الأرقام والنصوص المعدّلة على كل الصفحة ---------- */
+  var DEF_PH1 = '01016946303', DEF_PH2 = '01557587871';
+  function replaceEverywhere(oldS, newS) {
+    if (!oldS || !newS || oldS === newS) return;
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n;
+    while ((n = w.nextNode())) {
+      if (n.nodeValue && n.nodeValue.indexOf(oldS) > -1) n.nodeValue = n.nodeValue.split(oldS).join(newS);
+    }
+    $$('*').forEach(function (el) {
+      if (!el.getAttribute) return;
+      ['href', 'data-copy', 'title', 'alt', 'value', 'content'].forEach(function (a) {
+        var v = el.getAttribute(a);
+        if (v && v.indexOf(oldS) > -1) el.setAttribute(a, v.split(oldS).join(newS));
+      });
+    });
+  }
+  function applySiteSettings() {
+    var s = OV.site || {};
+    var ph1 = String(s.ph1 || '').trim(), ph2 = String(s.ph2 || '').trim();
+    if (ph1) {
+      replaceEverywhere(DEF_PH1, ph1);
+      STORE.phoneKungfu = ph1; STORE.instapay = ph1; STORE.waKungfu = '20' + ph1.replace(/^0/, '');
+    }
+    if (ph2) {
+      replaceEverywhere(DEF_PH2, ph2);
+      STORE.phoneBoxing = ph2; STORE.vodafone = ph2; STORE.waBoxing = '20' + ph2.replace(/^0/, '');
+    }
+    if (s.wa1) STORE.waKungfu = String(s.wa1).replace(/\D/g, '');
+    if (s.wa2) STORE.waBoxing = String(s.wa2).replace(/\D/g, '');
+    if (s.ship) SHIP_TEXT = s.ship;
+    if (s.ask) ASK_TEXT = s.ask;
+    if (s.heroTitle) { var h1 = $('#page-home .hero h1'); if (h1) h1.innerHTML = s.heroTitle; }
+    if (s.heroLead) { var ld = $('#page-home .hero p.lead'); if (ld) ld.innerHTML = s.heroLead; }
+  }
+  function inpAttr(attr, val, type, ph, w) {
+    return '<input data-ed-' + attr + '" type="' + (type || 'text') + '" value="' +
+      String(val == null ? '' : val).replace(/"/g, '&quot;').replace(/</g, '&lt;') + '"' +
+      (ph ? ' placeholder="' + ph + '"' : '') + (w ? ' style="max-width:' + w + '"' : '') + '>';
+  }
+  function sitInp(key, val, type, ph, ltr) {
+    return '<input data-ed-site="' + key + '" type="' + (type || 'text') + '" value="' +
+      String(val == null ? '' : val).replace(/"/g, '&quot;').replace(/</g, '&lt;') + '"' +
+      (ph ? ' placeholder="' + ph + '"' : '') + (ltr ? ' dir="ltr"' : '') + '>';
+  }
+  function initEditor() {
+    paintAuth();
+    var panel = $('#editorPanel'), gate = $('#edGate');
+    if (!isAdmin()) { if (panel) panel.hidden = true; if (gate) gate.classList.remove('hide'); return; }
+    if (gate) gate.classList.add('hide');
+    if (!panel) return;
+    panel.hidden = false;
+    var rows = PRODUCTS.map(function (p) {
+      return '<tr><td style="min-width:90px"><b>' + p.id + '</b></td>' +
+        '<td>' + inpAttr('name', p.name) + '</td>' +
+        '<td>' + inpAttr('price', p.price, 'number', '', '104px') + '</td>' +
+        '<td>' + inpAttr('desc', p.desc) + '</td></tr>';
+    }).join('');
+    rows += GALLERY.map(function (g, i) {
+      if (g.c === 'brand') return '';
+      return '<tr style="background:#101521"><td style="min-width:90px"><b>g-' + i + '</b> <span class="muted">(معرض)</span></td>' +
+        '<td>' + inpAttr('name', g.t) + '</td>' +
+        '<td>' + inpAttr('price', g.price == null ? '' : g.price, 'number', 'واتساب', '104px') + '</td>' +
+        '<td class="muted">—</td></tr>';
+    }).join('');
+    var tb = $('#edRows'); if (tb) tb.innerHTML = rows;
+
+    var sd = $('#edSite'), uu0 = getUser();
+    if (sd) sd.innerHTML =
+      '<div class="form-grid">' +
+        '<div class="field"><label>📞 رقم موبايل/واتساب الكونغ فو</label>' + sitInp('ph1', OV.site.ph1 || STORE.phoneKungfu, 'tel', DEF_PH1, 1) + '</div>' +
+        '<div class="field"><label>📞 رقم موبايل/واتساب الملاكمه</label>' + sitInp('ph2', OV.site.ph2 || STORE.phoneBoxing, 'tel', DEF_PH2, 1) + '</div>' +
+        '<div class="field"><label>🎯 نص أيقونة الصور الفاضية</label>' + sitInp('ask', OV.site.ask || ASK_TEXT, 'text', ASK_TEXT, 0) + '</div>' +
+        '<div class="field"><label>🚚 نص الشحن</label>' + sitInp('ship', OV.site.ship || SHIP_TEXT, 'text', SHIP_TEXT, 0) + '</div>' +
+        '<div class="field" style="grid-column:1/-1"><label>عنوان الصفحة الرئيسية (يقبل HTML)</label>' + sitInp('heroTitle', OV.site.heroTitle || '', 'text', 'سيبه فاضي للإبقاء على العنوان الحالي', 0) + '</div>' +
+        '<div class="field" style="grid-column:1/-1"><label>الوصف تحت العنوان الرئيسي (يقبل HTML)</label>' + sitInp('heroLead', OV.site.heroLead || '', 'text', 'سيبه فاضي للإبقاء على الوصف الحالي', 0) + '</div>' +
+      '</div>' +
+      '<div class="note mt2">أي خانة تسيبها فاضية تفضل زي ما هي. الأرقام بتتغيّر في كل الصفحة (أزرار الواتساب + الاتصال + الفاتورة).</div>';
+
+    var pn = $('#edPassNow');
+    if (pn && uu0) pn.textContent = passOf(uu0.email) || '—';
+
+    if (editorReady) return;
+    editorReady = true;
+    $('#edSave').addEventListener('click', function () {
+      var o = { p: {}, g: {}, site: {} };
+      $$('[data-ed-name]').forEach(function (i2) {
+        var id = i2.getAttribute('data-ed-name');
+        var pr = document.querySelector('[data-ed-price="' + id + '"]');
+        var ds = document.querySelector('[data-ed-desc="' + id + '"]');
+        var box = (id.indexOf('g-') === 0) ? o.g : o.p;
+        box[id] = { name: i2.value.trim(), price: pr ? pr.value : '', desc: ds ? ds.value.trim() : '' };
+      });
+      $$('[data-ed-site]').forEach(function (i3) {
+        var k = i3.getAttribute('data-ed-site'), v = i3.value.trim();
+        if (v) o.site[k] = v;
+      });
+      sset(OKEY, JSON.stringify(o));
+      alert('تم حفظ كل التعديلات ✅\nهتظهر فورًا على الجهاز ده.\nوللعرض لكل الزوار: «📋 نسخ كود التعديل» وحطّه في الملف.');
+      location.reload();
+    });
+    $('#edReset').addEventListener('click', function () {
+      if (!confirm('ترجّع كل الأسماء والأسعار والأرقام للأصل؟')) return;
+      clearOverrides(); location.reload();
+    });
+    $('#edCopy').addEventListener('click', function () {
+      var out = $('#edOut'); out.value = overridesCode(); out.classList.remove('hide'); out.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      alert('تم نسخ كود التعديل 📋');
+    });
+    var ps = $('#edPassSave');
+    if (ps) ps.addEventListener('click', function () {
+      var uu = getUser();
+      if (!isAdmin(uu)) { alert('سجّل الدخول كمشرف الأول 🔒'); return; }
+      if (String($('#edCurPass').value) !== passOf(uu.email)) { alert('كلمة السر الحالية غلط 🔒'); return; }
+      var nw = $('#edNewPass').value, nw2 = $('#edNewPass2').value;
+      if (String(nw).length < 6) { alert('كلمة السر الجديدة لازم 6 حروف/أرقام على الأقل'); return; }
+      if (nw !== nw2) { alert('كلمة السر الجديدة غير متطابقة'); return; }
+      setPass(uu.email, nw);
+      $('#edCurPass').value = ''; $('#edNewPass').value = ''; $('#edNewPass2').value = '';
+      if ($('#edPassNow')) $('#edPassNow').textContent = nw;
+      alert('تم تغيير كلمة السر ✅ (للجهاز ده)\nلتفعيلها على كل الأجهزة اكتبها في سطر ADMIN_PASS جوه الملف.');
+    });
+  }
+
   function route() {
     var h = (location.hash || '#home').replace(/^#/, '');
     var parts = h.split('/'), name = parts[0] || 'home', arg = parts[1] || '';
@@ -1427,16 +2030,62 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     if (name === 'product') initProduct(arg || 'kf-01');
     if (name === 'cart') initCart();
     if (name === 'invoice') initInvoice();
+    if (name === 'gallery') initGallery();
     if (name === 'photos') initPhotos();
+    if (name === 'login') initLogin();
+    if (name === 'editor') initEditor();
   }
 
   function boot() {
-    $$('.ph-img').forEach(function (im) { im.src = PH; });
+    loadOverrides();     /* تعديلات الأدمن (منتجات / معرض / نصوص وأرقام المتجر) */
+    applySiteSettings(); /* تطبيق أرقام التواصل والنصوص المعدّلة */
+    paintAuth();
+    /* صور الكباتن الحقيقية (كابتن هشام — كابتن اياد) */
+    $$('.coach-card .ph-img').forEach(function (im) {
+      var t = im.getAttribute('alt') || '';
+      im.src = (t.indexOf('اياد') > -1)
+        ? 'https://sc02.alicdn.com/kf/A55b9bd9d297d4b9e9fc5c6b53f9b576eg.png'
+        : 'https://sc04.alicdn.com/kf/Af68925bd11b44148b204001e518b9074T.jpg';
+      im.onerror = function () { this.onerror = null; this.src = PH; };
+    });
+    /* الصور الفاضية: إطار الغلاف/صفحة المنتج يُحذف، والباقي يأخذ أيقونة «اسأل على أدواتك وملابسك» */
+    $$('.ph-img').forEach(function (im) {
+      if (im.closest('.coach-card')) return;
+      var hero = im.closest('.hero-media');
+      if (hero) {
+        hero.parentNode.removeChild(hero);
+        var hg = document.querySelector('.hero-grid'); if (hg) hg.classList.add('no-media');
+        return;
+      }
+      var pd = im.closest('.pd-media');
+      if (pd) {
+        var pg = pd.closest('.pd-grid'); if (pg) pg.classList.add('no-media');
+        pd.parentNode.removeChild(pd);
+        return;
+      }
+      var a = document.createElement('a');
+      a.className = 'ask-thumb'; a.target = '_blank'; a.rel = 'noopener'; a.href = askLink();
+      a.innerHTML = '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01557587871</small>';
+      im.parentNode.replaceChild(a, im);
+    });
+    /* معرض الأعمال: نافذة التفاصيل + أضف طلب */
+    document.addEventListener('click', function (e) {
+      var t2 = e.target; if (!t2.closest) return;
+      var op = t2.closest('[data-gopen]'); if (op) { e.preventDefault(); openGallery(+op.getAttribute('data-gopen')); return; }
+      var ad = t2.closest('[data-gadd]'); if (ad) { addGalleryItem(+ad.getAttribute('data-gadd')); return; }
+      if (t2.closest('[data-gclose]')) { closeGallery(); return; }
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeGallery(); });
+    $$('.logo-img').forEach(function (im) { im.src = LOGO; });
+    var fav = document.querySelector('link[rel="icon"]');
+    if (fav) { fav.href = LOGO; }
+    else { fav = document.createElement('link'); fav.rel = 'icon'; fav.href = LOGO; document.head.appendChild(fav); }
     var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
     updateBadge();
     var best = PRODUCTS.filter(function (p) { return p.badge === 'الأكثر مبيعًا'; });
     var off = PRODUCTS.filter(function (p) { return p.badge === 'عرض'; });
     renderGrid('#homeFeatured', best.concat(off).slice(0, 8));
+    renderGallery('#homeGallery');   /* معرض الأعمال تحت قسم العروض — أول صورة اللوجو */
     var b = $('.burger');
     if (b) b.addEventListener('click', function () { $('#mainMenu').classList.toggle('open'); });
     $$('[data-copy]').forEach(function (btn) {
