@@ -318,6 +318,266 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
 .hide{display:none !important}
 .note{background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.3);border-radius:var(--r-sm);padding:12px 14px;font-size:.87rem;color:#f0e3c2}
 .ok-note{background:rgba(39,192,122,.1);border-color:rgba(39,192,122,.35);color:#c8f2dc}
+
+/* ====== DARK STYLE (نفس أشكال DINA STORE — غامق ونص واضح ومناسب للتلفون) ====== */
+:root{
+  --bg:#061A1C; --bg2:#08221F; --card:#0C2A28; --card2:#113633;
+  --line:#1B4A45; --txt:#EAF7F4; --muted:#9FC2BC;
+  --red:#EF6F5C; --red2:#FF8A78; --gold:#E0A32E; --gold2:#F6C45A;
+  --wa:#27C07A; --ok:#27C07A;
+  --t1:#07433E; --t2:#12796F; --t3:#E0A32E;
+  --r:18px; --r-sm:12px;
+  --sh:0 10px 30px rgba(0,0,0,.35); --sh-sm:0 6px 18px rgba(0,0,0,.28);
+}
+body{background:radial-gradient(900px 420px at 85% -10%,rgba(18,121,111,.30),transparent 60%),
+  radial-gradient(700px 380px at 8% 110%,rgba(224,163,46,.10),transparent 60%),var(--bg);color:var(--txt)}
+@keyframes aurora{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.site-header{position:sticky;top:0;z-index:80;color:#fff;overflow:hidden;border-radius:0 0 22px 22px;
+  background:linear-gradient(120deg,var(--t1),var(--t2),var(--t3),var(--t1));background-size:280% 280%;
+  animation:aurora 22s ease infinite;box-shadow:0 8px 26px rgba(0,0,0,.38)}
+.site-header::after{content:"";position:absolute;inset-inline:0;bottom:-8px;height:20px;pointer-events:none;
+  background:radial-gradient(60% 100% at 50% 0,rgba(6,26,28,.85),transparent 72%)}
+.site-header .menu{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:8px;scrollbar-width:none;padding-bottom:4px}
+.site-header .menu::-webkit-scrollbar{display:none}
+.site-header .menu a{background:rgba(255,255,255,.14);border-radius:999px;padding:8px 15px;color:#fff;white-space:nowrap;font-size:.9rem}
+.site-header .menu a.active{background:#fff;color:var(--t1);font-weight:800;box-shadow:none}
+.site-header .menu a:hover{background:rgba(255,255,255,.26);color:#fff}
+.brand-logo{border-radius:14px}
+.cart-btn{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);color:#fff}
+.cart-count{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3b2a00}
+.burger{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff}
+.login-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.42);color:#fff}
+.login-btn:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.24)}
+.login-btn.is-admin{background:linear-gradient(135deg,#27c07a,#0f7a3e);border-color:transparent;color:#04231A}
+.p-card,.cat-card,.form-card,.summary,.coach-card,.feature,.area-card{
+  background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--sh-sm)}
+.p-card:hover,.cat-card:hover{transform:translateY(-4px);border-color:rgba(224,163,46,.55);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.p-card .p-thumb.has-photo{background:#0A2321}
+.p-cat{color:var(--gold2);background:rgba(224,163,46,.14);border-radius:999px;padding:3px 10px;align-self:flex-start}
+.p-name{color:#fff} .p-desc{color:var(--muted)} .p-price b{color:var(--gold2)}
+.badge{background:linear-gradient(135deg,var(--red),#ff9a86);color:#2b0a05}
+.badge.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3b2a00}
+.pill{background:rgba(224,163,46,.14);border-color:rgba(224,163,46,.42);color:var(--gold2)}
+h1,h2,h3{color:#fff} .eyebrow{color:var(--gold2)} .gold{color:var(--gold2)}
+.btn{border-radius:999px;box-shadow:0 8px 20px rgba(224,163,46,.26)}
+.btn-red{background:linear-gradient(135deg,var(--red),#ff9a86);color:#2b0a05;box-shadow:0 8px 20px rgba(239,111,92,.30)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3b2a00}
+.btn-wa{background:linear-gradient(135deg,#27c07a,#0f7a3e);color:#04231A}
+.btn-call{background:linear-gradient(135deg,#3fa46a,#0b4b33);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--txt)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:var(--gold);color:var(--gold2)}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:999px}
+.chip.active,.chip.on{background:linear-gradient(135deg,var(--t1),var(--t2));color:#fff;border-color:transparent}
+.field input,.field select,.field textarea,table.data input,input,select,textarea{background:#08211F;border:1px solid var(--line);color:var(--txt);border-radius:12px}
+.field input:focus,.field select:focus,.field textarea:focus,input:focus,select:focus{border-color:var(--t2);box-shadow:0 0 0 3px rgba(18,121,111,.28)}
+table.data th{background:linear-gradient(135deg,var(--t1),var(--t2));color:#fff}
+.table-scroll{background:var(--card);border-color:var(--line);border-radius:14px}
+.note{background:rgba(224,163,46,.10);border:1px dashed rgba(224,163,46,.45);color:#F6E7C6}
+.ok-note{background:rgba(39,192,122,.12);border-color:rgba(39,192,122,.45);color:#C8F2DC}
+.hero,.page-hero{background:linear-gradient(120deg,var(--t1),var(--t2),var(--t3),var(--t1));background-size:280% 280%;animation:aurora 22s ease infinite;color:#fff}
+.site-footer{background:linear-gradient(125deg,var(--t1),var(--t2),var(--t1));background-size:200% 200%;animation:aurora 26s ease infinite;color:#fff;border-top:0}
+.site-footer h4{color:var(--gold2)} .site-footer a.link{color:rgba(255,255,255,.92)}
+.float-wa{background:linear-gradient(135deg,#27c07a,#0f7a3e);box-shadow:0 12px 28px rgba(39,192,122,.42)}
+.ask-thumb{background:linear-gradient(150deg,#0F3431,#08211F)}
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.85}
+  .container{padding-inline:12px}
+  .grid-products,.g-grid,.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .p-body{padding:11px} .p-name{font-size:.96rem} .p-desc{font-size:.82rem}
+  .p-price b{font-size:1.05rem}
+  .btn{padding:13px 18px;font-size:.95rem}
+  .btn-sm{padding:10px 14px;font-size:.88rem}
+  .hero-grid,.pd-grid,.cart-wrap{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(1.5rem,7vw,2.05rem)}
+  .page-hero h1{font-size:clamp(1.35rem,6vw,1.85rem)}
+  .section-head h2{font-size:1.25rem}
+  .table-scroll{-webkit-overflow-scrolling:touch}
+  .float-wa{width:52px;height:52px;font-size:1.35rem}
+  .coach-card{grid-template-columns:1fr}
+}
+@media(min-width:761px){.g-grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important}}
+
+/* ====== V2: أشكال أحلى وأكثر جذبًا (حدود متدرّجة + لمعة + شرائح بارزة) ====== */
+:root{ --r:24px; --r-sm:14px;
+  --grad-gold:linear-gradient(135deg,#F6C45A,#E0A32E 55%,#B9791A);
+  --grad-teal:linear-gradient(135deg,#12796F,#07433E);
+  --grad-coral:linear-gradient(135deg,#FF8A78,#EF6F5C);
+  --glow:0 14px 34px rgba(224,163,46,.26)}
+.p-card,.cat-card,.form-card,.summary,.coach-card,.feature,.g-card,.faq-item,.area-card{
+  position:relative;border:1px solid transparent;border-radius:var(--r);
+  background:linear-gradient(180deg,var(--card),var(--bg2)) padding-box,
+             linear-gradient(140deg,rgba(224,163,46,.55),rgba(18,121,111,.35) 45%,rgba(255,255,255,.06)) border-box;
+  box-shadow:0 10px 26px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+  transition:transform .25s ease, box-shadow .25s ease}
+.p-card::before{content:"";position:absolute;top:0;inset-inline:0;height:3px;z-index:3;
+  background:linear-gradient(90deg,var(--gold),var(--t2),var(--red))}
+.p-card::after,.cat-card::after,.g-card::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.16) 50%,transparent 62%);
+  transform:translateX(-120%);transition:transform .7s ease}
+.p-card:hover::after,.cat-card:hover::after,.g-card:hover::after{transform:translateX(120%)}
+.p-card:hover,.cat-card:hover,.g-card:hover{transform:translateY(-6px) scale(1.012);
+  box-shadow:0 20px 44px rgba(0,0,0,.5), var(--glow);border-color:transparent}
+.p-card .p-thumb{border-radius:calc(var(--r) - 2px) calc(var(--r) - 2px) 0 0;position:relative}
+.p-card .p-thumb.has-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(6,26,28,.78))}
+.badge{border-radius:999px;padding:5px 12px;box-shadow:0 6px 16px rgba(239,111,92,.4)}
+.badge.gold{box-shadow:0 6px 16px rgba(224,163,46,.45)}
+.p-price{background:linear-gradient(135deg,rgba(224,163,46,.16),rgba(224,163,46,.04));
+  border:1px solid rgba(224,163,46,.35);border-radius:14px;padding:8px 12px;justify-content:space-between}
+.p-price b{font-size:1.18rem;text-shadow:0 0 18px rgba(224,163,46,.35)}
+.btn{position:relative;overflow:hidden;
+  box-shadow:0 10px 24px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);
+  transform:translateX(-130%);transition:transform .6s ease}
+.btn:hover::after{transform:translateX(130%)}
+.btn-red{background:var(--grad-coral);box-shadow:0 10px 26px rgba(239,111,92,.38), inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-gold{background:var(--grad-gold);box-shadow:0 10px 26px rgba(224,163,46,.42), inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-wa{background:linear-gradient(135deg,#42E08A,#0F7A3E);box-shadow:0 10px 26px rgba(39,192,122,.4), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-ghost{border:1px solid rgba(224,163,46,.45)}
+h2,.section-head h2{background:linear-gradient(90deg,#fff,#F6C45A 72%);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:#fff}
+.section-head h2::after{content:"";display:block;width:74px;height:4px;border-radius:99px;margin-top:10px;
+  background:linear-gradient(90deg,var(--gold),var(--t2))}
+.chip{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05)}
+.chip.active,.chip.on{background:var(--grad-teal);box-shadow:0 8px 22px rgba(18,121,111,.4), inset 0 1px 0 rgba(255,255,255,.25)}
+.feature .ico{background:var(--grad-gold);color:#3b2a00;border-radius:16px;box-shadow:var(--glow)}
+.site-header{box-shadow:0 8px 26px rgba(0,0,0,.38), inset 0 -3px 0 rgba(224,163,46,.7)}
+.site-header .menu a.active{box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.site-footer{box-shadow:inset 0 4px 0 rgba(224,163,46,.65)}
+.summary{border-radius:var(--r)}
+@media(max-width:760px){
+  .p-card:hover,.cat-card:hover,.g-card:hover{transform:none}
+  .p-price b{font-size:1.04rem}
+  h2,.section-head h2{font-size:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){.btn::after,.p-card::after,.cat-card::after,.g-card::after{display:none}}
+@media print{h2,.section-head h2{background:none !important;-webkit-text-fill-color:#111 !important;color:#111 !important}}
+
+/* ====== V3: فقاعات + موجات + حركات راقية (CSS فقط — سريعة بدون JS) ====== */
+html{scroll-behavior:smooth}
+@keyframes riseBubbles{0%{transform:translate3d(0,30%,0) scale(.92);opacity:0}
+  22%{opacity:.65}100%{transform:translate3d(0,-34%,0) scale(1.1);opacity:0}}
+@keyframes floaty{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-8px,0)}}
+@keyframes fadeUp{from{opacity:0;transform:translate3d(0,14px,0)}to{opacity:1;transform:none}}
+@keyframes pulseGold{0%,100%{box-shadow:0 6px 16px rgba(224,163,46,.42)}50%{box-shadow:0 8px 26px rgba(224,163,46,.8)}}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(39,192,122,.55)}70%{box-shadow:0 0 0 18px rgba(39,192,122,0)}100%{box-shadow:0 0 0 0 rgba(39,192,122,0)}}
+@keyframes shineTitle{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+/* فقاعات طالعة جوه الهيدر */
+.site-header::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55;
+  background-image:
+    radial-gradient(circle at 12% 80%,rgba(255,255,255,.55) 0 6px,transparent 7px),
+    radial-gradient(circle at 27% 94%,rgba(255,255,255,.38) 0 10px,transparent 11px),
+    radial-gradient(circle at 44% 86%,rgba(255,255,255,.30) 0 5px,transparent 6px),
+    radial-gradient(circle at 61% 96%,rgba(255,255,255,.42) 0 8px,transparent 9px),
+    radial-gradient(circle at 76% 84%,rgba(255,255,255,.32) 0 6px,transparent 7px),
+    radial-gradient(circle at 90% 92%,rgba(255,255,255,.45) 0 9px,transparent 10px);
+  background-repeat:no-repeat;animation:riseBubbles 9s linear infinite}
+/* موجة دائرية في آخر الهيدر */
+.site-header::after{content:"";position:absolute;inset-inline:0;bottom:0;height:16px;z-index:2;pointer-events:none;
+  background:
+    radial-gradient(58px 16px at 14% 0,var(--bg) 58%,transparent 60%),
+    radial-gradient(78px 17px at 44% 0,var(--bg) 58%,transparent 60%),
+    radial-gradient(66px 15px at 76% 0,var(--bg) 58%,transparent 60%),
+    radial-gradient(50px 14px at 96% 0,var(--bg) 58%,transparent 60%);
+  background-repeat:no-repeat}
+/* عنوان رئيسي لامع + حركة */
+.hero h1{text-shadow:0 8px 28px rgba(0,0,0,.45)}
+.hero h1 em{background:linear-gradient(90deg,#FFE7AE,#F6C45A,#E0A32E,#FFE7AE);background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shineTitle 6s linear infinite;position:relative;display:inline-block}
+.hero h1 em::after{content:"";position:absolute;inset-inline:0;bottom:-6px;height:4px;border-radius:99px;
+  background:var(--grad-gold);opacity:.9}
+.hero .pill,.hero-stat{animation:floaty 6s ease-in-out infinite}
+/* دخول ناعم للصفحات والكروت */
+.page:not([hidden]),.screen.on{animation:fadeUp .42s ease both}
+.grid-products .p-card,.g-grid .g-card{animation:fadeUp .5s ease both;will-change:transform,opacity}
+.grid-products .p-card:nth-child(1),.g-grid .g-card:nth-child(1){animation-delay:.02s}
+.grid-products .p-card:nth-child(2),.g-grid .g-card:nth-child(2){animation-delay:.06s}
+.grid-products .p-card:nth-child(3),.g-grid .g-card:nth-child(3){animation-delay:.1s}
+.grid-products .p-card:nth-child(4),.g-grid .g-card:nth-child(4){animation-delay:.14s}
+.grid-products .p-card:nth-child(5),.g-grid .g-card:nth-child(5){animation-delay:.18s}
+.grid-products .p-card:nth-child(6),.g-grid .g-card:nth-child(6){animation-delay:.22s}
+.grid-products .p-card:nth-child(n+7),.g-grid .g-card:nth-child(n+7){animation-delay:.26s}
+/* نبضة ذهبية على «عرض» ونبضة واتساب */
+.badge.gold{animation:pulseGold 3.2s ease-in-out infinite}
+.float-wa{animation:waPulse 2.6s ease-out infinite}
+/* لمسة راقية: خط فاصل متدرّج تحت عناوين الأقسام */
+.section-head{border-bottom:1px solid rgba(224,163,46,.16);padding-bottom:14px}
+/* الموبايل: حركات أخف = أسرع */
+@media(max-width:760px){
+  .site-header::before{animation-duration:13s;opacity:.4}
+  .hero .pill,.hero-stat,.badge.gold,.float-wa{animation:none}
+  .grid-products .p-card,.g-grid .g-card{animation-duration:.34s;will-change:auto}
+  .page:not([hidden]){animation-duration:.3s}
+}
+/* بطيء/خفيف الأداء: اهدى الحركات */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .hero h1 em{-webkit-text-fill-color:#F6C45A}
+}
+
+/* ====== V4: إفكتات كتير — شرارات بتضرب من أركان الشاشة + توهّجات + تيكر عروض ====== */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:45;overflow:hidden}
+.fx i{position:absolute;width:9px;height:9px;border-radius:50%;opacity:0;
+  background:radial-gradient(circle at 34% 32%,#FFF7DF,#F6C45A 55%,#E0A32E);
+  box-shadow:0 0 12px rgba(224,163,46,.85),0 0 22px rgba(224,163,46,.35)}
+.fx i:nth-child(1){left:1%;top:14vh;animation:shootTL 6s ease-out infinite}
+.fx i:nth-child(2){left:0;top:34vh;animation:shootTL 7.5s ease-out .9s infinite}
+.fx i:nth-child(3){right:1%;top:12vh;animation:shootTR 6.6s ease-out .4s infinite}
+.fx i:nth-child(4){right:0;top:40vh;animation:shootTR 8s ease-out 1.6s infinite}
+.fx i:nth-child(5){left:1%;bottom:12vh;animation:shootBL 7s ease-out .6s infinite}
+.fx i:nth-child(6){left:0;bottom:30vh;animation:shootBL 8.4s ease-out 2s infinite}
+.fx i:nth-child(7){right:1%;bottom:14vh;animation:shootBR 6.8s ease-out 1.2s infinite}
+.fx i:nth-child(8){right:0;bottom:32vh;animation:shootBR 7.8s ease-out 2.4s infinite}
+@keyframes shootTL{0%{transform:translate3d(0,0,0) scale(.35);opacity:0}10%{opacity:1}
+  100%{transform:translate3d(42vw,56vh,0) scale(1.05);opacity:0}}
+@keyframes shootTR{0%{transform:translate3d(0,0,0) scale(.35);opacity:0}10%{opacity:1}
+  100%{transform:translate3d(-42vw,56vh,0) scale(1.05);opacity:0}}
+@keyframes shootBL{0%{transform:translate3d(0,0,0) scale(.35);opacity:0}10%{opacity:1}
+  100%{transform:translate3d(40vw,-56vh,0) scale(1.05);opacity:0}}
+@keyframes shootBR{0%{transform:translate3d(0,0,0) scale(.35);opacity:0}10%{opacity:1}
+  100%{transform:translate3d(-40vw,-56vh,0) scale(1.05);opacity:0}}
+.fx .orb{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(34px);opacity:.32;
+  animation:orbFloat 16s ease-in-out infinite}
+.fx .o1{background:radial-gradient(circle,#12796F,transparent 70%);top:8%;right:-6%}
+.fx .o2{background:radial-gradient(circle,#E0A32E,transparent 70%);bottom:12%;left:-8%;animation-delay:-5s}
+.fx .o3{background:radial-gradient(circle,#EF6F5C,transparent 70%);top:52%;left:38%;width:190px;height:190px;animation-delay:-9s}
+@keyframes orbFloat{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-26px,0) scale(1.08)}}
+.fx::after{content:"";position:absolute;inset:0;opacity:.3;animation:twinkle 5s ease-in-out infinite;
+  background-image:
+    radial-gradient(circle at 18% 22%,rgba(255,255,255,.6) 0 2px,transparent 3px),
+    radial-gradient(circle at 66% 14%,rgba(246,196,90,.65) 0 2px,transparent 3px),
+    radial-gradient(circle at 84% 48%,rgba(255,255,255,.5) 0 2px,transparent 3px),
+    radial-gradient(circle at 32% 68%,rgba(246,196,90,.55) 0 2px,transparent 3px),
+    radial-gradient(circle at 74% 82%,rgba(255,255,255,.5) 0 2px,transparent 3px),
+    radial-gradient(circle at 12% 88%,rgba(246,196,90,.5) 0 2px,transparent 3px);
+  background-repeat:no-repeat}
+@keyframes twinkle{0%,100%{opacity:.16}50%{opacity:.6}}
+.ticker{position:relative;overflow:hidden;background:linear-gradient(90deg,#08211F,#0C2A28,#08211F);
+  border-bottom:1px solid rgba(224,163,46,.28)}
+.ticker-in{display:flex;gap:30px;white-space:nowrap;padding:10px 0;color:#F6E7C6;font-weight:700;font-size:.85rem;
+  animation:tickerMove 30s linear infinite;will-change:transform}
+.ticker-in span{display:inline-flex;align-items:center;gap:8px}
+@keyframes tickerMove{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.brand-logo{animation:logoGlow 4.5s ease-in-out infinite}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(224,163,46,0))}50%{filter:drop-shadow(0 0 14px rgba(224,163,46,.6))}}
+.btn:active{transform:translateY(1px) scale(.985)}
+@media(min-width:761px){
+  .p-card:hover,.cat-card:hover{transform:translateY(-6px) scale(1.012) rotate(-.5deg)}
+  .p-card:nth-child(even):hover,.cat-card:nth-child(even):hover{transform:translateY(-6px) scale(1.012) rotate(.5deg)}
+  .ticker-in:hover{animation-play-state:paused}
+}
+@media(max-width:760px){
+  .fx i:nth-child(n+5){display:none}
+  .fx .orb{display:none}
+  .fx .o1{display:block;opacity:.2;width:180px;height:180px}
+  .brand-logo{animation:none}
+  .ticker-in{animation-duration:22s;font-size:.8rem}
+}
+@media (prefers-reduced-motion:reduce){.fx{display:none}}
 </style>
 </head>
 <body>
@@ -355,6 +615,17 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     </div>
   </div>
 </header>
+
+<!-- ====== طبقة الإفكتات (زينة فقط — مش بتأثر على أي وظيفة) ====== -->
+<div class="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><em class="orb o1"></em><em class="orb o2"></em><em class="orb o3"></em></div>
+
+<!-- ====== شريط العروض المتحرّك ====== -->
+<div class="ticker" aria-hidden="true"><div class="ticker-in">
+  <span>🔥 عروض على أطقم الملاكمه والكونغ فو</span><span>🚚 شحن لكل المحافظات</span>
+  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031067936</span>
+  <span>🔥 عروض على أطقم الملاكمه والكونغ فو</span><span>🚚 شحن لكل المحافظات</span>
+  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031067936</span>
+</div></div>
 
 <main>
 <!-- ================= الصفحة الرئيسية ================= -->
@@ -448,10 +719,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
         <div>
           <span class="role">مدرب ملاكمه — BOXING COACH</span>
           <h3>كابتن اياد الشربيني</h3>
-          <div class="num">01557587871</div>
+          <div class="num">01031067936</div>
           <div class="btn-row mt1">
-            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، أريد الاستفسار عن الملاكمه والمنتجات">واتساب</a>
-            <a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال</a>
+            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، أريد الاستفسار عن الملاكمه والمنتجات">واتساب</a>
+            <a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال</a>
           </div>
         </div>
       </div>
@@ -478,10 +749,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
         <span class="tag">VODAFONE CASH</span>
         <h3 class="mb0">فودافون كاش</h3>
         <p class="muted">حوّل على محفظة فودافون كاش ثم أرسل صورة العملية واتساب.</p>
-        <div class="num">01557587871</div>
+        <div class="num">01031067936</div>
         <div class="btn-row">
-          <button class="btn btn-gold btn-sm" type="button" data-copy="01557587871">نسخ الرقم</button>
-          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+          <button class="btn btn-gold btn-sm" type="button" data-copy="01031067936">نسخ الرقم</button>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
         </div>
       </div>
       <div class="pay-card">
@@ -561,7 +832,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       💬 <b>مش لاقي اللي تدور عليه؟</b> كلّم الكابتن واتساب ونوفّره لك:
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أبحث عن منتج غير موجود في المتجر">كابتن هشام وليد — كونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أبحث عن منتج غير موجود في المتجر">كابتن اياد الشربيني — ملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أبحث عن منتج غير موجود في المتجر">كابتن اياد الشربيني — ملاكمه</a>
       </div>
     </div>
   </div>
@@ -610,10 +881,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
         <span class="role">مدرب ملاكمه — BOXING COACH</span>
         <h3>كابتن اياد الشربيني</h3>
         <p class="muted mb0">يساعدك في اختيار مقاس القفاز المناسب والوزن والخطة التدريبية — واتساب أو اتصال فوري.</p>
-        <div class="num mt1">01557587871</div>
+        <div class="num mt1">01031067936</div>
         <div class="btn-row mt1">
-          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، استفسار عن قسم الملاكمه">واتساب فوري</a>
-          <a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال مباشر</a>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، استفسار عن قسم الملاكمه">واتساب فوري</a>
+          <a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال مباشر</a>
         </div>
       </div>
     </div>
@@ -677,7 +948,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       🤝 <b>للجيمات والمراكز الرياضية:</b> أسعار خاصة للكميات الكبيرة وتجهيز صالات التدريب بالكامل — كلّم الكابتن واطلب عرض سعر.
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (كونغ فو)</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (ملاكمه)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (ملاكمه)</a>
       </div>
     </div>
   </div>
@@ -703,7 +974,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       🎁 <b>عرض الطقم الكامل:</b> بدلة كونغ فو + حزام + ملف يد = هدية جوارب رياضية. وقفازات + كيس تدريب = خصم إضافي 5%.
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (كونغ فو)</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (ملاكمه)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (ملاكمه)</a>
       </div>
     </div>
   </div>
@@ -755,10 +1026,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
         <h3 class="mt3">طريقة تأكيد الدفع</h3>
         <div class="radio-row">
           <label class="radio-card"><input type="radio" name="pay" value="انستا باي — تحويل مباشر (01016946303)" checked> انستا باي — InstaPay</label>
-          <label class="radio-card"><input type="radio" name="pay" value="فودافون كاش (01557587871)"> فودافون كاش — Vodafone Cash</label>
+          <label class="radio-card"><input type="radio" name="pay" value="فودافون كاش (01031067936)"> فودافون كاش — Vodafone Cash</label>
           <label class="radio-card"><input type="radio" name="pay" value="الدفع عند الاستلام"> دفع عند الاستلام</label>
         </div>
-        <div class="note mt2">💳 رقم انستا باي: <b dir="ltr">01016946303</b> — رقم فودافون كاش: <b dir="ltr">01557587871</b> — بعد التحويل أرسل صورة العملية واتساب لتأكيد الطلب فورًا.</div>
+        <div class="note mt2">💳 رقم انستا باي: <b dir="ltr">01016946303</b> — رقم فودافون كاش: <b dir="ltr">01031067936</b> — بعد التحويل أرسل صورة العملية واتساب لتأكيد الطلب فورًا.</div>
       </div>
     </div>
     <aside class="summary">
@@ -818,10 +1089,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <span class="tag">2 — VODAFONE CASH</span>
       <h3 class="mb0">فودافون كاش</h3>
       <p class="muted">حوّل من محفظتك إلى الرقم التالي في دقائق.</p>
-      <div class="num">01557587871</div>
+      <div class="num">01031067936</div>
       <div class="btn-row">
-        <button class="btn btn-gold btn-sm" type="button" data-copy="01557587871">نسخ الرقم</button>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+        <button class="btn btn-gold btn-sm" type="button" data-copy="01031067936">نسخ الرقم</button>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
       </div>
     </div>
     <div class="pay-card">
@@ -844,7 +1115,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <a class="btn btn-red" href="#cart">ابدأ الطلب الآن</a>
       <a class="btn btn-ghost" href="#invoice">عرض / طباعة الفاتورة</a>
     </div>
-    <div class="note mt2">🔒 <b>تنبيه أمان:</b> أرقام الدفع الوحيدة المعتمدة هي <b dir="ltr">01016946303</b> (انستا باي) و <b dir="ltr">01557587871</b> (فودافون كاش). لا تحوّل على أي رقم آخر يزعم أنه من المتجر، ولو شكيت كلّمنا واتساب للتأكد قبل التحويل.</div>
+    <div class="note mt2">🔒 <b>تنبيه أمان:</b> أرقام الدفع الوحيدة المعتمدة هي <b dir="ltr">01016946303</b> (انستا باي) و <b dir="ltr">01031067936</b> (فودافون كاش). لا تحوّل على أي رقم آخر يزعم أنه من المتجر، ولو شكيت كلّمنا واتساب للتأكد قبل التحويل.</div>
   </div>
 </section>
 
@@ -879,7 +1150,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <div class="feature"><div class="ico">🛠️</div><b>عيب صناعة</b><span>استبدال فوري مجانًا مع تحمّلنا الشحن.</span></div>
     </div>
     <div class="note mt2">❌ <b>غير قابل للاستبدال:</b> أدوات التدريب المستخدمة (قفازات مستعملة، ملفات يد، واقيات أسنان) للأسباب الصحية، والمنتجات المصنوعة بمقاس خاص.</div>
-    <div class="note mt2">🧾 <b>للاستبدال:</b> ابعت رقم الفاتورة وسبب الاستبدال — كونغ فو: <b dir="ltr">01016946303</b> — ملاكمه: <b dir="ltr">01557587871</b>.</div>
+    <div class="note mt2">🧾 <b>للاستبدال:</b> ابعت رقم الفاتورة وسبب الاستبدال — كونغ فو: <b dir="ltr">01016946303</b> — ملاكمه: <b dir="ltr">01031067936</b>.</div>
   </div>
 </section>
 
@@ -892,21 +1163,21 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   </div></div>
   <div class="container section">
     <details class="faq-item" open><summary>إزاي أطلب من المتجر؟</summary><div class="ans">اختار المنتج والمقاس واضغط «أضف للطلب»، بعدين افتح سلة الطلب واكتب بياناتك واختر طريقة الدفع و«تأكيد الطلب» — هتظهر لك فاتورة قابلة للطباعة PDF، ويمكنك إرسالها واتساب للكابتن لتأكيد الطلب فورًا.</div></details>
-    <details class="faq-item"><summary>إيه وسائل الدفع المتاحة؟</summary><div class="ans">انستا باي (تحويل مباشر) على رقم <b dir="ltr">01016946303</b> — فودافون كاش على رقم <b dir="ltr">01557587871</b> — والدفع عند الاستلام داخل القاهرة والجيزة.</div></details>
+    <details class="faq-item"><summary>إيه وسائل الدفع المتاحة؟</summary><div class="ans">انستا باي (تحويل مباشر) على رقم <b dir="ltr">01016946303</b> — فودافون كاش على رقم <b dir="ltr">01031067936</b> — والدفع عند الاستلام داخل القاهرة والجيزة.</div></details>
     <details class="faq-item"><summary>هل الشحن متاح لكل محافظات مصر؟</summary><div class="ans">أيوه، الشحن لكل المحافظات، والشحن مجاني للطلبات فوق 2000 ج.م. التفاصيل في صفحة <a class="gold" href="#shipping">الشحن والاستبدال</a>.</div></details>
     <details class="faq-item"><summary>كم مدة التوصيل؟</summary><div class="ans">القاهرة والجيزة 1 – 2 يوم عمل، الدلتا والإسكندرية 2 – 3 أيام، الصعيد والمحافظات الأخرى 3 – 5 أيام عمل.</div></details>
     <details class="faq-item"><summary>أقدر أستبدل المقاس؟</summary><div class="ans">نعم خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية وغير مستخدم مع الفاتورة. الاستبدال لمرة واحدة لكل طلب.</div></details>
     <details class="faq-item"><summary>الفاتورة بتطلع منها نسخة PDF؟</summary><div class="ans">أيوه — من صفحة <a class="gold" href="#invoice">الفاتورة</a> اضغط «طباعة / حفظ PDF» واختار <b>Save as PDF</b>، هتطلع فاتورة بألوان المتجر جاهزة للطباعة أو الإرسال.</div></details>
-    <details class="faq-item"><summary>مين المدربين الموجودين في المتجر؟</summary><div class="ans"><b>كابتن هشام وليد</b> — مدرب كونغ فو: <span dir="ltr">01016946303</span> — و <b>كابتن اياد الشربيني</b> — مدرب ملاكمه: <span dir="ltr">01557587871</span>. اضغط واتساب أو اتصال من <a class="gold" href="#contact">صفحة التواصل</a>.</div></details>
+    <details class="faq-item"><summary>مين المدربين الموجودين في المتجر؟</summary><div class="ans"><b>كابتن هشام وليد</b> — مدرب كونغ فو: <span dir="ltr">01016946303</span> — و <b>كابتن اياد الشربيني</b> — مدرب ملاكمه: <span dir="ltr">01031067936</span>. اضغط واتساب أو اتصال من <a class="gold" href="#contact">صفحة التواصل</a>.</div></details>
     <details class="faq-item"><summary>هل فيه تدريب أو حصص مع الشراء؟</summary><div class="ans">المنتجات تُشترى منفصلة عن الحصص، لكن الكابتن يرشّح لك المقاس المناسب للتمرين ويوجهك في أي استفسار فني عن المعدات.</div></details>
     <details class="faq-item"><summary>المنتجات أصلية؟</summary><div class="ans">كل المعدات مختارة ومجرّبة من المدربين أنفسهم، ومضمونة ضد عيوب الصناعة مع استبدال مجاني عند وجود عيب.</div></details>
     <details class="faq-item"><summary>أقدر أدفع مبلغ مقدّم للطلبات الكبيرة؟</summary><div class="ans">للطلبات الثقيلة (كيس ملاكمه / أرضيات / تجهيز جيم) يتم الاتفاق على مقدم بسيط وباقي المبلغ عند التسليم — التفاصيل مع الكابتن واتساب.</div></details>
     <details class="faq-item"><summary>عندكم عروض وخصومات؟</summary><div class="ans">نعم، عروض مستمرة في صفحة <a class="gold" href="#offers">العروض</a>، وعرض الطقم الكامل (بدلة + حزام + ملف يد) هدية جوارب، وخصم إضافي على تجهيز الصالات.</div></details>
     <details class="faq-item"><summary>إزاي أتواصل معاكم بسرعة؟</summary><div class="ans">واتساب فوري من أي مكان في الموقع (الزر الأخضر الثابت)، أو اتصال مباشر من الأرقام في <a class="gold" href="#contact">صفحة التواصل</a> — والرد على مدار اليوم.</div></details>
-    <div class="note mt2">لسه عندك سؤال؟ 🥋 كونغ فو: <b dir="ltr">01016946303</b> — 🥊 ملاكمه: <b dir="ltr">01557587871</b>
+    <div class="note mt2">لسه عندك سؤال؟ 🥋 كونغ فو: <b dir="ltr">01016946303</b> — 🥊 ملاكمه: <b dir="ltr">01031067936</b>
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=عندي سؤال عن منتجات E&H STORE">واتساب كونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=عندي سؤال عن منتجات E&H STORE">واتساب ملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=عندي سؤال عن منتجات E&H STORE">واتساب ملاكمه</a>
       </div>
     </div>
   </div>
@@ -945,8 +1216,8 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       </div>
       <div class="coach-card">
         <img class="ph-img" alt="كابتن اياد الشربيني">
-        <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3><div class="num">01557587871</div>
-          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201557587871">اتصال</a></div>
+        <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3><div class="num">01031067936</div>
+          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال</a></div>
         </div>
       </div>
     </div>
@@ -976,10 +1247,10 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <img class="ph-img" alt="كابتن اياد الشربيني">
       <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3>
         <p class="muted mb0">استفسارات الملاكمه، مقاسات القفازات، الأكياس والمعدات، وحجز التدريب.</p>
-        <div class="num mt1">01557587871</div>
+        <div class="num mt1">01031067936</div>
         <div class="btn-row mt1">
-          <a class="btn btn-wa" target="_blank" href="https://wa.me/201557587871?text=مرحبًا كابتن اياد، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
-          <a class="btn btn-call" href="tel:+201557587871">اتصال مباشر</a>
+          <a class="btn btn-wa" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
+          <a class="btn btn-call" href="tel:+201031067936">اتصال مباشر</a>
         </div>
       </div>
     </div>
@@ -1002,7 +1273,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     </div>
     <div>
       <div class="pay-card"><span class="tag">WORKING HOURS</span><h3 class="mb0">مواعيد الرد</h3><p class="muted mb0">واتساب: يوميًا من 10 صباحًا حتى 11 مساءً — والرد على الرسائل خارج الوقت في أول وقت متاح.</p></div>
-      <div class="pay-card mt2"><span class="tag">PAYMENT</span><h3 class="mb0">الدفع</h3><p class="mb0 muted">انستا باي:</p><div class="num">01016946303</div><p class="mb0 muted">فودافون كاش:</p><div class="num">01557587871</div></div>
+      <div class="pay-card mt2"><span class="tag">PAYMENT</span><h3 class="mb0">الدفع</h3><p class="mb0 muted">انستا باي:</p><div class="num">01016946303</div><p class="mb0 muted">فودافون كاش:</p><div class="num">01031067936</div></div>
     </div>
   </div>
 </section>
@@ -1059,7 +1330,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   </div></div>
   <div class="container section">
     <details class="faq-item" open><summary>1) الطلبات والتأكيد</summary><div class="ans">يُعد الطلب مؤكدًا بعد إرسال بيانات العميل والفاتورة واتساب أو بعد تأكيد التحويل. الأسعار سارية وقت الطلب.</div></details>
-    <details class="faq-item"><summary>2) الأسعار والدفع</summary><div class="ans">الأسعار بالجنيه المصري. طرق الدفع: انستا باي <b dir="ltr">01016946303</b>، فودافون كاش <b dir="ltr">01557587871</b>، أو الدفع عند الاستلام داخل القاهرة والجيزة. يجب إرسال صورة التحويل لتأكيد الطلب.</div></details>
+    <details class="faq-item"><summary>2) الأسعار والدفع</summary><div class="ans">الأسعار بالجنيه المصري. طرق الدفع: انستا باي <b dir="ltr">01016946303</b>، فودافون كاش <b dir="ltr">01031067936</b>، أو الدفع عند الاستلام داخل القاهرة والجيزة. يجب إرسال صورة التحويل لتأكيد الطلب.</div></details>
     <details class="faq-item"><summary>3) الشحن والتسليم</summary><div class="ans">مواعيد التسليم تقديرية وقد تتأخر لأسباب خارجة عن إرادتنا (شركة الشحن / الأحوال الجوية). الوزن الثقيل قد يُضاف إليه فرق تحميل ويتم إخبار العميل قبل الشحن.</div></details>
     <details class="faq-item"><summary>4) الاستبدال والإرجاع</summary><div class="ans">الاستبدال خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية ومغلف وغير مستخدم مع إظهار الفاتورة. تُستثنى الأدوات الصحية (واقي الأسنان، ملفات اليد، القفازات المستخدمة) والمنتجات المخصصة.</div></details>
     <details class="faq-item"><summary>5) الضمان ضد عيوب الصناعة</summary><div class="ans">يتم استبدال المنتج مجانًا عند وجود عيب صناعة من أول استخدام، مع تحمّل المتجر تكلفة الشحن في هذه الحالة.</div></details>
@@ -1067,7 +1338,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     <details class="faq-item"><summary>7) الصور والوصف</summary><div class="ans">قد تختلف الألوان قليلًا حسب الإضاءة والشاشة. الأوصاف محدّثة باستمرار، وفي حالة وجود خطأ واضح في الوصف يحق للعميل إلغاء الطلب خلال 24 ساعة.</div></details>
     <details class="faq-item"><summary>8) الخصوصية</summary><div class="ans">بياناتك (الاسم / الموبايل / العنوان) تُستخدم فقط لتجهيز الطلب والشحن، ولا تُشارك مع أي طرف خارج شركة التوصيل.</div></details>
     <details class="faq-item"><summary>9) الفواتير</summary><div class="ans">تُصدر فاتورة إلكترونية لكل طلب من صفحة الفاتورة، قابلة للطباعة أو الحفظ PDF، وتُرسل واتساب عند الطلب. الفاتورة مستند رسمي لإتمام الاستبدال أو الضمان.</div></details>
-    <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01557587871</span>.</div></details>
+    <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01031067936</span>.</div></details>
   </div>
 </section>
 
@@ -1163,7 +1434,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       <p class="muted">متجر متخصص في أدوات وملابس الفنون القتالية والرياضة — جودة عالية وأسعار مناسبة، بإشراف كابتن هشام وليد (كونغ فو) وكابتن اياد الشربيني (ملاكمه).</p>
       <div class="btn-row">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الكونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201557587871?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الملاكمه</a>
       </div>
     </div>
     <div>
@@ -1182,9 +1453,9 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
     <div>
       <h4>تواصل ودفع</h4>
       <a class="link" href="tel:+201016946303">📞 كابتن هشام وليد — كونغ فو: 01016946303</a>
-      <a class="link" href="tel:+201557587871">📞 كابتن اياد الشربيني — ملاكمه: 01557587871</a>
+      <a class="link" href="tel:+201031067936">📞 كابتن اياد الشربيني — ملاكمه: 01031067936</a>
       <a class="link" href="#payment">💳 انستا باي: 01016946303</a>
-      <a class="link" href="#payment">💳 فودافون كاش: 01557587871</a>
+      <a class="link" href="#payment">💳 فودافون كاش: 01031067936</a>
       <a class="link" href="#about">ℹ️ من نحن</a><a class="link" href="#contact">📞 تواصل معنا</a>
     </div>
   </div>
@@ -1229,9 +1500,9 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
 
   /* ============ بيانات المتجر ============ */
   var STORE = {
-    phoneKungfu: '01016946303', phoneBoxing: '01557587871',
-    waKungfu: '201016946303', waBoxing: '201557587871',
-    instapay: '01016946303', vodafone: '01557587871',
+    phoneKungfu: '01016946303', phoneBoxing: '01031067936',
+    waKungfu: '201016946303', waBoxing: '201031067936',
+    instapay: '01016946303', vodafone: '01031067936',
     ship: 60, freeShipFrom: 2000
   };
   var CATS = {
@@ -1325,12 +1596,12 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   /* ---------- نص التوصيل الموحّد ---------- */
   var SHIP_TEXT = 'يُحدَّد على واتساب على الرقم 01016946303';
   /* مكان الصور الفاضية: أيقونة «اسأل على أدواتك وملابسك» */
-  var ASK_NUM = '201557587871';
+  var ASK_NUM = '201031067936';
   var ASK_TEXT = 'اسأل على أدواتك وملابسك';
   function askLink() { return 'https://wa.me/' + ASK_NUM + '?text=' + encodeURIComponent('مرحبًا، أريد أسأل على أدواتك وملابسك — E&H STORE SPORT WEAR'); }
   function askThumb(cls) {
     return '<a class="ask-thumb' + (cls ? ' ' + cls : '') + '" target="_blank" rel="noopener" href="' + askLink() + '">' +
-      '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01557587871</small></a>';
+      '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031067936</small></a>';
   }
 
   /* ---------- معرض الأعمال (أول صورة = اللوجو) ---------- */
@@ -1364,7 +1635,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
 
   /* ---------- صور المنتجات الحقيقية (من صور الكابتن) موزّعة بالتصنيف ----------
      كل رقم = ترتيب الصورة في GALLERY. المنتجات اللي مالهاش صورة حقيقية
-     بتفضل بأيقونة «اسأل على أدواتك وملابسك» واتساب 01557587871. */
+     بتفضل بأيقونة «اسأل على أدواتك وملابسك» واتساب 01031067936. */
   var PHOTO_OF = {
     /* ملاكمه */
     'bx-01': [15, 17], 'bx-02': [16], 'bx-04': [9, 11, 12, 14], 'bx-05': [20],
@@ -1651,7 +1922,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       '<a class="btn btn-ghost btn-lg" href="#cart">إتمام الطلب</a></div>' +
       '<table class="spec-table">' + specs +
       '<tr><td>الضمان</td><td>استبدال خلال 3 أيام عند وجود عيب صناعة</td></tr>' +
-      '<tr><td>طرق الدفع</td><td>انستا باي 01016946303 — فودافون كاش 01557587871</td></tr></table>' +
+      '<tr><td>طرق الدفع</td><td>انستا باي 01016946303 — فودافون كاش 01031067936</td></tr></table>' +
       '<div class="note mt2">🧾 الفاتورة تُصدر تلقائيًا بعد تأكيد الطلب وقابلة للطباعة أو الحفظ PDF.</div></div>';
     var qin = document.querySelector('[data-qty-for="' + p.id + '"]');
     document.querySelector('[data-inc]').addEventListener('click', function () { qin.value = (parseInt(qin.value, 10) || 1) + 1; });
@@ -1889,7 +2160,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
   }
 
   /* ---------- تطبيق الأرقام والنصوص المعدّلة على كل الصفحة ---------- */
-  var DEF_PH1 = '01016946303', DEF_PH2 = '01557587871';
+  var DEF_PH1 = '01016946303', DEF_PH2 = '01031067936';
   function replaceEverywhere(oldS, newS) {
     if (!oldS || !newS || oldS === newS) return;
     var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n;
@@ -2065,7 +2336,7 @@ table.inv-table td.num,table.inv-table th.num{text-align:left;direction:ltr}
       }
       var a = document.createElement('a');
       a.className = 'ask-thumb'; a.target = '_blank'; a.rel = 'noopener'; a.href = askLink();
-      a.innerHTML = '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01557587871</small>';
+      a.innerHTML = '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031067936</small>';
       im.parentNode.replaceChild(a, im);
     });
     /* معرض الأعمال: نافذة التفاصيل + أضف طلب */
