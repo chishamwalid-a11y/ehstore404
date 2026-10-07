@@ -437,8 +437,11 @@ table.data th{background:linear-gradient(135deg,var(--t1),var(--t2));color:#fff}
 .btn-gold{background:var(--grad-gold);box-shadow:0 10px 26px rgba(224,163,46,.42), inset 0 1px 0 rgba(255,255,255,.55)}
 .btn-wa{background:linear-gradient(135deg,#42E08A,#0F7A3E);box-shadow:0 10px 26px rgba(39,192,122,.4), inset 0 1px 0 rgba(255,255,255,.35)}
 .btn-ghost{border:1px solid rgba(224,163,46,.45)}
-h2,.section-head h2{background:linear-gradient(90deg,#fff,#F6C45A 72%);-webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;color:#fff}
+h2,.section-head h2{color:#fff}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h2,.section-head h2{background:linear-gradient(90deg,#fff,#F6C45A 72%);-webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent}
+}
 .section-head h2::after{content:"";display:block;width:74px;height:4px;border-radius:99px;margin-top:10px;
   background:linear-gradient(90deg,var(--gold),var(--t2))}
 .chip{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05)}
@@ -485,9 +488,12 @@ html{scroll-behavior:smooth}
   background-repeat:no-repeat}
 /* عنوان رئيسي لامع + حركة */
 .hero h1{text-shadow:0 8px 28px rgba(0,0,0,.45)}
-.hero h1 em{background:linear-gradient(90deg,#FFE7AE,#F6C45A,#E0A32E,#FFE7AE);background-size:200% 100%;
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  animation:shineTitle 6s linear infinite;position:relative;display:inline-block}
+.hero h1 em{position:relative;display:inline-block;color:#F6C45A}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 em{background:linear-gradient(90deg,#FFE7AE,#F6C45A,#E0A32E,#FFE7AE);background-size:200% 100%;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    animation:shineTitle 6s linear infinite}
+}
 .hero h1 em::after{content:"";position:absolute;inset-inline:0;bottom:-6px;height:4px;border-radius:99px;
   background:var(--grad-gold);opacity:.9}
 .hero .pill,.hero-stat{animation:floaty 6s ease-in-out infinite}
@@ -578,6 +584,13 @@ html{scroll-behavior:smooth}
   .ticker-in{animation-duration:22s;font-size:.8rem}
 }
 @media (prefers-reduced-motion:reduce){.fx{display:none}}
+/* زر صوت النقر */
+#sndBtn{position:fixed;bottom:18px;right:18px;z-index:62;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  background:linear-gradient(135deg,#F6C45A,#E0A32E);color:#3b2a00;font-size:1.15rem;display:grid;place-items:center;
+  box-shadow:0 10px 24px rgba(224,163,46,.45);transition:transform .15s ease}
+#sndBtn:active{transform:scale(.93)}
+@media(max-width:760px){#sndBtn{width:42px;height:42px;bottom:14px;right:12px}}
+@media print{#sndBtn{display:none !important}}
 </style>
 </head>
 <body>
@@ -622,9 +635,9 @@ html{scroll-behavior:smooth}
 <!-- ====== شريط العروض المتحرّك ====== -->
 <div class="ticker" aria-hidden="true"><div class="ticker-in">
   <span>🔥 عروض على أطقم الملاكمه والكونغ فو</span><span>🚚 شحن لكل المحافظات</span>
-  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031067936</span>
+  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031087936</span>
   <span>🔥 عروض على أطقم الملاكمه والكونغ فو</span><span>🚚 شحن لكل المحافظات</span>
-  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031067936</span>
+  <span>💳 انستا باي وفودافون كاش</span><span>💬 واتساب فوري 01031087936</span>
 </div></div>
 
 <main>
@@ -719,10 +732,10 @@ html{scroll-behavior:smooth}
         <div>
           <span class="role">مدرب ملاكمه — BOXING COACH</span>
           <h3>كابتن اياد الشربيني</h3>
-          <div class="num">01031067936</div>
+          <div class="num">01031087936</div>
           <div class="btn-row mt1">
-            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، أريد الاستفسار عن الملاكمه والمنتجات">واتساب</a>
-            <a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال</a>
+            <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=مرحبًا كابتن اياد، أريد الاستفسار عن الملاكمه والمنتجات">واتساب</a>
+            <a class="btn btn-call btn-sm" href="tel:+201031087936">اتصال</a>
           </div>
         </div>
       </div>
@@ -749,10 +762,10 @@ html{scroll-behavior:smooth}
         <span class="tag">VODAFONE CASH</span>
         <h3 class="mb0">فودافون كاش</h3>
         <p class="muted">حوّل على محفظة فودافون كاش ثم أرسل صورة العملية واتساب.</p>
-        <div class="num">01031067936</div>
+        <div class="num">01031087936</div>
         <div class="btn-row">
-          <button class="btn btn-gold btn-sm" type="button" data-copy="01031067936">نسخ الرقم</button>
-          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+          <button class="btn btn-gold btn-sm" type="button" data-copy="01031087936">نسخ الرقم</button>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
         </div>
       </div>
       <div class="pay-card">
@@ -832,7 +845,7 @@ html{scroll-behavior:smooth}
       💬 <b>مش لاقي اللي تدور عليه؟</b> كلّم الكابتن واتساب ونوفّره لك:
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أبحث عن منتج غير موجود في المتجر">كابتن هشام وليد — كونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أبحث عن منتج غير موجود في المتجر">كابتن اياد الشربيني — ملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=أبحث عن منتج غير موجود في المتجر">كابتن اياد الشربيني — ملاكمه</a>
       </div>
     </div>
   </div>
@@ -881,10 +894,10 @@ html{scroll-behavior:smooth}
         <span class="role">مدرب ملاكمه — BOXING COACH</span>
         <h3>كابتن اياد الشربيني</h3>
         <p class="muted mb0">يساعدك في اختيار مقاس القفاز المناسب والوزن والخطة التدريبية — واتساب أو اتصال فوري.</p>
-        <div class="num mt1">01031067936</div>
+        <div class="num mt1">01031087936</div>
         <div class="btn-row mt1">
-          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، استفسار عن قسم الملاكمه">واتساب فوري</a>
-          <a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال مباشر</a>
+          <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=مرحبًا كابتن اياد، استفسار عن قسم الملاكمه">واتساب فوري</a>
+          <a class="btn btn-call btn-sm" href="tel:+201031087936">اتصال مباشر</a>
         </div>
       </div>
     </div>
@@ -948,7 +961,7 @@ html{scroll-behavior:smooth}
       🤝 <b>للجيمات والمراكز الرياضية:</b> أسعار خاصة للكميات الكبيرة وتجهيز صالات التدريب بالكامل — كلّم الكابتن واطلب عرض سعر.
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (كونغ فو)</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (ملاكمه)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=أريد عرض سعر لتجهيز صالة تدريب — E&H STORE">طلب عرض سعر (ملاكمه)</a>
       </div>
     </div>
   </div>
@@ -974,7 +987,7 @@ html{scroll-behavior:smooth}
       🎁 <b>عرض الطقم الكامل:</b> بدلة كونغ فو + حزام + ملف يد = هدية جوارب رياضية. وقفازات + كيس تدريب = خصم إضافي 5%.
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (كونغ فو)</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (ملاكمه)</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=أريد تفعيل عرض الطقم الكامل — E&H STORE">فعّل العرض (ملاكمه)</a>
       </div>
     </div>
   </div>
@@ -1026,10 +1039,10 @@ html{scroll-behavior:smooth}
         <h3 class="mt3">طريقة تأكيد الدفع</h3>
         <div class="radio-row">
           <label class="radio-card"><input type="radio" name="pay" value="انستا باي — تحويل مباشر (01016946303)" checked> انستا باي — InstaPay</label>
-          <label class="radio-card"><input type="radio" name="pay" value="فودافون كاش (01031067936)"> فودافون كاش — Vodafone Cash</label>
+          <label class="radio-card"><input type="radio" name="pay" value="فودافون كاش (01031087936)"> فودافون كاش — Vodafone Cash</label>
           <label class="radio-card"><input type="radio" name="pay" value="الدفع عند الاستلام"> دفع عند الاستلام</label>
         </div>
-        <div class="note mt2">💳 رقم انستا باي: <b dir="ltr">01016946303</b> — رقم فودافون كاش: <b dir="ltr">01031067936</b> — بعد التحويل أرسل صورة العملية واتساب لتأكيد الطلب فورًا.</div>
+        <div class="note mt2">💳 رقم انستا باي: <b dir="ltr">01016946303</b> — رقم فودافون كاش: <b dir="ltr">01031087936</b> — بعد التحويل أرسل صورة العملية واتساب لتأكيد الطلب فورًا.</div>
       </div>
     </div>
     <aside class="summary">
@@ -1089,10 +1102,10 @@ html{scroll-behavior:smooth}
       <span class="tag">2 — VODAFONE CASH</span>
       <h3 class="mb0">فودافون كاش</h3>
       <p class="muted">حوّل من محفظتك إلى الرقم التالي في دقائق.</p>
-      <div class="num">01031067936</div>
+      <div class="num">01031087936</div>
       <div class="btn-row">
-        <button class="btn btn-gold btn-sm" type="button" data-copy="01031067936">نسخ الرقم</button>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
+        <button class="btn btn-gold btn-sm" type="button" data-copy="01031087936">نسخ الرقم</button>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=تم تحويل مبلغ فودافون كاش — أرفق صورة التحويل">إرسال إشعار التحويل</a>
       </div>
     </div>
     <div class="pay-card">
@@ -1115,7 +1128,7 @@ html{scroll-behavior:smooth}
       <a class="btn btn-red" href="#cart">ابدأ الطلب الآن</a>
       <a class="btn btn-ghost" href="#invoice">عرض / طباعة الفاتورة</a>
     </div>
-    <div class="note mt2">🔒 <b>تنبيه أمان:</b> أرقام الدفع الوحيدة المعتمدة هي <b dir="ltr">01016946303</b> (انستا باي) و <b dir="ltr">01031067936</b> (فودافون كاش). لا تحوّل على أي رقم آخر يزعم أنه من المتجر، ولو شكيت كلّمنا واتساب للتأكد قبل التحويل.</div>
+    <div class="note mt2">🔒 <b>تنبيه أمان:</b> أرقام الدفع الوحيدة المعتمدة هي <b dir="ltr">01016946303</b> (انستا باي) و <b dir="ltr">01031087936</b> (فودافون كاش). لا تحوّل على أي رقم آخر يزعم أنه من المتجر، ولو شكيت كلّمنا واتساب للتأكد قبل التحويل.</div>
   </div>
 </section>
 
@@ -1150,7 +1163,7 @@ html{scroll-behavior:smooth}
       <div class="feature"><div class="ico">🛠️</div><b>عيب صناعة</b><span>استبدال فوري مجانًا مع تحمّلنا الشحن.</span></div>
     </div>
     <div class="note mt2">❌ <b>غير قابل للاستبدال:</b> أدوات التدريب المستخدمة (قفازات مستعملة، ملفات يد، واقيات أسنان) للأسباب الصحية، والمنتجات المصنوعة بمقاس خاص.</div>
-    <div class="note mt2">🧾 <b>للاستبدال:</b> ابعت رقم الفاتورة وسبب الاستبدال — كونغ فو: <b dir="ltr">01016946303</b> — ملاكمه: <b dir="ltr">01031067936</b>.</div>
+    <div class="note mt2">🧾 <b>للاستبدال:</b> ابعت رقم الفاتورة وسبب الاستبدال — كونغ فو: <b dir="ltr">01016946303</b> — ملاكمه: <b dir="ltr">01031087936</b>.</div>
   </div>
 </section>
 
@@ -1163,21 +1176,21 @@ html{scroll-behavior:smooth}
   </div></div>
   <div class="container section">
     <details class="faq-item" open><summary>إزاي أطلب من المتجر؟</summary><div class="ans">اختار المنتج والمقاس واضغط «أضف للطلب»، بعدين افتح سلة الطلب واكتب بياناتك واختر طريقة الدفع و«تأكيد الطلب» — هتظهر لك فاتورة قابلة للطباعة PDF، ويمكنك إرسالها واتساب للكابتن لتأكيد الطلب فورًا.</div></details>
-    <details class="faq-item"><summary>إيه وسائل الدفع المتاحة؟</summary><div class="ans">انستا باي (تحويل مباشر) على رقم <b dir="ltr">01016946303</b> — فودافون كاش على رقم <b dir="ltr">01031067936</b> — والدفع عند الاستلام داخل القاهرة والجيزة.</div></details>
+    <details class="faq-item"><summary>إيه وسائل الدفع المتاحة؟</summary><div class="ans">انستا باي (تحويل مباشر) على رقم <b dir="ltr">01016946303</b> — فودافون كاش على رقم <b dir="ltr">01031087936</b> — والدفع عند الاستلام داخل القاهرة والجيزة.</div></details>
     <details class="faq-item"><summary>هل الشحن متاح لكل محافظات مصر؟</summary><div class="ans">أيوه، الشحن لكل المحافظات، والشحن مجاني للطلبات فوق 2000 ج.م. التفاصيل في صفحة <a class="gold" href="#shipping">الشحن والاستبدال</a>.</div></details>
     <details class="faq-item"><summary>كم مدة التوصيل؟</summary><div class="ans">القاهرة والجيزة 1 – 2 يوم عمل، الدلتا والإسكندرية 2 – 3 أيام، الصعيد والمحافظات الأخرى 3 – 5 أيام عمل.</div></details>
     <details class="faq-item"><summary>أقدر أستبدل المقاس؟</summary><div class="ans">نعم خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية وغير مستخدم مع الفاتورة. الاستبدال لمرة واحدة لكل طلب.</div></details>
     <details class="faq-item"><summary>الفاتورة بتطلع منها نسخة PDF؟</summary><div class="ans">أيوه — من صفحة <a class="gold" href="#invoice">الفاتورة</a> اضغط «طباعة / حفظ PDF» واختار <b>Save as PDF</b>، هتطلع فاتورة بألوان المتجر جاهزة للطباعة أو الإرسال.</div></details>
-    <details class="faq-item"><summary>مين المدربين الموجودين في المتجر؟</summary><div class="ans"><b>كابتن هشام وليد</b> — مدرب كونغ فو: <span dir="ltr">01016946303</span> — و <b>كابتن اياد الشربيني</b> — مدرب ملاكمه: <span dir="ltr">01031067936</span>. اضغط واتساب أو اتصال من <a class="gold" href="#contact">صفحة التواصل</a>.</div></details>
+    <details class="faq-item"><summary>مين المدربين الموجودين في المتجر؟</summary><div class="ans"><b>كابتن هشام وليد</b> — مدرب كونغ فو: <span dir="ltr">01016946303</span> — و <b>كابتن اياد الشربيني</b> — مدرب ملاكمه: <span dir="ltr">01031087936</span>. اضغط واتساب أو اتصال من <a class="gold" href="#contact">صفحة التواصل</a>.</div></details>
     <details class="faq-item"><summary>هل فيه تدريب أو حصص مع الشراء؟</summary><div class="ans">المنتجات تُشترى منفصلة عن الحصص، لكن الكابتن يرشّح لك المقاس المناسب للتمرين ويوجهك في أي استفسار فني عن المعدات.</div></details>
     <details class="faq-item"><summary>المنتجات أصلية؟</summary><div class="ans">كل المعدات مختارة ومجرّبة من المدربين أنفسهم، ومضمونة ضد عيوب الصناعة مع استبدال مجاني عند وجود عيب.</div></details>
     <details class="faq-item"><summary>أقدر أدفع مبلغ مقدّم للطلبات الكبيرة؟</summary><div class="ans">للطلبات الثقيلة (كيس ملاكمه / أرضيات / تجهيز جيم) يتم الاتفاق على مقدم بسيط وباقي المبلغ عند التسليم — التفاصيل مع الكابتن واتساب.</div></details>
     <details class="faq-item"><summary>عندكم عروض وخصومات؟</summary><div class="ans">نعم، عروض مستمرة في صفحة <a class="gold" href="#offers">العروض</a>، وعرض الطقم الكامل (بدلة + حزام + ملف يد) هدية جوارب، وخصم إضافي على تجهيز الصالات.</div></details>
     <details class="faq-item"><summary>إزاي أتواصل معاكم بسرعة؟</summary><div class="ans">واتساب فوري من أي مكان في الموقع (الزر الأخضر الثابت)، أو اتصال مباشر من الأرقام في <a class="gold" href="#contact">صفحة التواصل</a> — والرد على مدار اليوم.</div></details>
-    <div class="note mt2">لسه عندك سؤال؟ 🥋 كونغ فو: <b dir="ltr">01016946303</b> — 🥊 ملاكمه: <b dir="ltr">01031067936</b>
+    <div class="note mt2">لسه عندك سؤال؟ 🥋 كونغ فو: <b dir="ltr">01016946303</b> — 🥊 ملاكمه: <b dir="ltr">01031087936</b>
       <div class="btn-row mt1">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=عندي سؤال عن منتجات E&H STORE">واتساب كونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=عندي سؤال عن منتجات E&H STORE">واتساب ملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=عندي سؤال عن منتجات E&H STORE">واتساب ملاكمه</a>
       </div>
     </div>
   </div>
@@ -1216,8 +1229,8 @@ html{scroll-behavior:smooth}
       </div>
       <div class="coach-card">
         <img class="ph-img" alt="كابتن اياد الشربيني">
-        <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3><div class="num">01031067936</div>
-          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201031067936">اتصال</a></div>
+        <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3><div class="num">01031087936</div>
+          <div class="btn-row mt1"><a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=مرحبًا كابتن اياد">واتساب</a><a class="btn btn-call btn-sm" href="tel:+201031087936">اتصال</a></div>
         </div>
       </div>
     </div>
@@ -1247,10 +1260,10 @@ html{scroll-behavior:smooth}
       <img class="ph-img" alt="كابتن اياد الشربيني">
       <div><span class="role">مدرب ملاكمه — BOXING COACH</span><h3>كابتن اياد الشربيني</h3>
         <p class="muted mb0">استفسارات الملاكمه، مقاسات القفازات، الأكياس والمعدات، وحجز التدريب.</p>
-        <div class="num mt1">01031067936</div>
+        <div class="num mt1">01031087936</div>
         <div class="btn-row mt1">
-          <a class="btn btn-wa" target="_blank" href="https://wa.me/201031067936?text=مرحبًا كابتن اياد، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
-          <a class="btn btn-call" href="tel:+201031067936">اتصال مباشر</a>
+          <a class="btn btn-wa" target="_blank" href="https://wa.me/201031087936?text=مرحبًا كابتن اياد، أريد الاستفسار عن E&H STORE SPORT WEAR">واتساب فوري</a>
+          <a class="btn btn-call" href="tel:+201031087936">اتصال مباشر</a>
         </div>
       </div>
     </div>
@@ -1273,7 +1286,7 @@ html{scroll-behavior:smooth}
     </div>
     <div>
       <div class="pay-card"><span class="tag">WORKING HOURS</span><h3 class="mb0">مواعيد الرد</h3><p class="muted mb0">واتساب: يوميًا من 10 صباحًا حتى 11 مساءً — والرد على الرسائل خارج الوقت في أول وقت متاح.</p></div>
-      <div class="pay-card mt2"><span class="tag">PAYMENT</span><h3 class="mb0">الدفع</h3><p class="mb0 muted">انستا باي:</p><div class="num">01016946303</div><p class="mb0 muted">فودافون كاش:</p><div class="num">01031067936</div></div>
+      <div class="pay-card mt2"><span class="tag">PAYMENT</span><h3 class="mb0">الدفع</h3><p class="mb0 muted">انستا باي:</p><div class="num">01016946303</div><p class="mb0 muted">فودافون كاش:</p><div class="num">01031087936</div></div>
     </div>
   </div>
 </section>
@@ -1330,7 +1343,7 @@ html{scroll-behavior:smooth}
   </div></div>
   <div class="container section">
     <details class="faq-item" open><summary>1) الطلبات والتأكيد</summary><div class="ans">يُعد الطلب مؤكدًا بعد إرسال بيانات العميل والفاتورة واتساب أو بعد تأكيد التحويل. الأسعار سارية وقت الطلب.</div></details>
-    <details class="faq-item"><summary>2) الأسعار والدفع</summary><div class="ans">الأسعار بالجنيه المصري. طرق الدفع: انستا باي <b dir="ltr">01016946303</b>، فودافون كاش <b dir="ltr">01031067936</b>، أو الدفع عند الاستلام داخل القاهرة والجيزة. يجب إرسال صورة التحويل لتأكيد الطلب.</div></details>
+    <details class="faq-item"><summary>2) الأسعار والدفع</summary><div class="ans">الأسعار بالجنيه المصري. طرق الدفع: انستا باي <b dir="ltr">01016946303</b>، فودافون كاش <b dir="ltr">01031087936</b>، أو الدفع عند الاستلام داخل القاهرة والجيزة. يجب إرسال صورة التحويل لتأكيد الطلب.</div></details>
     <details class="faq-item"><summary>3) الشحن والتسليم</summary><div class="ans">مواعيد التسليم تقديرية وقد تتأخر لأسباب خارجة عن إرادتنا (شركة الشحن / الأحوال الجوية). الوزن الثقيل قد يُضاف إليه فرق تحميل ويتم إخبار العميل قبل الشحن.</div></details>
     <details class="faq-item"><summary>4) الاستبدال والإرجاع</summary><div class="ans">الاستبدال خلال 3 أيام من الاستلام بشرط أن المنتج بحالة أصلية ومغلف وغير مستخدم مع إظهار الفاتورة. تُستثنى الأدوات الصحية (واقي الأسنان، ملفات اليد، القفازات المستخدمة) والمنتجات المخصصة.</div></details>
     <details class="faq-item"><summary>5) الضمان ضد عيوب الصناعة</summary><div class="ans">يتم استبدال المنتج مجانًا عند وجود عيب صناعة من أول استخدام، مع تحمّل المتجر تكلفة الشحن في هذه الحالة.</div></details>
@@ -1338,7 +1351,7 @@ html{scroll-behavior:smooth}
     <details class="faq-item"><summary>7) الصور والوصف</summary><div class="ans">قد تختلف الألوان قليلًا حسب الإضاءة والشاشة. الأوصاف محدّثة باستمرار، وفي حالة وجود خطأ واضح في الوصف يحق للعميل إلغاء الطلب خلال 24 ساعة.</div></details>
     <details class="faq-item"><summary>8) الخصوصية</summary><div class="ans">بياناتك (الاسم / الموبايل / العنوان) تُستخدم فقط لتجهيز الطلب والشحن، ولا تُشارك مع أي طرف خارج شركة التوصيل.</div></details>
     <details class="faq-item"><summary>9) الفواتير</summary><div class="ans">تُصدر فاتورة إلكترونية لكل طلب من صفحة الفاتورة، قابلة للطباعة أو الحفظ PDF، وتُرسل واتساب عند الطلب. الفاتورة مستند رسمي لإتمام الاستبدال أو الضمان.</div></details>
-    <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01031067936</span>.</div></details>
+    <details class="faq-item"><summary>10) التواصل</summary><div class="ans">كابتن هشام وليد — مدرب كونغ فو: <span dir="ltr">01016946303</span> | كابتن اياد الشربيني — مدرب ملاكمه: <span dir="ltr">01031087936</span>.</div></details>
   </div>
 </section>
 
@@ -1434,7 +1447,7 @@ html{scroll-behavior:smooth}
       <p class="muted">متجر متخصص في أدوات وملابس الفنون القتالية والرياضة — جودة عالية وأسعار مناسبة، بإشراف كابتن هشام وليد (كونغ فو) وكابتن اياد الشربيني (ملاكمه).</p>
       <div class="btn-row">
         <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201016946303?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الكونغ فو</a>
-        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031067936?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الملاكمه</a>
+        <a class="btn btn-wa btn-sm" target="_blank" href="https://wa.me/201031087936?text=مرحبًا، استفسار عن E&H STORE SPORT WEAR">واتساب الملاكمه</a>
       </div>
     </div>
     <div>
@@ -1453,9 +1466,9 @@ html{scroll-behavior:smooth}
     <div>
       <h4>تواصل ودفع</h4>
       <a class="link" href="tel:+201016946303">📞 كابتن هشام وليد — كونغ فو: 01016946303</a>
-      <a class="link" href="tel:+201031067936">📞 كابتن اياد الشربيني — ملاكمه: 01031067936</a>
+      <a class="link" href="tel:+201031087936">📞 كابتن اياد الشربيني — ملاكمه: 01031087936</a>
       <a class="link" href="#payment">💳 انستا باي: 01016946303</a>
-      <a class="link" href="#payment">💳 فودافون كاش: 01031067936</a>
+      <a class="link" href="#payment">💳 فودافون كاش: 01031087936</a>
       <a class="link" href="#about">ℹ️ من نحن</a><a class="link" href="#contact">📞 تواصل معنا</a>
     </div>
   </div>
@@ -1500,9 +1513,9 @@ html{scroll-behavior:smooth}
 
   /* ============ بيانات المتجر ============ */
   var STORE = {
-    phoneKungfu: '01016946303', phoneBoxing: '01031067936',
-    waKungfu: '201016946303', waBoxing: '201031067936',
-    instapay: '01016946303', vodafone: '01031067936',
+    phoneKungfu: '01016946303', phoneBoxing: '01031087936',
+    waKungfu: '201016946303', waBoxing: '201031087936',
+    instapay: '01016946303', vodafone: '01031087936',
     ship: 60, freeShipFrom: 2000
   };
   var CATS = {
@@ -1596,12 +1609,12 @@ html{scroll-behavior:smooth}
   /* ---------- نص التوصيل الموحّد ---------- */
   var SHIP_TEXT = 'يُحدَّد على واتساب على الرقم 01016946303';
   /* مكان الصور الفاضية: أيقونة «اسأل على أدواتك وملابسك» */
-  var ASK_NUM = '201031067936';
+  var ASK_NUM = '201031087936';
   var ASK_TEXT = 'اسأل على أدواتك وملابسك';
   function askLink() { return 'https://wa.me/' + ASK_NUM + '?text=' + encodeURIComponent('مرحبًا، أريد أسأل على أدواتك وملابسك — E&H STORE SPORT WEAR'); }
   function askThumb(cls) {
     return '<a class="ask-thumb' + (cls ? ' ' + cls : '') + '" target="_blank" rel="noopener" href="' + askLink() + '">' +
-      '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031067936</small></a>';
+      '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031087936</small></a>';
   }
 
   /* ---------- معرض الأعمال (أول صورة = اللوجو) ---------- */
@@ -1635,7 +1648,7 @@ html{scroll-behavior:smooth}
 
   /* ---------- صور المنتجات الحقيقية (من صور الكابتن) موزّعة بالتصنيف ----------
      كل رقم = ترتيب الصورة في GALLERY. المنتجات اللي مالهاش صورة حقيقية
-     بتفضل بأيقونة «اسأل على أدواتك وملابسك» واتساب 01031067936. */
+     بتفضل بأيقونة «اسأل على أدواتك وملابسك» واتساب 01031087936. */
   var PHOTO_OF = {
     /* ملاكمه */
     'bx-01': [15, 17], 'bx-02': [16], 'bx-04': [9, 11, 12, 14], 'bx-05': [20],
@@ -1922,7 +1935,7 @@ html{scroll-behavior:smooth}
       '<a class="btn btn-ghost btn-lg" href="#cart">إتمام الطلب</a></div>' +
       '<table class="spec-table">' + specs +
       '<tr><td>الضمان</td><td>استبدال خلال 3 أيام عند وجود عيب صناعة</td></tr>' +
-      '<tr><td>طرق الدفع</td><td>انستا باي 01016946303 — فودافون كاش 01031067936</td></tr></table>' +
+      '<tr><td>طرق الدفع</td><td>انستا باي 01016946303 — فودافون كاش 01031087936</td></tr></table>' +
       '<div class="note mt2">🧾 الفاتورة تُصدر تلقائيًا بعد تأكيد الطلب وقابلة للطباعة أو الحفظ PDF.</div></div>';
     var qin = document.querySelector('[data-qty-for="' + p.id + '"]');
     document.querySelector('[data-inc]').addEventListener('click', function () { qin.value = (parseInt(qin.value, 10) || 1) + 1; });
@@ -2160,7 +2173,7 @@ html{scroll-behavior:smooth}
   }
 
   /* ---------- تطبيق الأرقام والنصوص المعدّلة على كل الصفحة ---------- */
-  var DEF_PH1 = '01016946303', DEF_PH2 = '01031067936';
+  var DEF_PH1 = '01016946303', DEF_PH2 = '01031087936';
   function replaceEverywhere(oldS, newS) {
     if (!oldS || !newS || oldS === newS) return;
     var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n;
@@ -2307,6 +2320,64 @@ html{scroll-behavior:smooth}
     if (name === 'editor') initEditor();
   }
 
+  /* ============ أصوات النقر (فقاعات) ============ */
+  (function () {
+    var AC = null, ON = true;
+    try { ON = sget('eh_snd') !== '0'; } catch (e) {}
+    function ctx() {
+      if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { AC = null; } }
+      if (AC && AC.state === 'suspended') { try { AC.resume(); } catch (e) {} }
+      return AC;
+    }
+    function pop(big) {
+      if (!ON) return;
+      var a = ctx(); if (!a) return;
+      var t = a.currentTime, d = big ? 0.2 : 0.12;
+      var o = a.createOscillator(), g = a.createGain(), lp = a.createBiquadFilter();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(big ? 300 : 480, t);
+      o.frequency.exponentialRampToValueAtTime(big ? 1250 : 880, t + d * 0.7);
+      lp.type = 'lowpass'; lp.frequency.value = 2800;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(big ? 0.17 : 0.09, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0008, t + d);
+      o.connect(lp); lp.connect(g); g.connect(a.destination);
+      o.start(t); o.stop(t + d + 0.02);
+      if (big) {   /* نقطة فقاعة تانية خفيفة */
+        var o2 = a.createOscillator(), g2 = a.createGain();
+        o2.type = 'triangle';
+        o2.frequency.setValueAtTime(880, t + d * 0.5);
+        o2.frequency.exponentialRampToValueAtTime(520, t + d * 1.2);
+        g2.gain.setValueAtTime(0.0001, t + d * 0.5);
+        g2.gain.exponentialRampToValueAtTime(0.07, t + d * 0.58);
+        g2.gain.exponentialRampToValueAtTime(0.0008, t + d * 1.3);
+        o2.connect(g2); g2.connect(a.destination);
+        o2.start(t + d * 0.5); o2.stop(t + d * 1.35);
+      }
+    }
+    document.addEventListener('pointerdown', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('.btn,button,a,.chip,.p-card,.cat-card,.g-card,.login-btn,.cart-btn,.menu a') : null;
+      if (!el) return;
+      var cn = (typeof el.className === 'string') ? el.className : '';
+      pop(el.tagName === 'BUTTON' || cn.indexOf('btn') > -1);
+    }, { passive: true });
+    function mkBtn() {
+      if (document.getElementById('sndBtn')) return;
+      var b = document.createElement('button');
+      b.id = 'sndBtn'; b.type = 'button'; b.title = 'صوت النقر (تشغيل / كتم)';
+      b.setAttribute('aria-label', 'صوت النقر تشغيل أو كتم');
+      b.textContent = ON ? '🔊' : '🔇';
+      b.addEventListener('click', function () {
+        ON = !ON;
+        try { sset('eh_snd', ON ? '1' : '0'); } catch (e) {}
+        b.textContent = ON ? '🔊' : '🔇';
+        if (ON) pop(true);
+      });
+      document.body.appendChild(b);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mkBtn); else mkBtn();
+  })();
+
   function boot() {
     loadOverrides();     /* تعديلات الأدمن (منتجات / معرض / نصوص وأرقام المتجر) */
     applySiteSettings(); /* تطبيق أرقام التواصل والنصوص المعدّلة */
@@ -2336,7 +2407,7 @@ html{scroll-behavior:smooth}
       }
       var a = document.createElement('a');
       a.className = 'ask-thumb'; a.target = '_blank'; a.rel = 'noopener'; a.href = askLink();
-      a.innerHTML = '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031067936</small>';
+      a.innerHTML = '<span class="ico">💬</span><b>' + ASK_TEXT + '</b><small>واتساب 01031087936</small>';
       im.parentNode.replaceChild(a, im);
     });
     /* معرض الأعمال: نافذة التفاصيل + أضف طلب */
