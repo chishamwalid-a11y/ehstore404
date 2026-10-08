@@ -687,7 +687,7 @@ html{scroll-behavior:smooth}
       <a class="cat-card" href="#boxing"><img class="ph-img" alt="قسم الملاكمه"><div class="body"><h3>ملاكمه — BOXING</h3><p>قفازات، أكياس، ملفات يد، واقيات ولو كيك باد.</p><span class="go">تصفح القسم ←</span></div></a>
       <a class="cat-card" href="#sportswear"><img class="ph-img" alt="قسم الملابس الرياضيه"><div class="body"><h3>ملابس رياضيه — SPORT WEAR</h3><p>تيشيرتات، هودي، تراك سوت وبناطيل بشعار E&amp;H.</p><span class="go">تصفح القسم ←</span></div></a>
       <a class="cat-card" href="#equipment"><img class="ph-img" alt="قسم الأدوات والمعدات"><div class="body"><h3>أدوات ومعدات — EQUIPMENT</h3><p>حبال مقاومة، دمبل، أرضيات، تايمر جولات.</p><span class="go">تصفح القسم ←</span></div></a>
-      <a class="cat-card" href="#login"><img class="ph-img" alt="تسجيل الدخول"><div class="body"><h3>🔐 تسجيل الدخول (أدمن)</h3><p>الكابتن يدخل بحساب Google أو إيميله ليفتح محرر الأسماء والأسعار.</p><span class="go">تسجيل الدخول ←</span></div></a>
+      <a class="cat-card" href="#login" data-guest-only><img class="ph-img" alt="الحساب وتسجيل الدخول"><div class="body"><h3>🔐 حسابي</h3><p>تسجيل دخول المشرفين لإدارة المنتجات: الأسعار والصور والتفاصيل.</p><span class="go">دخول ←</span></div></a>
     </div>
   </div>
 
@@ -1403,10 +1403,11 @@ html{scroll-behavior:smooth}
       <p class="mb0 muted">🔒 الصفحة دي للأدمن بس — <a class="gold" href="#login">سجّل الدخول</a> بإيميل مشرف + كلمة السر.</p>
     </div>
     <div id="editorPanel" hidden>
-      <h3 class="mt0">🧾 المنتجات ومعرض الأعمال</h3>
+      <h3 class="mt0">🧾 المنتجات ومعرض الأعمال <span class="ed-badge">للمشرف فقط</span></h3>
+      <p class="muted">عدّل من هنا: الاسم · السعر · الوصف · <b>روابط صور المنتج</b> · <b>تفاصيل المنتج</b> (كل تفصيل في سطر بالشكل: اسم التفصيل | القيمة) · وأصناف المعرض وصورها. سيب أي خانة فاضية = تفضل زي ما هي.</p>
       <div class="table-scroll">
         <table class="data">
-          <thead><tr><th>الكود</th><th>الاسم</th><th>السعر (ج.م)</th><th>الوصف</th></tr></thead>
+          <thead><tr><th>الكود</th><th>الاسم</th><th>السعر (ج.م)</th><th>الوصف</th><th>صور المنتج (روابط)</th><th>التفاصيل (سطر لكل تفصيل: اسم | قيمة)</th></tr></thead>
           <tbody id="edRows"></tbody>
         </table>
       </div>
@@ -1461,7 +1462,7 @@ html{scroll-behavior:smooth}
       <a class="link" href="#payment">طرق الدفع</a><a class="link" href="#shipping">الشحن والاستبدال</a>
       <a class="link" href="#faq">الأسئلة الشائعة</a><a class="link" href="#terms">الشروط والأحكام</a>
       <a class="link" href="#invoice">الفاتورة / PDF</a><a class="link" href="#photos">دليل الصور</a>
-      <a class="link" href="#login">🔐 تسجيل الدخول (أدمن)</a><a class="link" href="#editor">✏️ محرر الأسماء والأسعار</a>
+      <a class="link" href="#login">🔐 تسجيل الدخول</a><a class="link" href="#editor" data-admin-only hidden>✏️ محرر المنتجات (للمشرف)</a>
     </div>
     <div>
       <h4>تواصل ودفع</h4>
@@ -1657,6 +1658,7 @@ html{scroll-behavior:smooth}
     'sw-04': [2, 3, 4, 5, 7]
   };
   function productPics(p) {
+    if (p.imgs && p.imgs.length) return p.imgs;   /* روابط الصور اللي عدّلها المشرف */
     var a = PHOTO_OF[p.id]; if (!a) return null;
     return a.map(function (i) { return GALLERY[i] ? GALLERY[i].u : null; }).filter(function (u) { return !!u; });
   }
@@ -2158,11 +2160,16 @@ html{scroll-behavior:smooth}
       var r = OV.p[p.id]; if (!r) return;
       if (r.name) p.name = r.name;
       if (r.desc) p.desc = r.desc;
+      if (r.imgs) p.imgs = String(r.imgs).split(/[\n,]+/).map(function (u) { return u.trim(); }).filter(Boolean);
+      if (r.specs) p.specs = String(r.specs).split('\n').map(function (l) { return l.split('|'); })
+        .filter(function (a) { return a[0] && a[0].trim(); })
+        .map(function (a) { return [a[0].trim(), String(a[1] == null ? '' : a[1]).trim()]; });
       var n = numOrNull(r.price); if (n !== null) p.price = n;
     });
     GALLERY.forEach(function (g, i) {
       var r = OV.g['g-' + i]; if (!r) return;
       if (r.name) g.t = r.name;
+      if (r.img) g.u = String(r.img).trim();
       var n = numOrNull(r.price); if (n !== null) g.price = n;
     });
   }
@@ -2208,8 +2215,14 @@ html{scroll-behavior:smooth}
   }
   function inpAttr(attr, val, type, ph, w) {
     return '<input data-ed-' + attr + '" type="' + (type || 'text') + '" value="' +
-      String(val == null ? '' : val).replace(/"/g, '&quot;').replace(/</g, '&lt;') + '"' +
+      String(val == null ? '' : val).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '"' +
       (ph ? ' placeholder="' + ph + '"' : '') + (w ? ' style="max-width:' + w + '"' : '') + '>';
+  }
+  /* خانة نص كبيرة (تفاصيل المنتج) */
+  function txArea(attr, val, ph) {
+    return '<textarea data-ed-' + attr + '" rows="3" placeholder="' + (ph || '') +
+      '" style="width:100%;min-width:210px;background:#08211f;border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:8px">' +
+      String(val == null ? '' : val).replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</textarea>';
   }
   function sitInp(key, val, type, ph, ltr) {
     return '<input data-ed-site="' + key + '" type="' + (type || 'text') + '" value="' +
@@ -2227,13 +2240,17 @@ html{scroll-behavior:smooth}
       return '<tr><td style="min-width:90px"><b>' + p.id + '</b></td>' +
         '<td>' + inpAttr('name', p.name) + '</td>' +
         '<td>' + inpAttr('price', p.price, 'number', '', '104px') + '</td>' +
-        '<td>' + inpAttr('desc', p.desc) + '</td></tr>';
+        '<td>' + inpAttr('desc', p.desc) + '</td>' +
+        '<td>' + inpAttr('imgs', (p.imgs || []).join(', '), 'text', 'روابط الصور (افصل بينهم بفاصلة)', '270px') + '</td>' +
+        '<td>' + txArea('specs', (p.specs || []).map(function (r2) { return r2[0] + ' | ' + r2[1]; }).join('\n'), 'المادة | جلد طبيعي') + '</td></tr>';
     }).join('');
     rows += GALLERY.map(function (g, i) {
       if (g.c === 'brand') return '';
       return '<tr style="background:#101521"><td style="min-width:90px"><b>g-' + i + '</b> <span class="muted">(معرض)</span></td>' +
         '<td>' + inpAttr('name', g.t) + '</td>' +
         '<td>' + inpAttr('price', g.price == null ? '' : g.price, 'number', 'واتساب', '104px') + '</td>' +
+        '<td class="muted">—</td>' +
+        '<td>' + inpAttr('img', g.u, 'text', 'رابط الصورة', '270px') + '</td>' +
         '<td class="muted">—</td></tr>';
     }).join('');
     var tb = $('#edRows'); if (tb) tb.innerHTML = rows;
@@ -2261,8 +2278,14 @@ html{scroll-behavior:smooth}
         var id = i2.getAttribute('data-ed-name');
         var pr = document.querySelector('[data-ed-price="' + id + '"]');
         var ds = document.querySelector('[data-ed-desc="' + id + '"]');
+        var im = document.querySelector('[data-ed-imgs="' + id + '"]');
+        var gi = document.querySelector('[data-ed-img="' + id + '"]');
+        var sp = document.querySelector('[data-ed-specs="' + id + '"]');
         var box = (id.indexOf('g-') === 0) ? o.g : o.p;
         box[id] = { name: i2.value.trim(), price: pr ? pr.value : '', desc: ds ? ds.value.trim() : '' };
+        if (im) box[id].imgs = im.value.trim();
+        if (gi) box[id].img = gi.value.trim();
+        if (sp) box[id].specs = sp.value.trim();
       });
       $$('[data-ed-site]').forEach(function (i3) {
         var k = i3.getAttribute('data-ed-site'), v = i3.value.trim();
